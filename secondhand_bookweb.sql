@@ -104,7 +104,7 @@ ALTER TABLE `order_information`
 --
 
 --
--- 鞈����銵函�������嗅�� `order_information`
+-- ����銵函�������嗅�� `order_information`
 --
 ALTER TABLE `order_information`
   ADD CONSTRAINT `order_information_ibfk_1` FOREIGN KEY (`A_BuyerID`) REFERENCES `account_manage` (`A_ID`),
