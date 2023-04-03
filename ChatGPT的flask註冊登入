@@ -1,0 +1,67 @@
+from flask import Flask, request, redirect, render_template, session, url_for
+from flask_mysqldb import MySQL
+
+app = Flask(__name__)
+app.secret_key = 'your-secret-key'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'password'
+app.config['MYSQL_DB'] = 'mydb'
+mysql = MySQL(app)
+
+@app.route('/')
+def home():
+    if 'username' in session:
+        return f'Hello, {session["username"]}!'
+    else:
+        return redirect(url_for('login'))
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        confirm_password = request.form['confirm_password']
+        if password == confirm_password:
+            cur = mysql.connection.cursor()
+            cur.execute("INSERT INTO users (username, password) VALUES (%s, %s)", (username, password))
+            mysql.connection.commit()
+            cur.close()
+            return redirect(url_for('login'))
+        else:
+            return 'Passwords do not match!'
+    else:
+        return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+        user = cur.fetchone()
+        cur.close()
+        if user:
+            session['username'] = user[1]
+            return redirect(url_for('home'))
+        else:
+            return 'Invalid username or password!'
+    else:
+        return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('home'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+#上面的代碼中定義了四個路由：'/'、'/register'、'/login'和'/logout'。當用戶訪問'/'路由時，應用程式將檢查用戶是否已經登錄。如果用戶已經登錄，將向用戶打招呼，否則將重定向到'login'路由。
+
+#'register'路由處理用戶註冊功能。當用戶提交註冊表單時，應用程式將從表單中獲取用戶名和密碼，並將其插入到MySQL數據庫的'users'表中。如果密碼與確認密碼不匹配，將返回一條錯誤消息。
+
+#'login'路由處理用戶登錄功能。當用戶提交登錄表單時，應用程式將從表單中獲取用戶名和密碼，並檢查這些值是否匹配MySQL數據庫中的'user'表中的記錄。
