@@ -3,11 +3,12 @@ import pymysql
 
 app = Flask(__name__)
 
-"""
+
+#最初的模板
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
-"""
+    return 'Hello World! 註冊: http://localhost:5000/show_register'
+
 
 # 連接mysql
 def get_conn():
@@ -15,7 +16,8 @@ def get_conn():
         host = '127.0.0.1', 
         user = 'root', 
         password = '12345678', 
-        database = 'secondhand_bookweb', 
+#        database = 'secondhand_bookweb', 
+        database = 'bookweb_0411',  # 資料庫名稱
         charset = 'utf8'
     )
 
@@ -38,16 +40,15 @@ def show_register():
 @app.route('/do_register', methods=['POST'])
 def do_register():
     print(request.form)
-    A_ID = request.form.get("A_ID") # 確定用A_I可以的話記得刪掉
+    A_StuID = request.form.get("A_StuID")
     A_Account = request.form.get("A_Account")
     A_Password = request.form.get("A_Password")
-    A_StuID = request.form.get("A_StuID")
     A_RealNameVerify = request.form.get("A_RealNameVerify")
     A_BirthDate = request.form.get("A_BirthDate")
     A_Major = request.form.get("A_Major")
     sql = f'''
-    insert into account_manage(A_ID, A_Account, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major)
-    values({A_ID}, '{A_Account}', '{A_Password}', '{A_StuID}', {A_RealNameVerify}, '{A_BirthDate}', '{A_Major}')
+    insert into account_manage(A_StuID, A_Account, A_Password, A_RealNameVerify, A_BirthDate, A_Major)
+    values('{A_StuID}',  '{A_Account}', '{A_Password}', {A_RealNameVerify}, '{A_BirthDate}', '{A_Major}')
     '''
     print(sql)
     insert_or_update_data(sql)
