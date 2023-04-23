@@ -31,12 +31,12 @@ def insert_or_update_data(sql):
         finally:
             conn.close()
 
-# 顯示上架書籍的網站
+# [上架] 顯示上架書籍的網站
 @app.route('/book_create')
 def show_register():
     return render_template("book_create.html")
 
-# 接收表單提交的數據
+# [上架] 接收表單提交的數據
 @app.route('/do_book_create', methods=['POST'])
 def do_register():
     print(request.form)
@@ -52,16 +52,14 @@ def do_register():
     B_UsedStatus = request.form.get("B_UsedStatus")
     B_UsedByTeacher = request.form.get("B_UsedByTeacher")
     B_Extra_Info = request.form.get("B_Extra_Info")
+    B_Price = request.form.get("B_Price")
     sql = f'''
-    insert into book_information(B_BookID, B_BookName, B_ISBN, B_Author, B_BookVersion, B_BookMajor, B_LessonName, B_BookPic, B_BookStatus, B_UsedStatus, B_UsedByTeacher, B_Extra_Info)
-    values({B_BookID},  '{B_BookName}', '{B_ISBN}', '{B_Author}', '{B_BookVersion}', '{B_BookMajor}', '{B_LessonName}', '{B_BookPic}', {B_BookStatus}, '{B_UsedStatus}', '{B_UsedByTeacher}', '{B_Extra_Info}')
+    insert into book_information(B_BookID, B_BookName, B_ISBN, B_Author, B_BookVersion, B_BookMajor, B_LessonName, B_BookPic, B_BookStatus, B_UsedStatus, B_UsedByTeacher, B_Extra_Info, B_Price)
+    values({B_BookID},  '{B_BookName}', '{B_ISBN}', '{B_Author}', '{B_BookVersion}', '{B_BookMajor}', '{B_LessonName}', '{B_BookPic}', {B_BookStatus}, '{B_UsedStatus}', '{B_UsedByTeacher}', '{B_Extra_Info}', {B_Price})
     '''
     print(sql)
     insert_or_update_data(sql)
     return "Book added successfully!"
-
-
-
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
