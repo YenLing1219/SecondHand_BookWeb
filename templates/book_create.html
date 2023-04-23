@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input - 書籍上架</title>
+</head>
+<body>
+    <div>
+        <h1>註冊</h1>
+        <form action="/do_book_create" method="POST">
+            <table border="1">
+                <tr>
+                    <th>上架編號*</th>
+                    <td><input type="number" name="B_BookID" required></td>
+                </tr>
+                <tr>
+                    <th>書名*</th>
+                    <td><input type="text" name="B_BookName" required></td>
+                </tr>
+                <tr>
+                    <th>ISBN碼*</th>
+                    <td><input type="text" name="B_ISBN" required></td>
+                </tr>
+                <tr>
+                    <th>作者*</th>
+                    <td><input type="text" name="B_Author" required></td>
+                </tr>
+                <tr>
+                    <th>版本*</th>
+                    <td><input type="text" name="B_BookVersion" required></td>
+                </tr>
+                <tr>
+                    <th>科系*</th>
+                    <td><input type="text" name="B_BookMajor" required></td>
+                </tr>
+                <tr>
+                    <th>課程名稱*</th>
+                    <td><input type="text" name="B_LessonName" required></td>
+                </tr>
+                <tr>
+                    <th>授課老師</th>
+                    <td><input type="text" name="B_UsedByTeacher"></td>
+                </tr>
+                <tr>
+                    <th>書況照片*</th>
+                    <td><input type="text" name="B_BookPic" required></td>
+                </tr>
+                <tr>
+                    <th>全新部分的狀態*</th>
+                    <td>
+                        <select name="B_BookStatus" required>
+                            <option value=1>全使用過</option>
+                            <option value=2>25%未翻閱</option>
+                            <option value=3>50%未翻閱</option>
+                            <option value=4>75%未翻閱</option>
+                            <option value=5>90%以上未翻閱</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>已使用部分的狀態*</th>
+                    <td>
+                        <textarea name="B_UsedStatus" cols="20" rows="10" required>
+                            ~說明文字~
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>補充資訊</th>
+                    <td>
+                        <textarea name="B_Extra_Info" cols="20" rows="15">
+                            ~說明文字~
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>提交</th>
+                    <td><input type="submit" name="submit" value="提交"> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

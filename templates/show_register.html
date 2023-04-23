@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input - 用戶create</title>
+</head>
+<body>
+    <div>
+        <h1>註冊</h1>
+        <form action="/do_register" method="POST">
+            <table border="1">
+                <tr>
+                    <th>學號</th>
+                    <td><input type="text" name="A_StuID"></td>
+                </tr>
+                <tr>
+                    <th>帳號</th>
+                    <td><input type="text" name="A_Account"></td>
+                </tr>
+                <tr>
+                    <th>密碼</th>
+                    <td><input type="password" name="A_Password"></td>
+                </tr>
+                <tr>
+                    <th>實名認證</th>
+                    <td>
+                        <input type="radio" name="A_RealNameVerify" value=0> No
+                        <input type="radio" name="A_RealNameVerify" value=1> Yes
+                    </td>
+                </tr>
+                <tr>
+                    <th>生日</th>
+                    <td><input type="date" name="A_BirthDate"></td>
+                </tr>
+                <tr>
+                    <th>科系</th>
+                    <td><input type="text" name="A_Major"></td>
+                </tr>
+                <tr>
+                    <th>提交</th>
+                    <td><input type="submit" name="submit" value="提交"> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
