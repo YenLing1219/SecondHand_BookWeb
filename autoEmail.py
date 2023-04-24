@@ -1,20 +1,21 @@
 # email套件(Package)下的mime(Multipurpose Internet Mail Extensions)子套件，為網際網路媒體類型
 # 定義了在網路上傳輸電子郵件的格式標準，在其底下的multipart子套件中
 # MIMEMultipart類別能夠讓電子郵件的格式包含純文字或HTML的內容。
-import configparser
+from threading import Thread
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 from time import sleep
 
-from flask import Flask, request, render_template
+from flask import Flask, request, config, render_template, current_app
+from flask_mail import Message
 from flask_mysql_connector import MySQL
 import pymysql
 from flask_login import LoginManager, UserMixin, confirm_login, login_user, logout_user, login_required, current_user
 
 app = Flask(__name__)
 mysql = MySQL(app)
-app.secret_key = configparser.get('flask', '123456')
+app.secret_key = config.get('flask', '123456')
 
 # 連接mysql
 def get_conn():
