@@ -1,47 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>input - 用戶create</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>input - 註冊</title>
+  </head>
+
+  <body>
     <div>
-        <h1>註冊</h1>
-        <form action="/do_register" method="POST">
-            <table border="1">
-                <tr>
-                    <th>學號</th>
-                    <td><input type="text" name="A_StuID"></td>
-                </tr>
-                <tr>
-                    <th>帳號</th>
-                    <td><input type="text" name="A_Account"></td>
-                </tr>
-                <tr>
-                    <th>密碼</th>
-                    <td><input type="password" name="A_Password"></td>
-                </tr>
-                <tr>
-                    <th>實名認證</th>
-                    <td>
-                        <input type="radio" name="A_RealNameVerify" value=0> No
-                        <input type="radio" name="A_RealNameVerify" value=1> Yes
-                    </td>
-                </tr>
-                <tr>
-                    <th>生日</th>
-                    <td><input type="date" name="A_BirthDate"></td>
-                </tr>
-                <tr>
-                    <th>科系</th>
-                    <td><input type="text" name="A_Major"></td>
-                </tr>
-                <tr>
-                    <th>提交</th>
-                    <td><input type="submit" name="submit" value="提交"> </td>
-                </tr>
-            </table>
-        </form>
+      <h1>註冊</h1>
+      <form action="register.py" method="POST">
+        <table border="1">
+          <tr>
+            <th>(*必填欄位)學號</th>
+            <td><input type="text" required="required" name="A_StuID" /></td>
+          </tr>
+          <tr>
+            <th>(*必填欄位)常用信箱</th>
+            <td><input type="email" name="A_Account" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/></td>
+          </tr>
+          <tr>
+            <th>(*必填欄位)密碼(含英文與數字，至少6位字元)</th>
+            <td><input type="password" name="A_Password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required="required" oninput="setCustomValidity('');" oninvalid="setCustomValidity('請輸入正確的密碼格式:含英數至少六個字元');"/></td>
+          </tr>
+          <tr>
+            <th>(*必填欄位)確認密碼</th>
+            <td><input type="password" name="ConfirmPassword" required="required" oninput="setCustomValidity('');" 
+                onchange="if(document.getElementById('inputPassword').value != document.getElementById('ConfirmPassword').value)
+                {setCustomValidity('密碼不相符，請重新輸入!');}"/></td>
+          </tr>
+          <tr>
+            <th>生日</th>
+            <td><input type="date" name="A_BirthDate" /></td>
+          </tr>
+          <tr>
+            <th>科系</th>
+            <td>
+              <select name="A_Major">
+                <option value="">請選擇你的科系</option>
+
+                <optgroup label="文學院">
+                  <option value="中國文學系">中國文學系</option>
+                  <option value="歷史學系">歷史學系</option>
+                  <option value="哲學系">哲學系</option>
+                </optgroup>
+                <optgroup label="藝術學院">
+                  <option value="音樂學系">音樂學系</option>
+                  <option value="應用美術學系">應用美術學系</option>
+                  <option value="景觀設計學系">景觀設計學系</option>
+                </optgroup>
+                <optgroup label="傳播學院">
+                  <option value="影像傳播學系">影像傳播學系</option>
+                  <option value="新聞傳播學系">新聞傳播學系</option>
+                  <option value="廣告傳播學系">廣告傳播學系</option>
+                </optgroup>
+                <optgroup label="教育學院">
+                  <option value="體育學系">體育學系</option>
+                  <option value="圖書資訊學系">圖書資訊學系</option>
+                </optgroup>
+                <optgroup label="醫學院">
+                  <option value="醫學系">醫學系</option>
+                  <option value="護理學系">護理學系</option>
+                  <option value="公共衛生學系">公共衛生學系</option>
+                  <option value="臨床心理學系">臨床心理學系</option>
+                  <option value="職能治療學系">職能治療學系</option>
+                  <option value="呼吸治療學系">呼吸治療學系</option>
+                </optgroup>
+
+                <optgroup label="理工學院">
+                  <option value="數學系">數學系</option>
+                  <option value="物理學系">物理學系</option>
+                  <option value="化學系">化學系</option>
+                  <option value="生命科學系">生命科學系</option>
+                  <option value="資訊工程學系">資訊工程學系</option>
+                  <option value="電機工程學系">電機工程學系</option>
+                </optgroup>
+                <optgroup label="外國語文學院">
+                  <option value="英國語文學系">英國語文學系</option>
+                  <option value="德語語文學系">德語語文學系</option>
+                  <option value="法國語文學系">法國語文學系</option>
+                  <option value="西班牙語文學系">西班牙語文學系</option>
+                  <option value="日本語文學系">日本語文學系</option>
+                  <option value="義大利語文學系">義大利語文學系</option>
+                </optgroup>
+                <optgroup label="民生學院">
+                  <option value="兒童與家庭學系">兒童與家庭學系</option>
+                  <option value="餐旅管理學系">餐旅管理學系</option>
+                  <option value="食品科學系">食品科學系</option>
+                  <option value="營養科學系">營養科學系</option>
+                </optgroup>
+                <optgroup label="法律學院">
+                  <option value="法律學系">法律學系</option>
+                  <option value="財經法律學系">財經法律學系</option>
+                  <option value="學士後法律學系">學士後法律學系</option>
+                </optgroup>
+                <optgroup label="社會科學院">
+                  <option value="社會學系、所">社會學系、所</option>
+                  <option value="社會工作學系、所">社會工作學系、所</option>
+                  <option value="經濟學系、所">經濟學系、所</option>
+                  <option value="宗教學系、所">宗教學系、所</option>
+                  <option value="心理學系、所">心理學系、所</option>
+                </optgroup>
+                <optgroup label="管理學院">
+                  <option value="企業管理學系">企業管理學系</option>
+                  <option value="會計學系">會計學系</option>
+                  <option value="統計資訊學系">統計資訊學系</option>
+                  <option value="金融與國際企業學系">金融與國際企業學系</option>
+                  <option value="資訊管理學系">資訊管理學系</option>
+                </optgroup>
+                <optgroup label="織品服裝學院">
+                  <option value="織品服裝學系">織品服裝學系</option>
+                </optgroup>
+                <optgroup label="進修部">
+                  <option value="中國文學系">中國文學系</option>
+                  <option value="歷史學系">歷史學系</option>
+                  <option value="哲學系">哲學系</option>
+                  <option value="應用美術學系">應用美術學系</option>
+                  <option value="圖書資訊學系">圖書資訊學系</option>
+                  <option value="英國語文學系">英國語文學系</option>
+                  <option value="日本語文學系">日本語文學系</option>
+                  <option value="餐旅管理學系">餐旅管理學系</option>
+                  <option value="法律學系">法律學系</option>
+                  <option value="經濟學系">經濟學系</option>
+                  <option value="宗教學系">宗教學系</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>(*必填欄位)實名認證</th>
+            <td>
+              <input type="radio" required="required" name="A_RealNameVerify" value="0" /> No
+              <input type="radio" required="required" name="A_RealNameVerify" value="1" /> Yes
+            </td>
+          </tr>
+          <tr>
+            <th>提交</th>
+            <td><input type="submit" name="submit" value="提交" /></td>
+          </tr>
+        </table>
+      </form>
     </div>
-</body>
+  </body>
 </html>

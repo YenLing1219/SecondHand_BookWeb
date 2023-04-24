@@ -1,7 +1,13 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_mysql_connector import MySQL
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 import pymysql
 
+
 app = Flask(__name__)
+app.secret_key = '123456' #flask做login功能用途的key，可以隨便定義
+mysql = MySQL(app) #mysql引入的參數
+
 
 
 #最初的模板
@@ -16,8 +22,8 @@ def get_conn():
         host = '127.0.0.1', 
         user = 'root', 
         password = '12345678', 
-#        database = 'secondhand_bookweb', 
-        database = 'bookweb_0411',  # 資料庫名稱
+        database = 'secondhand_bookweb', # 資料庫名稱(我改回這個名稱了，我用日期標記之後自己感覺不太好= =)  
+        # database = 'bookweb_0411',  
         charset = 'utf8'
     )
 
@@ -40,7 +46,19 @@ def show_register():
 @app.route('/do_register', methods=['POST'])
 def do_register():
     print(request.form)
+#做了檢驗學號是否重複的小功能，但我不確定先print form之後不管它跳回register那邊會不會出事
+#我電腦不知道為什麼跑不出來檔案，幫測...Orz
     A_StuID = request.form.get("A_StuID")
+
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM your_table_name WHERE A_StuID=%s", (A_StuID,))
+    result = cursor.fetchone()
+    
+    if result[0] > 0:
+        flash('學號已存在，請重新輸入。', 'error')
+        return redirect(url_for('show_register.html'))
+    
     A_Account = request.form.get("A_Account")
     A_Password = request.form.get("A_Password")
     A_RealNameVerify = request.form.get("A_RealNameVerify")
