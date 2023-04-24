@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人資料</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      border: 3px solid black;
+      background-color: white;
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    hr {
+      border: 1px solid black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function toggleEditMode() {
+      const inputs = document.querySelectorAll("input");
+      const editBtn = document.getElementById("editBtn");
+      let enableEdit = false;
+
+      if (editBtn.innerText === "編輯") {
+        enableEdit = true;
+        editBtn.innerText = "鎖定";
+      } else {
+        enableEdit = false;
+        editBtn.innerText = "編輯";
+      }
+
+      inputs.forEach(input => {
+        input.disabled = !enableEdit;
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>個人資料</h1>
+    <hr>
+    <form>
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" disabled>
+      <label for="email">電子郵件：</label>
+      <input type="email" id="email" name="email" disabled>
+      <label for="studentId">學號：</label>
+      <input type="text" id="studentId" name="studentId" disabled>
+      <label for="subject">科系：</label>
+      <input type="tel" id="subject" name="subject" disabled>
+      <label for="dob">生日：</label>
+      <input type="date" id="dob" name="dob" disabled>
+      <label for="password">密碼：</label>
+      <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{1,15}" disabled>
+    </form>
+    <button id="editBtn" onclick="toggleEditMode()">編輯</button>
+  </div>
+</body>
+</html>
