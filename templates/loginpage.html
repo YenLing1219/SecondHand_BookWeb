@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登入</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid silver;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .login-title {
+    color: blue;
+    margin-bottom: 15px;
+  }
+  .input-field {
+    margin-bottom: 10px;
+  }
+  .login-button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <form action="login.py" method="post">
+<div class="login-container">
+  <h1 class="login-title">登入</h1>
+   
+  <label class="input-field">
+    學號:
+    <input type="text" name="A_StuID" id="A_StuID" />
+  </label>
+  <label class="input-field">
+    密碼:
+    <input type="password" name="A_Password" id="A_Password"/>
+  </label>
+  <input type="submit" value="登入">
+  還沒有帳號嗎?
+  <button class="button">註冊</button>
+</form>
+</div>
+</body>
+</html>
