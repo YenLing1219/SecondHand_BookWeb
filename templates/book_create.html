@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input - 書籍上架</title>
+</head>
+<body>
+    <div>
+        <h1>上架</h1>
+        <form action="/do_book_create" method="POST">
+                上架編號（必填）<input type="number" name="B_BookID" required>
+
+            <h3>書籍基本資料</h3>
+            <table border="1">
+                <tr>
+                    <th>書名（必填）</th>
+                    <td><input type="text" name="B_BookName" required></td>
+                </tr>
+                <tr>
+                    <th>版本（必填）</th>
+                    <td><input type="text" name="B_BookVersion" required></td>
+                </tr>
+                <tr>
+                    <th>ISBN碼（必填）</th>
+                    <td><input type="text" name="B_ISBN" required></td>
+                </tr>
+                <tr>
+                    <th>作者（必填）</th>
+                    <td><input type="text" name="B_Author" required></td>
+                </tr>
+            </table>
+
+            <h3>二手狀態調查</h3>
+            <table border="1">
+                <tr>
+                    <th>全新未使用部分（必填）</th>
+                    <td>
+                        <select name="B_BookStatus" required>
+                            <option value=1>全使用過</option>
+                            <option value=2>25%未翻閱</option>
+                            <option value=3>50%未翻閱</option>
+                            <option value=4>75%未翻閱</option>
+                            <option value=5>90%以上未翻閱</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>使用痕跡、筆跡、汙損敘述（必填）</th>
+                    <td>
+                        <textarea name="B_UsedStatus" cols="30" rows="10" required>~說明文字~
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>補充資訊</th>
+                    <td>
+                        <textarea name="B_Extra_Info" cols="30" rows="15">~說明文字~
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>書況照片（必填）</th>
+                    <td><input type="text" name="B_BookPic" required></td>
+                </tr>
+            </table>
+
+            <h3>相關分類及標籤</h3>
+            <table border="1">
+                <tr>
+                    <th>科系（必填）</th>
+                    <td><input type="text" name="B_BookMajor" required></td>
+                </tr>
+                <tr>
+                    <th>課程名稱（必填）</th>
+                    <td><input type="text" name="B_LessonName" required></td>
+                </tr>
+                <tr>
+                    <th>授課老師</th>
+                    <td><input type="text" name="B_UsedByTeacher"></td>
+                </tr>
+            </table>
+
+            <h3>定價</h3>
+            <table border="1">
+                <tr>
+                    <th>願意售價</th>
+                    <td><input type="number" name="B_Price"></td>
+                </tr>
+            </table>
+
+            <br><br>
+            <input type="submit" name="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>
