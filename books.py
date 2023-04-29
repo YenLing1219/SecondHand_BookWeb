@@ -7,7 +7,7 @@ app = Flask(__name__)
 #最初的模板
 @app.route('/')
 def hello_world():
-    return 'Hello World! 上架: http://localhost:5000/book_create'
+    return 'Hello World! 上架: http://localhost:5000/book_create    修改書籍資訊: http://localhost:5000//book_update/(+B_BookID)'
 
 
 # 連接mysql
@@ -16,8 +16,7 @@ def get_conn():
         host = '127.0.0.1', 
         user = 'root', 
         password = '12345678', 
-#        database = 'secondhand_bookweb', 
-        database = 'bookweb_0411',  # 資料庫名稱
+        database = 'secondhand_bookweb', 
         charset = 'utf8'
     )
 
@@ -31,16 +30,15 @@ def insert_or_update_data(sql):
         finally:
             conn.close()
 
-# [上架] 顯示上架書籍的網站
+# [上架] 顯示網站
 @app.route('/book_create')
-def show_register():
+def show_book_create():
     return render_template("book_create.html")
 
 # [上架] 接收表單提交的數據
 @app.route('/do_book_create', methods=['POST'])
-def do_register():
+def book_create():
     print(request.form)
-    B_BookID = request.form.get("B_BookID") #有用A_I的話可以刪掉
     B_BookName = request.form.get("B_BookName")
     B_ISBN = request.form.get("B_ISBN")
     B_Author = request.form.get("B_Author")
@@ -54,13 +52,54 @@ def do_register():
     B_Extra_Info = request.form.get("B_Extra_Info")
     B_Price = request.form.get("B_Price")
     sql = f'''
-    insert into book_information(B_BookID, B_BookName, B_ISBN, B_Author, B_BookVersion, B_BookMajor, B_LessonName, B_BookPic, B_BookStatus, B_UsedStatus, B_UsedByTeacher, B_Extra_Info, B_Price)
-    values({B_BookID},  '{B_BookName}', '{B_ISBN}', '{B_Author}', '{B_BookVersion}', '{B_BookMajor}', '{B_LessonName}', '{B_BookPic}', {B_BookStatus}, '{B_UsedStatus}', '{B_UsedByTeacher}', '{B_Extra_Info}', {B_Price})
+    insert into book_information(B_BookName, B_ISBN, B_Author, B_BookVersion, B_BookMajor, B_LessonName, B_BookPic, B_BookStatus, B_UsedStatus, B_UsedByTeacher, B_Extra_Info, B_Price)
+    values('{B_BookName}', '{B_ISBN}', '{B_Author}', '{B_BookVersion}', '{B_BookMajor}', '{B_LessonName}', '{B_BookPic}', {B_BookStatus}, '{B_UsedStatus}', '{B_UsedByTeacher}', '{B_Extra_Info}', {B_Price})
     '''
     print(sql)
     insert_or_update_data(sql)
     return "Book added successfully!"
 
+# [修改書籍資訊] 顯示網站
+@app.route('/book_update/<B_BookID>')
+def show_book_update(B_BookID):
+    sql = "select * from book_information where B_BookID=" + B_BookID
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+        book = datas[0]
+    finally:
+        conn.close()
+    return render_template("book_update.html", book = book)
+
+# [修改書籍資訊] 接收表單提交的數據
+@app.route('/do_book_update', methods=['POST']) #修改接值方式 將尾截掉.edit
+def book_update():
+    print(request.form)
+    B_BookID = request.form.get("B_BookID") #擺在下方接值.edit
+    B_BookName = request.form.get("B_BookName")
+    B_ISBN = request.form.get("B_ISBN")
+    B_Author = request.form.get("B_Author")
+    B_BookVersion = request.form.get("B_BookVersion")
+    B_BookMajor = request.form.get("B_BookMajor")
+    B_LessonName = request.form.get("B_LessonName")
+    B_BookPic = request.form.get("B_BookPic") # 上傳圖片的功能還沒出來
+    B_BookStatus = request.form.get("B_BookStatus")
+    B_UsedStatus = request.form.get("B_UsedStatus")
+    B_UsedByTeacher = request.form.get("B_UsedByTeacher")
+    B_Extra_Info = request.form.get("B_Extra_Info")
+    B_Price = request.form.get("B_Price")
+    sql = f'''
+    update book_information set B_BookName='{B_BookName}', B_ISBN='{B_ISBN}', B_Author='{B_Author}', B_BookVersion='{B_BookVersion}', 
+    B_BookMajor='{B_BookMajor}', B_LessonName='{B_LessonName}', B_BookPic='{B_BookPic}', B_BookStatus={B_BookStatus}, 
+    B_UsedStatus='{B_UsedStatus}', B_UsedByTeacher='{B_UsedByTeacher}', B_Extra_Info='{B_Extra_Info}', B_Price={B_Price}
+    where B_BookID={B_BookID}
+    '''
+    print(sql)
+    insert_or_update_data(sql)
+    return "Information updated successfully!"
+
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
-    app.run() 
+    app.run(debug=True) 
