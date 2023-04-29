@@ -1,24 +1,21 @@
 body {
     font-family: Arial, sans-serif;
 }
-
 .search-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-
 .search-button {
     margin-left: 5px;
 }
-
 .grid-container {
     display: grid;
-       grid-template-columns: repeat(4, 1fr); /* 4x4 的呈現方式，每行 4 個格子 */
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 20px;
     width: 100%;
-    max-width: 880px; /* 4 個 200px 的圖片加上 3 個 10px 的間距 */
+    max-width: 880px;
     margin: 0 auto;
 }
 
@@ -26,6 +23,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    cursor: pointer;
 }
 
 .image-container {
@@ -41,4 +41,15 @@ body {
 .text-container p {
     text-align: center;
     margin: 0;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.pagination-container button {
+    margin: 0 10px;
 }
