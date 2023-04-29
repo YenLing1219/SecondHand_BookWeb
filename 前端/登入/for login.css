@@ -1,0 +1,26 @@
+/* 容器樣式，用於包裹整個表單 */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 10px solid #ADD8E6; /* 淺藍色邊框 */
+    box-sizing: border-box;
+  }
+  
+  /* 輸入框標籤樣式 */
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  /* 提交按鈕樣式 */
+  .submit-button {
+    width: 100%;
+  }
+  
