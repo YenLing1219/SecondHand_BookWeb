@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>input - 書籍上架</title>
+    <title>書籍上架</title>
     <link rel="stylesheet" href="book_create_update_styles.css">
 </head>
 <body>
@@ -13,19 +13,19 @@
             <h3>書籍基本資料</h3>
             <table border="1">
                 <tr>
-                    <th>書名（必填）</th>
+                    <th>書名*</th>
                     <td><input type="text" name="B_BookName" required></td>
                 </tr>
                 <tr>
-                    <th>版本（必填）</th>
+                    <th>版本*</th>
                     <td><input type="text" name="B_BookVersion" required></td>
                 </tr>
                 <tr>
-                    <th>ISBN碼（必填）</th>
+                    <th>ISBN碼*</th>
                     <td><input type="text" name="B_ISBN" required></td>
                 </tr>
                 <tr>
-                    <th>作者（必填）</th>
+                    <th>作者*</th>
                     <td><input type="text" name="B_Author" required></td>
                 </tr>
             </table>
@@ -33,7 +33,7 @@
             <h3>二手狀態調查</h3>
             <table border="1">
                 <tr>
-                    <th>全新未使用部分（必填）</th>
+                    <th>全新未使用部分*</th>
                     <td>
                         <select name="B_BookStatus" required>
                             <option value=1>全使用過</option>
@@ -45,7 +45,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>使用痕跡、筆跡、汙損敘述（必填）</th>
+                    <th>使用痕跡、筆跡、汙損敘述*</th>
                     <td>
                         <textarea name="B_UsedStatus" cols="30" rows="10" required>~說明文字~
                         </textarea>
@@ -59,7 +59,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>書況照片（必填）</th>
+                    <th>書況照片*</th>
                     <td>
                       <input type="file" name="B_BookPic" accept="image/*" required>
                       <div class="button-container">
@@ -73,11 +73,11 @@
             <h3>相關分類及標籤</h3>
             <table border="1">
                 <tr>
-                    <th>科系（必填）</th>
+                    <th>科系*</th>
                     <td><input type="text" name="B_BookMajor" required></td>
                 </tr>
                 <tr>
-                    <th>課程名稱（必填）</th>
+                    <th>課程名稱*</th>
                     <td><input type="text" name="B_LessonName" required></td>
                 </tr>
                 <tr>
