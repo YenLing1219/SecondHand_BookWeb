@@ -7,7 +7,7 @@ app = Flask(__name__)
 #最初的模板
 @app.route('/')
 def hello_world():
-    return 'Hello World! 上架: http://localhost:5000/book_create    修改書籍資訊: http://localhost:5000//book_update/(+B_BookID)'
+    return 'Hello World! 上架: /book_create    修改書籍資訊: /book_update/(+B_BookID)    書籍列表: /book_display    搜尋書籍: /book_search/(+search_str)'
 
 
 # 連接mysql
@@ -99,6 +99,51 @@ def book_update():
     print(sql)
     insert_or_update_data(sql)
     return "Information updated successfully!"
+
+# 以下為新內容
+
+# [書籍列表] 顯示網站
+@app.route('/book_display')
+def show_book_display():
+    sql = "select B_BookID, B_BookName, B_BookPic, B_Price from book_information"
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+    finally:
+        conn.close()
+    return render_template("book_display.html", datas = datas)
+
+# [依"標籤"尋找書籍] 顯示網站
+@app.route('/book_search/<search_str>')
+def show_book_search(search_str):
+    sql = "select B_BookID, B_BookName, B_BookPic, B_Price from book_information where B_BookName like '%" + search_str + "%'"
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+    finally:
+        conn.close()
+    return render_template("book_search.html", datas = datas)
+
+# [依"標籤"尋找書籍] 接收搜尋的數據
+# unfinished QQ
+
+# [查看書籍詳細資訊] 顯示網站
+@app.route('/book_detail/<B_BookID>')
+def show_book_detail(B_BookID):
+    sql = "select * from book_information where B_BookID=" + B_BookID
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+        book = datas[0]
+    finally:
+        conn.close()
+    return render_template("book_detail.html", book = book)
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
