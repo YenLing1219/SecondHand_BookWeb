@@ -25,13 +25,9 @@ def hello_world():
 
 # 首頁
 @app.route('/')
-<<<<<<< HEAD
 def home():
     return render_template("index.html")
-=======
-def index():
-    return render_template("home.html")
->>>>>>> d0b466b4da5a31a1309c0ba538dd756da25b8d69
+
 
 # 連接mysql
 def get_conn():
@@ -90,7 +86,7 @@ def book_create():
     print(sql)
     insert_or_update_data(sql)
     return "Book added successfully!"
-#    return redirect(url_for('index'))
+#    return redirect(url_for('home'))
 
 
 # [修改書籍資訊] 顯示網站

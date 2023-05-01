@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-        <form action="/do_book_search" method="GET">
+        <form action="/do_book_search" method="GET" enctype="multipart/form-data">
             <div class="search-container">
                 <input type="text" name="search_str" placeholder="{{ search_str }}" name="search">
                 <button class="search-button" name="searchButton" type="submit">搜索</button>
@@ -20,7 +20,7 @@
             <div class="grid-item">
                 <div class="image-container">
                     <a href="/book_detail/{{ book['B_BookID'] }}" class="content">
-                        <img src="{{ book['B_BookPic'] }}" alt="圖片">
+                        <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片">
                     </a>
                 </div>
                 <div class="text-container">
