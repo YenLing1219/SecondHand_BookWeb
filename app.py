@@ -39,9 +39,12 @@ def hello_world():
 
 # 首頁
 @app.route('/')
-def home():
-    return render_template("index.html")
-
+def index():
+    try:
+        return render_template("index.html")
+    except Exception as e:
+        logging.exception("Error occurred during index")
+        return "An error occurred during index. Please check the error log for more information.", 500
 # 顯示[用戶資訊]頁面
 @app.route('/user_information')
 def show_user_information():
