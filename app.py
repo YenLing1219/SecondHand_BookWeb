@@ -11,10 +11,11 @@ def hello_world():
     return 'Hello World! 上架: /book_create    修改書籍資訊: /book_update/(+B_BookID)    書籍列表: /book_display    搜尋書籍: /book_search/(+search_str)'
 """
 
+
 # 首頁
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 # 連接mysql
 def get_conn():
@@ -35,6 +36,8 @@ def insert_or_update_data(sql):
             conn.commit()
         finally:
             conn.close()
+
+
 
 # [上架] 顯示網站
 @app.route('/book_create')
