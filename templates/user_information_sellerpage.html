@@ -14,7 +14,9 @@
 
         {% for book in datas %}
         <div class="item">
-            <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+            <div class="image-change">
+                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+            </div>
             <p>書名：{{ book['B_BookName'] }}</p>
             <p class="status">狀態：已上架</p>
             <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
