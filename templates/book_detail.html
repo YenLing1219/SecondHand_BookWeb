@@ -10,7 +10,7 @@
   <div class="container">
     <div class="left">
       <a href="#">
-        <img class="image-link" src="https://imgur.dcard.tw/5uJ9HqAh.jpg" alt="圖片連結">
+        <img class="image-link" src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片連結">
       </a>
       <button class="custom-button">
         <img src="button-image.jpg" alt="按鈕圖片">
@@ -21,7 +21,26 @@
       <p>$價格: <!--這邊替換位置-->{{ book['B_Price'] }}</p>
       <div class="border-box">
         <!--css那邊有設置縮放-->
-        <p>書本使用狀態: <!--這邊替換位置-->{{ book['B_BookStatus'] }}</p>
+
+        <p id="book-status"><!--這邊替換位置--></p>
+        <script>
+          var n = {{ book['B_BookStatus'] }};
+          var bookStatusElement = document.getElementById("book-status");
+          if (n == 1) {
+            bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
+          } else if (n == 2) {
+            bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
+          } else if (n == 3) {
+            bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
+          } else if (n == 4) {
+            bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
+          } else if (n == 5) {
+            bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
+          } else {
+            bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
+          }
+        </script>
+
         <p>補充描述: <!--這邊替換位置-->{{ book['B_Extra_Info'] }}</p>
       </div>
     </div>
