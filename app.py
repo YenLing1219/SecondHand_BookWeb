@@ -28,6 +28,24 @@ def hello_world():
 def home():
     return render_template("index.html")
 
+# 顯示[用戶資訊]頁面
+@app.route('/user_information')
+def show_user_information():
+    return render_template("user_information.html")
+
+# 顯示[賣家介面]
+@app.route('/user_information_sellerpage')
+def show_user_information_sellerpage():
+    sql = "select B_BookID, B_BookName, B_BookPic from book_information"
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+    finally:
+        conn.close()
+    print(sql)
+    return render_template("user_information_sellerpage.html", datas = datas)
 
 # 連接mysql
 def get_conn():
@@ -73,7 +91,7 @@ def book_create():
     B_BookVersion = request.form.get("B_BookVersion")
     B_BookMajor = request.form.get("B_BookMajor")
     B_LessonName = request.form.get("B_LessonName")
-    B_BookPic = request.form.get("B_BookPic") # 上傳圖片的功能還沒出來
+    B_BookPic = file.filename
     B_BookStatus = request.form.get("B_BookStatus")
     B_UsedStatus = request.form.get("B_UsedStatus")
     B_UsedByTeacher = request.form.get("B_UsedByTeacher")
@@ -101,6 +119,7 @@ def show_book_update(B_BookID):
         book = datas[0]
     finally:
         conn.close()
+    print(sql)
     return render_template("book_update.html", book = book)
 
 # [修改書籍資訊] 接收表單提交的數據
@@ -120,7 +139,7 @@ def book_update():
     B_BookVersion = request.form.get("B_BookVersion")
     B_BookMajor = request.form.get("B_BookMajor")
     B_LessonName = request.form.get("B_LessonName")
-    B_BookPic = request.form.get("B_BookPic") # 上傳圖片的功能還沒出來
+    B_BookPic = file.filename
     B_BookStatus = request.form.get("B_BookStatus")
     B_UsedStatus = request.form.get("B_UsedStatus")
     B_UsedByTeacher = request.form.get("B_UsedByTeacher")
@@ -147,6 +166,7 @@ def show_book_display():
         datas = cursor.fetchall()
     finally:
         conn.close()
+    print(sql)
     return render_template("book_display.html", datas = datas)
 
 # [依"標籤"尋找書籍] 接收搜尋的數據
@@ -171,7 +191,7 @@ def show_book_search(search_str):
         print(datas)
     finally:
         conn.close()
-#    print(sql)
+    print(sql)
     return render_template("book_search.html", datas = datas, search_str = search_str)
 
 
@@ -187,6 +207,7 @@ def show_book_detail(B_BookID):
         book = datas[0]
     finally:
         conn.close()
+    print(sql)
     return render_template("book_detail.html", book = book)
 
 # 執行
