@@ -42,3 +42,18 @@ body {
     text-align: center;
     margin: 0;
 }
+.picture {
+    width: 100%; /* 按需要調整寬度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 圖片 */
+.picture img {
+    width: 100%; /* 按需要調整寬度 */
+    max-width: 280px; /* 設置最大寬度 */
+    max-height: 280px; /* 設置最大高度 */
+    height: auto; /* 維持寬高比 */
+    object-fit: contain; /* 確保圖片不失真 */
+}
