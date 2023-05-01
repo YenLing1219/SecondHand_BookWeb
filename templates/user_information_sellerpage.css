@@ -79,3 +79,14 @@
 .remove {
     background-color: #f44336;
 }
+.image-chage {
+    width: 100px;
+    height: 300px;
+    overflow: hidden;
+  }
+  /*這是設置圖片大小上限的代碼
+  img {
+  max-width: 500px;
+  max-height: 300px;
+}
+*/
