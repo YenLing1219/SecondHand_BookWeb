@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜尋結果</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+        <form action="/do_book_search" method="GET">
+            <div class="search-container">
+                <input type="text" name="search_str" placeholder="{{ search_str }}" name="search">
+                <button class="search-button" name="searchButton" type="submit">搜索</button>
+            </div>
+        </form>
+        <hr>
+        <div class="grid-container">
+            <!--從這裡-->
+            {% for book in datas %}
+            <div class="grid-item">
+                <div class="image-container">
+                    <a href="/book_detail/{{ book['B_BookID'] }}" class="content">
+                        <img src="{{ book['B_BookPic'] }}" alt="圖片">
+                    </a>
+                </div>
+                <div class="text-container">
+                    <p>書名：{{ book['B_BookName'] }}</p>
+                    <p>售價：{{ book['B_Price'] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!--到這裡是一個格子 一頁顯示最多16張 4*4-->
+        </div>
+
+</body>
+</html>
