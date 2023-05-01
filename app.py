@@ -28,6 +28,15 @@ def hello_world():
 def home():
     return render_template("index.html")
 
+# 顯示[用戶資訊]頁面
+@app.route('/user_information')
+def show_user_information():
+    return render_template("user_information.html")
+
+# 顯示[用戶資訊]頁面
+@app.route('/user_information_sellerpage')
+def show_user_information_sellerpage():
+    return render_template("user_information_sellerpage.html")
 
 # 連接mysql
 def get_conn():
