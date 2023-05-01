@@ -8,7 +8,7 @@
 <body>
     <div>
         <h1>上架</h1>
-        <form action="/do_book_create" method="POST">
+        <form action="/do_book_create" method="POST" enctype="multipart/form-data">
 
             <h3>書籍基本資料</h3>
             <table border="1">
@@ -61,11 +61,11 @@
                 <tr>
                     <th>書況照片*</th>
                     <td>
-                      <input type="file" name="B_BookPic" accept="image/*" required>
-                      <div class="button-container">
-                        <input type="submit" value="上傳">
-                        <input type="reset" value="重新上傳">
-                      </div>
+                        <input type="file" name="B_BookPic" accept="image/*" required>
+                        <div class="button-container">
+                            <input type="submit" value="上傳">
+                            <input type="reset" value="重新上傳">
+                        </div>
                     </td>
                   </tr>
             </table>
