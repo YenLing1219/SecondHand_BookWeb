@@ -1,0 +1,27 @@
+/* 訂單容器 */
+.order-container {
+    width: 100%;
+    max-width: 600px; /* 按需要調整最大寬度 */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 標題 */
+h1 {
+    text-align: center;
+    font-size: 24px; /* 按需要調整字體大小 */
+    margin-bottom: 20px;
+}
+
+/* 段落樣式 */
+p {
+    font-size: 16px; /* 按需要調整字體大小 */
+    margin-bottom: 10px;
+}
+
+/* 日期 */
+.date {
+    font-weight: bold; /* 粗體 */
+}

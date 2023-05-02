@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改書籍資料</title>
+    <link rel="stylesheet" href="book_create_update_styles.css">
+</head>
+<body>
+    <div>
+        <h1>修改書籍</h1>
+        <form action="/do_book_update" method="POST" enctype="multipart/form-data">
+                上架編號<input type="number" name = "B_BookID" value="{{ book[ 'B_BookID' ]}}" readonly>
+
+            <h3>書籍基本資料</h3>
+            <table border="1">
+                <tr>
+                    <th>書名*</th>
+                    <td><input type="text" name="B_BookName" value="{{ book[ 'B_BookName' ]}}" required></td>
+                </tr>
+                <tr>
+                    <th>版本*</th>
+                    <td><input type="text" name="B_BookVersion" value="{{ book[ 'B_BookVersion' ]}}" required></td>
+                </tr>
+                <tr>
+                    <th>ISBN碼*</th>
+                    <td><input type="text" name="B_ISBN" value="{{ book[ 'B_ISBN' ]}}" required></td>
+                </tr>
+                <tr>
+                    <th>作者*</th>
+                    <td><input type="text" name="B_Author" value="{{ book[ 'B_Author' ]}}" required></td>
+                </tr>
+            </table>
+
+            <h3>二手狀態調查</h3>
+            <table border="1">
+                <tr>
+                    <th>全新未使用部分*</th>
+                    <td>
+                        <input type="number" value="{{ book[ 'B_BookStatus' ]}}" readonly><br>
+                        更新:
+                        <select name="B_BookStatus"  required>
+                            <option value=1>全使用過</option>
+                            <option value=2>25%未翻閱</option>
+                            <option value=3>50%未翻閱</option>
+                            <option value=4>75%未翻閱</option>
+                            <option value=5>90%以上未翻閱</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>使用痕跡、筆跡、汙損敘述*</th>
+                    <td>
+                        <textarea name="B_UsedStatus" cols="30" rows="10" required>{{ book[ 'B_UsedStatus' ]}}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>補充資訊</th>
+                    <td>
+                        <textarea name="B_Extra_Info" cols="30" rows="15">{{ book[ 'B_Extra_Info' ]}}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>書況照片*</th>
+                    <td>
+                        <input type="text" value="{{ book[ 'B_BookPic' ]}}" readonly><br>
+                        <input type="file" name="B_BookPic" accept="image/*" required>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>相關分類及標籤</h3>
+            <table border="1">
+                <tr>
+                    <th>科系*</th>
+                    <td><input type="text" name="B_BookMajor" value="{{ book[ 'B_BookMajor' ]}}" required></td>
+                </tr>
+                <tr>
+                    <th>課程名稱*</th>
+                    <td><input type="text" name="B_LessonName" value="{{ book[ 'B_LessonName' ]}}" required></td>
+                </tr>
+                <tr>
+                    <th>授課老師</th>
+                    <td><input type="text" name="B_UsedByTeacher" value="{{ book[ 'B_UsedByTeacher' ]}}"></td>
+                </tr>
+            </table>
+
+            <h3>定價</h3>
+            <table border="1">
+                <tr>
+                    <th>願意售價</th>
+                    <td><input type="number" name="B_Price" value="{{ book[ 'B_Price' ]}}"></td>
+                </tr>
+            </table>
+
+                        
+            <br><br>
+            <input type="submit" name="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>

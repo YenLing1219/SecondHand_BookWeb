@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輔仁大學二手課本交易平台</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+    {% block title %} 首頁 {% endblock %}
+    {% block content %}
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3"><h1>
+        首頁
+    {% if session['A_StuID'] %}
+    Welcome {{ session['A_StuID'] }}
+    <!--主頁面的內容寫這邊-->
+    {% else %}
+    尚未登入
+    <!--主頁面的內容寫這邊-->
+    {% endif %}</h1>
+    </div>
+    </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
+

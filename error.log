@@ -1,0 +1,375 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:18:40] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:18:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:18:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:19:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:19:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:21:57] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:35:17] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:37:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:37:09] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:37:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:37:53] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:02] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:03] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:03] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:03] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:04] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:04] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:05] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:06] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:06] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:07] "GET /static/images/magnifier.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:07] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:07] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:09] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:09] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:09] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:38:10] "GET /static/images/magnifier.png HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:46:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:46:35] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:46:35] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:01] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:01] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:06] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:06] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:32] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:47:32] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:48:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:48:37] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:48:37] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:49:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:49:06] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 05:49:06] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:03:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:03:54] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:03:54] "[33mGET /static/images/register.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:03:54] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:03:54] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:05:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:05:06] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:05:07] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:06:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:06:31] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:06:31] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:06:31] "[33mGET /static/images/register.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:06:31] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:45] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:45] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:45] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:45] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:54] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:54] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:54] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:54] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:07:54] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:01] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:02] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:02] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:02] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:02] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:02] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:44] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:44] "[33mGET /user_information_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:48] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:52] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:52] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:52] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:52] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 06:08:52] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:03] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:03] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:03] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:03] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:03] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:06] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:06] "[33mGET /user_information_styles.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /user_information_sellerpage [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 616, in connect
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 836, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 無法連線，因為目標電腦拒絕連線。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 58, in show_user_information_sellerpage
+    conn = get_conn()
+           ^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 141, in get_conn
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 352, in __init__
+    self.connect()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 668, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] 無法連線，因為目標電腦拒絕連線。)")
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:37:12] "[35m[1mGET /user_information_sellerpage HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:40:14] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:40:15] "[33mGET /user_information_styles.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /user_information_sellerpage [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 616, in connect
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 836, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 無法連線，因為目標電腦拒絕連線。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 59, in show_user_information_sellerpage
+    conn = get_conn()
+           ^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 145, in get_conn
+    return pymysql.connect(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 352, in __init__
+    self.connect()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 668, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] 無法連線，因為目標電腦拒絕連線。)")
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:40:19] "[35m[1mGET /user_information_sellerpage HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /user_information_sellerpage_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /static/uploads/wWWWWWwww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /static/uploads/wwwwwwwww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /static/uploads/555 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:09] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:10] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /user_information_sellerpage_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/wWWWWWwww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/555 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/wwwwwwwww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:28] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:36] "GET /do_book_search?search_str=3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:36] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:37] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:37] "[33mGET /static/uploads/wWWWWWwww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:37] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:38] "GET /book_detail/3 HTTP/1.1" 200 -
+ERROR:app:Exception on /book_detail/book_detail_styles.css [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 298, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'book_detail_styles.css' in 'where clause'")
+ERROR:app:Exception on /book_detail/book_detail_script.js [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 298, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'book_detail_script.js' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:38] "[35m[1mGET /book_detail/book_detail_styles.css HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:38] "[35m[1mGET /book_detail/book_detail_script.js HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:38] "[33mGET /static/uploads/wWWWWWwww HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 298, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:38] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -

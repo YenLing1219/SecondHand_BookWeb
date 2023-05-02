@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>詳細書籍資訊</title>
+<link rel="stylesheet" href="book_detail_styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <a href="#">
+        <img class="image-link" src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片連結">
+      </a>
+      <button class="custom-button">
+        <img src="button-image.jpg" alt="按鈕圖片">
+      </button>
+    </div>
+    <div class="right">
+      <p>書名: <!--這邊替換位置-->{{ book['B_BookName'] }}</p>
+      <p>$價格: <!--這邊替換位置-->{{ book['B_Price'] }}</p>
+      <div class="border-box">
+        <!--css那邊有設置縮放-->
+
+        <p id="book-status"><!--這邊替換位置--></p>
+        <script>
+          var n = {{ book['B_BookStatus'] }};
+          var bookStatusElement = document.getElementById("book-status");
+          if (n == 1) {
+            bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
+          } else if (n == 2) {
+            bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
+          } else if (n == 3) {
+            bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
+          } else if (n == 4) {
+            bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
+          } else if (n == 5) {
+            bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
+          } else {
+            bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
+          }
+        </script>
+
+        <p>補充描述: <!--這邊替換位置-->{{ book['B_Extra_Info'] }}</p>
+      </div>
+    </div>
+  </div>
+  <hr class="horizontal">
+  <!--這邊開始，就是下面的頁面了-->
+  <div class="normal-content">位置標示</div>
+  <div class="tabs">
+    <button class="tab-button" data-target="details">詳細資訊</button>
+    <button class="tab-button" data-target="qa">留言板(Q&A)</button>
+    <button class="tab-button" data-target="seller">關於賣家</button>
+    <button class="tab-button">購買</button>
+  </div>
+  <div class="tab-content">
+    <div id="details" class="content">
+      <p>使用此書之科系：{{ book['B_BookMajor'] }}</p>
+      <p>使用此書之課程：{{ book['B_LessonName'] }}</p>
+      <p>使用此書之教師：{{ book['B_UsedByTeacher'] }}</p>
+      <br>
+      <p>作者：{{ book['B_Author'] }}</p>
+      <p>版本：{{ book['B_BookVersion'] }}</p>
+      <p>ISBN碼：{{ book['B_ISBN'] }}</p>
+    </div>
+    <div id="qa" class="content hide">留言板(Q&A)的內容</div>
+    <div id="seller" class="content hide">關於賣家的內容</div>
+  </div>
+  
+  <script src="book_detail_script.js"></script>
+  
+</body>
+</html>

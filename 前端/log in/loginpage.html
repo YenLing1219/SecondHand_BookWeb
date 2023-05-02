@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>學號密碼登入示例</title>
+  <script>
+    function checkCredentials() {
+      const studentID = document.getElementById('A_StuID').value;
+      const password = document.getElementById('A_Password').value;
+
+      // 這邊接入後端確認
+      const correctStudentID = '123456';
+      const correctPassword = 'password';
+
+      if (studentID === correctStudentID && password === correctPassword) {
+        window.location.href = ' '; // 接入跳轉頁面
+      } else {
+        alert('學號或密碼不正確，請重新輸入！');
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="for login.css">
+</head>
+<body>
+  <form onsubmit="event.preventDefault(); checkCredentials();">
+    <div class="form-container">
+      <label class="input-field">
+        學號:
+        <input type="text" name="A_StuID" id="A_StuID" />
+      </label>
+      <label class="input-field">
+        密碼:
+        <input type="password" name="A_Password" id="A_Password"/>
+      </label>
+      <input type="submit" value="登入" class="submit-button">
+    </div>
+    
+  </form>
+</body>
+</html>
