@@ -16,7 +16,7 @@ app.secret_key = "abc123"
 
 app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = '12345678'
 app.config['MYSQL_DB'] = 'secondhand_bookweb'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
@@ -145,7 +145,7 @@ def get_conn():
     return pymysql.connect(
         host = '127.0.0.1', 
         user = 'root', 
-        password = '', 
+        password = '12345678', 
         database = 'secondhand_bookweb', 
         charset = 'utf8'
     )
