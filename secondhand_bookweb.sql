@@ -44,7 +44,9 @@ CREATE TABLE `account_manage` (
 INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`) VALUES
 ('cherry911219@gmail.com', '$2b$12$/sKSfh7TR.S4F6fI7xSwDu/syU8aJbtob7MHmq4RcerLg5wNz0tYm', '410402226', 0, '2022-06-02', '資訊管理學系'),
 ('shioubi0216@gmail.com', '$2b$12$499rklXJAjYP/H/OkLbNVeSQbl6VM.il90.haYNzAc8gZiESagATS', '410402407', 0, '2023-05-10', '醫學系'),
-('wsx2244667@gmail.com', '$2b$12$5oQ7JJqoEjI1mf07r9vuau.LG6IPK51vDtRzl49On/m.5Nc01DEJO', '410402408', 0, '2023-05-12', '音樂學系');
+('wsx2244667@gmail.com', '$2b$12$5oQ7JJqoEjI1mf07r9vuau.LG6IPK51vDtRzl49On/m.5Nc01DEJO', '410402408', 0, '2023-05-12', '音樂學系'),
+('test1@gmail.com', '$2b$12$Hkv0sBLsT5wtp930sJ6kj.O1/VpIuF2/0Dh274.RVEvAmE1dEVVme', 'test1', 1, '2023-05-02', '圖書資訊學系'),
+('test111@gmail.com', '$2b$12$deX46FQLyTQXUiKSBgTY0eynwSsFZUX5XapT9QmXu/9qymJNktX/u', 'test111', 0, '2023-02-09', '職能治療學系');
 
 -- --------------------------------------------------------
 
@@ -74,7 +76,9 @@ CREATE TABLE `book_information` (
 
 INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`) VALUES
 (1, 'ドコデモ日本語', '11111111111', 'LiveABC', '1', '全人', '基礎日文', 'test1.jpg', 1, '測試1\r\n                        ', '教師1', '測試2\r\n                        ', 200),
-(2, '輔仁大學國文課本大學國文選', '45557555555', '輔仁大學國文系教師', '202', '全人', '國文', 'test3.jpg', 3, '~說明文字~\r\n                        ', 'authot', '~說明文字~\r\n                        ', 289);
+(2, '輔仁大學國文課本大學國文選', '45557555555', '輔仁大學國文系教師', '202', '全人', '國文', 'test3.jpg', 3, '~說明文字~\r\n                        ', 'authot', '~說明文字~\r\n                        ', 289),
+(3, '資訊管理', '8888888888', 'author3', '14', '資訊管', '資訊管理', '資訊管理.jpg', 1, '有鉛筆筆記\r\n                        ', '教師3', '~說明文字~\r\n                        ', 530),
+(4, 'english', '99999999999', 'author1', '2.3', '資管', '英文', 'GearUp.jpg', 1, '鉛筆筆跡\r\n                        ', '2', '補充\r\n                        ', 240);
 
 -- --------------------------------------------------------
 
@@ -124,7 +128,7 @@ ALTER TABLE `order_information`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `book_information`
 --
 ALTER TABLE `book_information`
-  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 已傾印資料表的限制式

@@ -5,6 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/user_information_sellerpage_styles.css">
     <title>Custom Layout</title>
+    <style>
+        /* Container */
+.container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button: +NEW */
+.new-button {
+    width: 400px;
+    height: 200px;
+    font-size: 48px; /* Adjust the font size as needed */
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Vertical adjustment for the +NEW button */
+/* Change the 'align-items' value to adjust the vertical position */
+/* Example: flex-start, center, flex-end */
+.container {
+    align-items: center; /* Modify this value */
+}
+
+/* Border */
+.border {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Item */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid black;
+    padding: 20px;
+}
+
+/* Image */
+.item img {
+    width: 100px; /* Adjust the image size as needed */
+    height: 100px;
+}
+
+/* Text */
+.text {
+    margin-left: 10px;
+}
+
+/* Status */
+.status {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Buttons: Modify and Remove */
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Modify button */
+.modify {
+    background-color: #4CAF50;
+}
+
+/* Remove button */
+.remove {
+    background-color: #f44336;
+}
+.image-chage {
+    width: 100px;
+    height: 300px;
+    overflow: hidden;
+  }
+  /*這是設置圖片大小上限的代碼
+  img {
+  max-width: 500px;
+  max-height: 300px;
+}
+*/
+
+    </style>
 </head>
 <body>
     {% extends 'layout.html' %}<!--複製這行 header-->
