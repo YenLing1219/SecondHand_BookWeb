@@ -373,3 +373,45 @@ Traceback (most recent call last):
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
 INFO:werkzeug:127.0.0.1 - - [02/May/2023 09:41:38] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 890-846-324
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:11] "GET /static/images/home.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:11] "GET /static/images/login.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:11] "GET /static/images/registration.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:12] "GET /static/images/magnifier.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:17] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:17] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:18] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:18] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:18] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred during login
+Traceback (most recent call last):
+  File "c:\Users\h0937\SecondHand_BookWeb\app.py", line 119, in login
+    if len(user) > 0:
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:24] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:26] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:26] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:27] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:27] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:27] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred during registration
+Traceback (most recent call last):
+  File "c:\Users\h0937\SecondHand_BookWeb\app.py", line 91, in register
+    cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,hash_password,A_StuID,A_RealNameVerify,A_BirthDate,A_Major))
+  File "C:\Users\h0937\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\h0937\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\h0937\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'A_Email' in 'field list'")
+INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:49] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
