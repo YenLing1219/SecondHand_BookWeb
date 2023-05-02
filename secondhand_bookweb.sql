@@ -29,13 +29,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `account_manage` (
-  `A_Account` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_Password` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_Password` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_StuID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_RealNameVerify` tinyint(1) DEFAULT NULL,
   `A_BirthDate` date DEFAULT NULL,
   `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- 傾印資料表的資料 `account_manage`
+--
+
+INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`) VALUES
+('cherry911219@gmail.com', '$2b$12$/sKSfh7TR.S4F6fI7xSwDu/syU8aJbtob7MHmq4RcerLg5wNz0tYm', '410402226', 0, '2022-06-02', '資訊管理學系');
 
 -- --------------------------------------------------------
 
@@ -64,14 +71,8 @@ CREATE TABLE `book_information` (
 --
 
 INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`) VALUES
-(1, '1', '111', '111', '110', '資管', 'wfee', 'qefrqfefeff', 1, '寫出來了 超級感動\r\n                        ', '11114', '~說明文字~\r\n                        ', 1500),
-(2, '221', '222', 'author', '22', 'adv', 'wfee', 'qefrqfefeff', 1, '~說明文字~\r\n    advadva                    ', 'efqf', '~說明文字~\r\n          advadv              ', 1000),
-(3, '333', '3333333', 'hu', '33', '企管', 'akkkk', 'wWWWWWwww', 1, '~說明文字~', '', '~說明文字~', 650),
-(4, '444', '5151', '+8448599', '4', '666', '8448', '555', 3, '~說明文字~', '2', '~說明文字~', 600),
-(7, 'ftj', 'sst', 'sthsj', 'fhx', '資管', 'xtrjs', 'ww', 1, '~說明文字~\r\n                        ', 'k', '~說明文字~\r\n                        ', 660),
-(5, 'ug', 'xgx', 'xfgj', 'gjc', '企管', 'xtrjs', 'wwwwwwwww', 1, '~說明文字~\r\n                        ', '55', 'kkk~說明文字~\r\n                        ', 777),
-(8, '33', '45555555555', 'author', '1.1', '財金', '555', 'IMG_0589.PNG', 2, '453\r\n3\r\n\r\n                        ', '', '~說明文字~\r\n                        ', 680),
-(9, '999', '355322', 'author3', '1.1', '財金', '666', 'IMG_20180720_093925.jpg', 3, 'hahahahaha\r\n                        ', 'x', 'test test\r\n123\r\n                        ', 720);
+(1, 'ドコデモ日本語', '11111111111', 'LiveABC', '1', '全人', '基礎日文', 'test1.jpg', 1, '測試1\r\n                        ', '教師1', '測試2\r\n                        ', 200),
+(2, '輔仁大學國文課本大學國文選', '45557555555', '輔仁大學國文系教師', '202', '全人', '國文', 'test3.jpg', 3, '~說明文字~\r\n                        ', 'authot', '~說明文字~\r\n                        ', 289);
 
 -- --------------------------------------------------------
 
@@ -121,7 +122,7 @@ ALTER TABLE `order_information`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `book_information`
 --
 ALTER TABLE `book_information`
-  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 已傾印資料表的限制式
