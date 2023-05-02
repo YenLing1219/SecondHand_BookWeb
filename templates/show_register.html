@@ -7,34 +7,35 @@
 
   <body>
     <div>
-      <h1>註冊</h1>
+      <h1 align="center">註冊</h1>
       <form action="register.py" method="POST">
-        <table border="1">
+
+        <table border="1" align="center" width="55%">
           <tr>
-            <th>(*必填欄位)學號</th>
-            <td><input type="text" required="required" name="A_StuID" /></td>
+            <th width="60%"><font size="4">學號</font><font color="red" size="2">(*必填欄位)</font></th>
+            <td width="40%" align="center"><input type="text" size="30" required="required" name="A_StuID" placeholder="請輸入學號"></td>
           </tr>
           <tr>
-            <th>(*必填欄位)常用信箱</th>
-            <td><input type="email" name="A_Account" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/></td>
+            <th><font size="4">常用信箱</font><font color="red" size="2">(*必填欄位)</font></th>
+            <td align="center"><input type="email" name="A_Account" size="30" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="請輸入信箱" ></td>
           </tr>
           <tr>
-            <th>(*必填欄位)密碼(含英文與數字，至少6位字元)</th>
-            <td><input type="password" name="A_Password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required="required" oninput="setCustomValidity('');" oninvalid="setCustomValidity('請輸入正確的密碼格式:含英數至少六個字元');"/></td>
+            <th><font size="4">密碼(含英文與數字，至少6位字元)</font><font color="red" size="2">(*必填欄位)</font></th>
+            <td align="center"><input type="password" name="A_Password" size="30" pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required="required" oninput="setCustomValidity('');" oninvalid="setCustomValidity('請輸入正確的密碼格式:含英數至少六個字元');" placeholder="請輸入密碼"></td>
           </tr>
           <tr>
-            <th>(*必填欄位)確認密碼</th>
-            <td><input type="password" name="ConfirmPassword" required="required" oninput="setCustomValidity('');" 
+            <th><font size="4">確認密碼</font><font color="red" size="2">(*必填欄位)</font></th>
+            <td align="center"><input type="password" size="30" name="ConfirmPassword" required="required" oninput="setCustomValidity('');" 
                 onchange="if(document.getElementById('inputPassword').value != document.getElementById('ConfirmPassword').value)
-                {setCustomValidity('密碼不相符，請重新輸入!');}"/></td>
+                {setCustomValidity('密碼不相符，請重新輸入!');}" placeholder="請再次輸入密碼"></td>
           </tr>
           <tr>
-            <th>生日</th>
-            <td><input type="date" name="A_BirthDate" /></td>
+            <th><font size="4">生日</font></th>
+            <td align="center"><input type="date" name="A_BirthDate" /></td>
           </tr>
           <tr>
-            <th>科系</th>
-            <td>
+            <th><font size="4">科系</font></th>
+            <td align="center">
               <select name="A_Major">
                 <option value="">請選擇你的科系</option>
 
@@ -127,17 +128,16 @@
             </td>
           </tr>
           <tr>
-            <th>(*必填欄位)實名認證</th>
-            <td>
-              <input type="radio" required="required" name="A_RealNameVerify" value="0" /> No
-              <input type="radio" required="required" name="A_RealNameVerify" value="1" /> Yes
+            <th><font size="4">實名認證</font><font color="red" size="2">(*必填欄位)</font></th>
+            <td align="center">
+              <input type="radio" required="required" name="A_RealNameVerify" value="0" /> 稍後再說
+              <input type="radio" required="required" name="A_RealNameVerify" value="1" /> 實名認證以成為賣家
             </td>
           </tr>
-          <tr>
-            <th>提交</th>
-            <td><input type="submit" name="submit" value="提交" /></td>
-          </tr>
-        </table>
+          </table>
+          <br>
+            <div align="center"><input type="submit" name="submit" value="提交"></div>
+
       </form>
     </div>
   </body>

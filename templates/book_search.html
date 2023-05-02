@@ -6,10 +6,93 @@
     <title>搜尋結果</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f1f1f1;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .search-box {
+            width: 400px;
+            height: 40px;
+            padding-left: 40px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-image: url('magnifier-icon.svg');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+    </style>
 <body>
-        <form action="/do_book_search" method="GET">
-            <div class="search-container">
-                <input type="text" name="search_str" placeholder="{{ search_str }}" name="search">
+    <header>
+        <div class="logo">
+            <a href="首頁網址.html">
+                <button>
+                    <img src="house-icon.svg" alt="首頁" width="30" height="30">
+                    <span>首頁</span>
+                </button>
+            </a>
+        </div>
+        <nav class="nav">
+            <div class="nav-item">
+                <a href="關注中網址.html">
+                    <button>
+                        <img src="star-icon.svg" alt="關注中" width="25" height="25">
+                        <span>關注中</span>
+                    </button>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="用戶資訊網址.html">
+                    <button>
+                        <img src="user-icon.svg" alt="用戶資訊" width="25" height="25">
+                        <span>用戶資訊</span>
+                    </button>
+                </a>
+            </div>
+            <!-- 4/27 追加部分 -->
+            <div class="nav-item">
+                <a id="loginLink" href="登入網址.html">
+                  <button id="loginButton">
+                    <span>Log In</span>
+                  </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+        <form action="/do_book_search" method="GET" enctype="multipart/form-data">
+            <div class="search-container" align="center">
+                <input type="text" name="search_str" placeholder="{{ search_str }}" name="search" size="70">&nbsp;
                 <button class="search-button" name="searchButton" type="submit">搜索</button>
             </div>
         </form>
@@ -20,7 +103,7 @@
             <div class="grid-item">
                 <div class="image-container">
                     <a href="/book_detail/{{ book['B_BookID'] }}" class="content">
-                        <img src="{{ book['B_BookPic'] }}" alt="圖片">
+                        <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片">
                     </a>
                 </div>
                 <div class="text-container">

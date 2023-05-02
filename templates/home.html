@@ -51,6 +51,15 @@
             background-repeat: no-repeat;
             background-position: 10px center;
         }
+        .div {
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0 0 -300px;
+
+        }
     </style>
      <script>
         function updateLoginButton() {
@@ -85,18 +94,18 @@
         </div>
         <nav class="nav">
             <div class="nav-item">
-                <a href="用戶資訊網址.html">
-                    <button>
-                        <img src="user-icon.svg" alt="用戶資訊" width="25" height="25">
-                        <span>用戶資訊</span>
-                    </button>
-                </a>
-            </div>
-            <div class="nav-item">
                 <a href="關注中網址.html">
                     <button>
                         <img src="star-icon.svg" alt="關注中" width="25" height="25">
                         <span>關注中</span>
+                    </button>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="用戶資訊網址.html">
+                    <button>
+                        <img src="user-icon.svg" alt="用戶資訊" width="25" height="25">
+                        <span>用戶資訊</span>
                     </button>
                 </a>
             </div>
@@ -112,14 +121,15 @@
     </header>
     
     <main>
+        <div class="div">
         <h1 style="text-align: center;">輔仁大學二手課本交易平台</h1>
         <form action="/do_book_search" method="GET">
             <div class="search-container">
-                <input type="text" class="search-box" name="search_str" placeholder="搜尋書名、作者、科系、課程、老師...">
+                <input type="text" class="search-box" name="search_str" placeholder="搜尋書名、作者、科系、課程、老師...">&nbsp;
                 <button class="search-button" type="submit">搜尋</button>
             </div>
         </form>
-        
+        </div>
     </main>
 </body>
 </html>
