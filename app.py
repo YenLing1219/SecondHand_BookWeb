@@ -45,6 +45,7 @@ def index():
     except Exception as e:
         logging.exception("Error occurred during index")
         return "An error occurred during index. Please check the error log for more information.", 500
+    
 # 顯示[用戶資訊]頁面
 @app.route('/user_information')
 def show_user_information():
@@ -53,17 +54,22 @@ def show_user_information():
 # 顯示[賣家介面]
 @app.route('/user_information_sellerpage')
 def show_user_information_sellerpage():
+    
     sql = "select B_BookID, B_BookName, B_BookPic from book_information"
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute(sql)
         datas = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
     finally:
         conn.close()
     print(sql)
     return render_template("user_information_sellerpage.html", datas = datas)
 
+#註冊功能實現，需要pip install bcrypt
 @app.route('/register', methods=["GET", "POST"]) 
 def register():
     try: 
@@ -91,7 +97,7 @@ def register():
         logging.exception("Error occurred during registration")
         return "An error occurred during registration. Please check the error log for more information.", 500
     
-
+#登入功能實現，同樣使用brcypt套件，加上MySQL和Mysqldb
 @app.route('/login',methods=["GET","POST"])
 def login():
     print("Entering login function")
@@ -128,7 +134,7 @@ def login():
         return "An error occurred during login. Please check the error log for more information.", 500
 
 
-    
+#將session清除，登出功能
 @app.route('/logout')
 def logout():
     session.clear()
