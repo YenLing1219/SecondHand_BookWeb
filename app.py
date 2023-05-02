@@ -11,6 +11,8 @@ import logging
 
 logging.basicConfig(filename='error.log', level=logging.DEBUG)
 
+
+
 app = Flask(__name__)
 app.secret_key = "abc123"
 
@@ -302,6 +304,86 @@ def show_book_detail(B_BookID):
         conn.close()
     print(sql)
     return render_template("book_detail.html", book = book)
+
+#信件功能函數
+from flask_mail import Mail, Message
+import random
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = 'shioubi0216@gmail.com'
+app.config['MAIL_PASSWORD'] = 'inok628088'
+
+mail = Mail(app)
+
+counter = 1
+
+#處理電子郵件發送
+def send_email(buyer_email, seller_email, cabinet_number, password):
+    subject = "輔大二手課本交易平台上的交易成功!"
+    content = f"交易櫃號碼:{cabinet_number}\n密碼:{password}"
+
+    msg_buyer = Message(subject, recipients=[buyer_email])
+    msg_seller = Message(subject, recipients=[seller_email])
+
+    msg_buyer.body = content
+    msg_seller.body = content
+
+    mail.send(msg_buyer)
+    mail.send(msg_seller)
+
+
+def get_email_by_stu_id(stu_id):
+    connection = get_conn()
+    cursor = connection.cursor()
+    query = "SELECT A_Email FROM account_manage WHERE A_StuID = %s;"
+    cursor.execute(query, (stu_id,))
+    result = cursor.fetchone()
+    connection.close()
+
+    if result:
+        return result[0]
+    else:
+        return None
+
+def get_seller_email_by_book_id(book_id):
+    connection = get_conn()
+    cursor = connection.cursor()
+    query = """SELECT A_Email FROM account_manage 
+               JOIN  order_information ON account_manage.A_StuID = order_information.A_BuyerID
+               WHERE B_BookID = %s;"""
+    cursor.execute(query, (book_id,))
+    result = cursor.fetchone()
+    connection.close()
+
+    if result:
+        return result[0]
+    else:
+        return None
+
+#買書動作發生
+@app.route('/purchaseBook/<book_id>/<buyer_id>', methods=['GET'])
+def purchaseBook(book_id, buyer_id):
+
+    global counter
+
+    # 根據buyer_id和book_id查找賣家和買家的電子郵件地址
+    buyer_email = get_email_by_stu_id(buyer_id)
+    seller_email = get_seller_email_by_book_id(book_id)
+
+    # 生成隨機6位數密碼
+    password = random.randint(100000, 999999)
+
+    # 發送電子郵件
+    send_email(buyer_email, seller_email, counter, password)
+
+    # 更新櫃號碼
+    counter += 1
+    if counter > 99:
+        counter = 1
+
+    return "Emails sent successfully!"
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
