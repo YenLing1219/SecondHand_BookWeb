@@ -7,11 +7,13 @@
     <title>Custom Layout</title>
 </head>
 <body>
+    {% extends 'layout.html' %}<!--複製這行 header-->
+    {% block content %}<!--複製這行 header-->
+
     <div class="container">
         <button class="new-button" onclick="location.href='/book_create'">+NEW</button>
     </div>
     <div class="border">
-
         {% for book in datas %}
         <div class="item">
             <div class="image-change">
@@ -23,6 +25,7 @@
             <button class="button remove">下架</button>
         </div>
         {% endfor %}
+    {% endblock %}<!--複製這行 header-->
 
     </div>
 </body>

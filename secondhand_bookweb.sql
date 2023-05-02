@@ -42,7 +42,9 @@ CREATE TABLE `account_manage` (
 --
 
 INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`) VALUES
-('cherry911219@gmail.com', '$2b$12$/sKSfh7TR.S4F6fI7xSwDu/syU8aJbtob7MHmq4RcerLg5wNz0tYm', '410402226', 0, '2022-06-02', '資訊管理學系');
+('cherry911219@gmail.com', '$2b$12$/sKSfh7TR.S4F6fI7xSwDu/syU8aJbtob7MHmq4RcerLg5wNz0tYm', '410402226', 0, '2022-06-02', '資訊管理學系'),
+('shioubi0216@gmail.com', '$2b$12$499rklXJAjYP/H/OkLbNVeSQbl6VM.il90.haYNzAc8gZiESagATS', '410402407', 0, '2023-05-10', '醫學系'),
+('wsx2244667@gmail.com', '$2b$12$5oQ7JJqoEjI1mf07r9vuau.LG6IPK51vDtRzl49On/m.5Nc01DEJO', '410402408', 0, '2023-05-12', '音樂學系');
 
 -- --------------------------------------------------------
 
