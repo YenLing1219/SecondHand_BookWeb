@@ -1206,3 +1206,7 @@ INFO:werkzeug:127.0.0.1 - - [02/May/2023 14:19:38] "[36mGET /static/uploads/tes
 INFO:werkzeug:127.0.0.1 - - [02/May/2023 14:19:38] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [02/May/2023 14:19:40] "GET /book_create HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [02/May/2023 14:19:40] "[33mGET /css/book_create_update_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SecondHand_BookWeb\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 440-043-178
