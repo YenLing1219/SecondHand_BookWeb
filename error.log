@@ -415,3 +415,7 @@ Traceback (most recent call last):
     _mysql.connection.query(self, query)
 MySQLdb.OperationalError: (1054, "Unknown column 'A_Email' in 'field list'")
 INFO:werkzeug:127.0.0.1 - - [02/May/2023 12:22:49] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\h0937\\SecondHand_BookWeb\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 890-846-324
