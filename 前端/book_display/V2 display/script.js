@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // 配置
-    var itemsPerPage = 16;
+    var itemsPerPage = 20;
     var currentPage = 1;
     var totalPages = 1;
     var data = generateData(50); // 修改這個數字以更改測試數據的數量
