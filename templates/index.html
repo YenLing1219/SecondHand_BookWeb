@@ -4,96 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>輔仁大學二手課本交易平台</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #f1f1f1;
-        }
-
-        .logo {
-            font-size: 24px;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-item {
-            margin-left: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .search-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 30px 0;
-        }
-
-        .search-box {
-            width: 400px;
-            height: 40px;
-            padding-left: 40px;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-image: url('../static/images/magnifier.png');
-            background-repeat: no-repeat;
-            background-size: 23px 23px;
-            background-position: 10px center;
-        }
-
-    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="/" title="回到首頁"><img src="{{ url_for('static', filename='images/home.png') }}" alt="首頁"  width="30" height="30"></a>
-        </div>
-        <nav class="nav">
-            <div class="nav-item">
-                <img src="{{ url_for('static', filename='images/star.png') }}" alt="關注中" width="25" height="25">
-                <span>關注中</span>
-            </div>
-            <div class="nav-item">
-                <a href="/user_information" title="用戶資訊"><img src="{{ url_for('static', filename='images/user.png') }}" alt="用戶資訊" width="25" height="25"></a>
-                <title="用戶資訊"><span>用戶資訊</span>
-            </div>
-            <div class="nav-item">
-                <a href="/register" title="註冊"><img src="{{ url_for('static', filename='images/registration.png') }}" alt="註冊" width="25" height="25"></a>
-                <a href="/register" title="註冊"><span>註冊</span></a>
-            </div>
-            <div class="nav-item">
-                <a href="/login" title="登入"><img src="{{ url_for('static', filename='images/login.png') }}"alt="登入" width="25" height="25"></a>
-                <a href="/login" title="登入"><span>登入</span></a>
-            </div>
-            <div class="nav-item">
-                <a href="/logout" title="登出"><img src="{{ url_for('static', filename='images/logout.png') }}"alt="登出" width="25" height="25"></a>
-                <a href="/logout" title="登出"><span>登出</span></a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="box">
-        <h1 style="text-align: center">輔仁大學二手課本交易平台</h1>
-        <form action="/do_book_search" method="GET">
-            <div class="search-container">
-                <input type="text" class="search-box" name="search_str" placeholder="搜尋書名、作者、科系、課程、老師...">
-                <button class="search-button" type="submit">搜尋</button>
-            </div>
-        </form>
+    {% extends 'layout.html' %}
+    {% block title %} 首頁 {% endblock %}
+    {% block content %}
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3"><h1>
+        首頁
+    {% if session['A_StuID'] %}
+    Welcome {{ session['A_StuID'] }}
+    <!--主頁面的內容寫這邊-->
+    {% else %}
+    尚未登入
+    <!--主頁面的內容寫這邊-->
+    {% endif %}</h1>
     </div>
-    </main>
+    </div>
+    </div>
+    {% endblock %}
 </body>
 </html>
 

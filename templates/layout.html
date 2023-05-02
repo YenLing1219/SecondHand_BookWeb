@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        .navbar-form {
+            padding: 5;
+        }
+
+        .search-box {
+            width: 400px;
+            height: 34px;
+            padding-left: 40px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-image: url('../static/images/magnifier.png');
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+            background-position: 10px center;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">輔仁大學二手課本交易平台</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/"><img src="{{ url_for('static', filename='images/home.png') }}" alt="home" style="width: 20px; height: 20px;"> 首頁</a>
+                </li>
+                {% if session['A_StuID'] %}
+                <li>
+                    <a href="/logout"><img src="{{ url_for('static', filename='images/logout.png') }}" alt="logout" style="width: 20px; height: 20px;">登出</a>
+                </li>
+                <li>
+                    <a href="/user_information"><img src="{{ url_for('static', filename='images/user.png') }}" alt="user_information" style="width: 20px; height: 20px;">用戶資訊</a>
+                </li>
+                <li>
+                    <a href="/star"><img src="{{ url_for('static', filename='images/star.png') }}" alt="Star" style="width: 20px; height: 20px;">關注中</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="/login"><img src="{{ url_for('static', filename='images/login.png') }}" alt="login" style="width: 20px; height: 20px;">登入</a>
+                </li>
+                <li>
+                    <a href="/register"><img src="{{ url_for('static', filename='images/registration.png') }}" alt="registration" style="width: 20px; height: 20px;">註冊</a>
+                </li>
+                {% endif %}
+            </ul>
+            <form action="/do_book_search" method="GET" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="search-box" name="search_str" placeholder="搜尋書名、作者、科系、課程、老師...">
+                </div>
+                <button class="btn btn-default" type="submit">搜尋</button>
+            </form>
+        </div>
+    </div>
+</nav>
+{% block content %} {% endblock %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
