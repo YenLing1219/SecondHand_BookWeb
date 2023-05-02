@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="user_information_sellerpage.css">
+=======
+    <link rel="stylesheet" href="css/user_information_sellerpage_styles.css">
+>>>>>>> 02708b46760c7bf02f1b969949d1c81688802d09
     <title>Custom Layout</title>
 </head>
 <body>
+    {% extends 'layout.html' %}<!--複製這行 header-->
+    {% block content %}<!--複製這行 header-->
+
     <div class="container">
         <button class="new-button" onclick="location.href='/book_create'">+NEW</button>
     </div>
     <div class="border">
-
         {% for book in datas %}
         <div class="item">
             <div class="image-change">
@@ -23,6 +29,7 @@
             <button class="button remove">下架</button>
         </div>
         {% endfor %}
+    {% endblock %}<!--複製這行 header-->
 
     </div>
 </body>
