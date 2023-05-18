@@ -1,3 +1,4 @@
+import datetime
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL, MySQLdb
 import pymysql
@@ -21,7 +22,7 @@ app.secret_key = "abc123"
 
 app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = '12345678'
 app.config['MYSQL_DB'] = 'secondhand_bookweb'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
@@ -150,7 +151,7 @@ def get_conn():
     return pymysql.connect(
         host = '127.0.0.1', 
         user = 'root', 
-        password = '', 
+        password = '12345678', 
         database = 'secondhand_bookweb', 
         charset = 'utf8'
     )
@@ -182,6 +183,8 @@ def book_create():
         file.save(os.path.join(UPLOAD_FOLDER, file.filename))
         print('--picture save successfully:' + file.filename)
 
+    
+
     print(request.form)
     B_BookName = request.form.get("B_BookName")
     B_ISBN = request.form.get("B_ISBN")
@@ -195,9 +198,10 @@ def book_create():
     B_UsedByTeacher = request.form.get("B_UsedByTeacher")
     B_Extra_Info = request.form.get("B_Extra_Info")
     B_Price = request.form.get("B_Price")
+    B_SalerID = session['A_StuID']
     sql = f'''
-    insert into book_information(B_BookName, B_ISBN, B_Author, B_BookVersion, B_BookMajor, B_LessonName, B_BookPic, B_BookStatus, B_UsedStatus, B_UsedByTeacher, B_Extra_Info, B_Price)
-    values('{B_BookName}', '{B_ISBN}', '{B_Author}', '{B_BookVersion}', '{B_BookMajor}', '{B_LessonName}', '{B_BookPic}', {B_BookStatus}, '{B_UsedStatus}', '{B_UsedByTeacher}', '{B_Extra_Info}', {B_Price})
+    insert into book_information(B_BookName, B_ISBN, B_Author, B_BookVersion, B_BookMajor, B_LessonName, B_BookPic, B_BookStatus, B_UsedStatus, B_UsedByTeacher, B_Extra_Info, B_Price, B_SalerID)
+    values('{B_BookName}', '{B_ISBN}', '{B_Author}', '{B_BookVersion}', '{B_BookMajor}', '{B_LessonName}', '{B_BookPic}', {B_BookStatus}, '{B_UsedStatus}', '{B_UsedByTeacher}', '{B_Extra_Info}', {B_Price},'{B_SalerID}')
     '''
     print(sql)
     insert_or_update_data(sql)
@@ -302,6 +306,7 @@ def show_book_detail(B_BookID):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute(sql)
         datas = cursor.fetchall()
+        B_BookID = session['B_BookID']
         book = datas[0]
         session['A_Email'] =cursor['A_Email'] #
     finally:
@@ -309,6 +314,7 @@ def show_book_detail(B_BookID):
     print(sql)
     return render_template("book_detail.html", book = book)
 
+<<<<<<< HEAD
 # 寄信功能嘗試
 @app.route('/purchase', methods=['POST'])
 def purchase():
@@ -347,6 +353,18 @@ def purchase():
             print("Complete!")
         except Exception as e:
             print("Error message: ", e)
+=======
+@app.route('/create_order/<B_BookID>/<B_SalerID>')
+def create_order(B_BookID, B_SalerID):
+    A_BuyerID = session['A_StuID']
+    ordertime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    lockerID = 1
+    sql = f"INSERT INTO order_information (ordertime, lockerID, B_BookID, A_BuyerID, B_SalerID) VALUES ('{ordertime}', {lockerID}, {B_BookID}, '{A_BuyerID}', '{B_SalerID}')"
+    insert_or_update_data(sql)
+    return "Order created successfully!"
+
+
+>>>>>>> fd698223737ae1f830d0732b45b8ed1c6e36c2a6
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
     app.run(debug=True) 
