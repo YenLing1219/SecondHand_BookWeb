@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `account_manage` (
-  `A_Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_Password` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_Account` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_Password` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_StuID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_RealNameVerify` tinyint(1) DEFAULT NULL,
   `A_BirthDate` date DEFAULT NULL,
@@ -113,7 +113,7 @@ ALTER TABLE `order_information`
   ADD PRIMARY KEY (`O_OrderID`),
   ADD KEY `B_BookID` (`B_BookID`),
   ADD KEY `A_BuyerID` (`A_BuyerID`),
-  ADD KEY `A_SalerID` (`B_SalerID`);
+  ADD KEY `B_SalerID` (`B_SalerID`);
 
 --
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)

@@ -314,6 +314,7 @@ def show_book_detail(B_BookID):
     print(sql)
     return render_template("book_detail.html", book = book)
 
+<<<<<<< HEAD
 # 寄信功能嘗試
 @app.route('/purchase', methods=['POST'])
 def purchase():
@@ -352,7 +353,7 @@ def purchase():
             print("Complete!")
         except Exception as e:
             print("Error message: ", e)
-            
+=======
 @app.route('/create_order/<B_BookID>/<B_SalerID>')
 def create_order(B_BookID, B_SalerID):
     A_BuyerID = session['A_StuID']
@@ -363,6 +364,7 @@ def create_order(B_BookID, B_SalerID):
     return "Order created successfully!"
 
 
+>>>>>>> fd698223737ae1f830d0732b45b8ed1c6e36c2a6
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
     app.run(debug=True) 
