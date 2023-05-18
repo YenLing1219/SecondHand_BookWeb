@@ -2,6 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL, MySQLdb
 import pymysql
 import bcrypt
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
+from time import sleep
 
 import os
 import pathlib
@@ -298,11 +303,50 @@ def show_book_detail(B_BookID):
         cursor.execute(sql)
         datas = cursor.fetchall()
         book = datas[0]
+        session['A_Email'] =cursor['A_Email'] #
     finally:
         conn.close()
     print(sql)
     return render_template("book_detail.html", book = book)
 
+# 寄信功能嘗試
+@app.route('/purchase', methods=['POST'])
+def purchase():
+    #寄給販賣者
+    content = MIMEMultipart()  #建立MIMEMultipart物件
+    content["subject"] = "輔大二手書網站交易成功"  #郵件標題
+    content["from"] = "wsx2244667@gmail.com"  #寄件者(我們網站方)
+    content["to"] = "" #收件者(需要接值)
+    content.attach(MIMEText("請將您的書籍放入1號櫃"))  #郵件內容
+
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:  # 設定SMTP伺服器
+        try:
+            smtp.ehlo()  # 驗證SMTP伺服器
+            smtp.starttls()  # 建立加密傳輸
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")  # 登入寄件者gmail
+            smtp.send_message(content)  # 寄送郵件
+            print("Complete!")
+        except Exception as e:
+            print("Error message: ", e)
+    
+    #寄給購買者
+    content = MIMEMultipart()  #建立MIMEMultipart物件
+    content["subject"] = "輔大二手書網站交易成功"  #郵件標題
+    content["from"] = "wsx2244667@gmail.com"  #寄件者(我們網站方)
+    content["to"] = "request.values['A_BuyerID']" #收件者(需要接值)
+    content.attach(MIMEText("請前往1號櫃領取您的書籍"))  #郵件內容
+
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:  # 設定SMTP伺服器
+        try:
+            smtp.ehlo()  # 驗證SMTP伺服器
+            smtp.starttls()  # 建立加密傳輸
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")  # 登入寄件者gmail
+            smtp.send_message(content)  # 寄送郵件
+            print("Complete!")
+        except Exception as e:
+            print("Error message: ", e)
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
     app.run(debug=True) 
