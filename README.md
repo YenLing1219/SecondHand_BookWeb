@@ -10,7 +10,7 @@
 ### phpmyadmin 預設帳號是 root 密碼為空
 ### [建議大家統一改成同樣的帳號密碼](https://loki1999.pixnet.net/blog/post/287069464)
 ***
-## 更新MySQL教學
+## [更新MySQL教學](https://hackmd.io/@shioubi0216/r1eXvnX7s)
 ### 這邊教各位如何以最快的速度更新本地的MySQL資料庫
 ### ~~(起碼是我自己用起來最順的)~~
 ### 1.下載好sql檔之後(不論是pull下來同步還是什麼)，先打開xampp進入phpmyadmin，點左上角的回到首頁<font color=#FF0000>(紅色圓圈起來的地方)</font>
