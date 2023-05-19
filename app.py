@@ -83,10 +83,7 @@ def register():
             return render_template("register.html")
         else:
             A_Email = request.form['A_Email']
-        
-            A_Password = request.form['A_Password'].encode('utf-8')
-            hash_password = bcrypt.hashpw(A_Password, bcrypt.gensalt())
-        
+            A_Password = request.form['A_Password']
             A_StuID = request.form['A_StuID']
             A_RealNameVerify = request.form['A_RealNameVerify']
             A_BirthDate = request.form['A_BirthDate']
@@ -94,7 +91,7 @@ def register():
 
 
             cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,hash_password,A_StuID,A_RealNameVerify,A_BirthDate,A_Major))
+            cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,A_Password,A_StuID,A_RealNameVerify,A_BirthDate,A_Major))
             mysql.connection.commit()
             session['A_StuID'] = request.form['A_StuID']
             session['A_Email'] = request.form['A_Email']
@@ -111,7 +108,7 @@ def login():
         if request.method == "POST":
             print("Handling POST request")
             A_StuID = request.form['A_StuID']
-            A_Password = request.form['A_Password'].encode('utf-8')
+            A_Password = request.form['A_Password']
             
             print(f"Login attempt: A_StuID={A_StuID}, A_Password={A_Password}")
  
@@ -123,7 +120,7 @@ def login():
             print(f"User fetched from database: {user}")
  
             if len(user) > 0:
-                if bcrypt.hashpw(A_Password, user["A_Password"].encode('utf-8')) == user["A_Password"].encode('utf-8'):
+                if A_Password == user["A_Password"]:
                     session['A_StuID'] = user['A_StuID']
                     session['A_Email'] = user['A_Email']
                     return render_template("index.html")
@@ -314,7 +311,6 @@ def show_book_detail(B_BookID):
     print(sql)
     return render_template("book_detail.html", book = book)
 
-<<<<<<< HEAD
 # 寄信功能嘗試
 @app.route('/purchase', methods=['POST'])
 def purchase():
@@ -353,18 +349,6 @@ def purchase():
             print("Complete!")
         except Exception as e:
             print("Error message: ", e)
-=======
-@app.route('/create_order/<B_BookID>/<B_SalerID>')
-def create_order(B_BookID, B_SalerID):
-    A_BuyerID = session['A_StuID']
-    ordertime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    lockerID = 1
-    sql = f"INSERT INTO order_information (ordertime, lockerID, B_BookID, A_BuyerID, B_SalerID) VALUES ('{ordertime}', {lockerID}, {B_BookID}, '{A_BuyerID}', '{B_SalerID}')"
-    insert_or_update_data(sql)
-    return "Order created successfully!"
-
-
->>>>>>> fd698223737ae1f830d0732b45b8ed1c6e36c2a6
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
     app.run(debug=True) 
