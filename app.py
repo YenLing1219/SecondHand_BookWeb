@@ -216,7 +216,7 @@ def user_information_profile_update():
         '''
         print(sql)
         insert_or_update_data(sql)
-        return "User information updated successfully!" # 舊密碼錯誤不會更改密碼，但還是顯示成功訊息
+        return "User information updated successfully!" # 舊密碼錯誤不會更新資訊，但還是顯示成功訊息
     except Exception as e:
         logging.exception("Error occurred during updating user information")
         print(e)
