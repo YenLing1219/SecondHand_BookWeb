@@ -163,7 +163,63 @@ def insert_or_update_data(sql):
         finally:
             conn.close()
 
+# 個人資料頁面
+@app.route('/user_information_profile')
+def show_user_information_profile():
+    A_StuID = session.get('A_StuID')
+    sql = "select * from account_manage where A_StuID = '{}'".format(A_StuID) #怎麼取A_StuID的值
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+        account = datas[0]
+    finally:
+        conn.close()
+    print(sql)
+    return render_template("user_information_profile.html", account=account)
 
+# [修改個人資料] 顯示網站
+@app.route('/user_information_profile_update/<A_StuID>')
+def show_user_information_profile_update(A_StuID):
+    A_StuID = session.get('A_StuID')
+    sql = "select * from account_manage where A_StuID = '{}'".format(A_StuID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+        account = datas[0]
+    finally:
+        conn.close()
+    print(sql)
+    return render_template("user_information_profile_update.html", account=account)
+
+# [修改個人資料] 接收表單提交的數據 (unfinished)
+@app.route('/do_user_information_profile_update', methods=["GET","POST"])
+def user_information_profile_update():
+    print(request.form)
+    A_StuID = request.form.get("A_StuID")
+    A_Email = request.form.get("A_Email")
+    A_Password_old = request.form.get("A_Password_old") #判斷舊密碼功能尚未成功
+    A_Password_new = request.form.get("A_Password_new")
+    A_StuID = request.form.get("A_StuID")
+    A_BirthDate = request.form.get("A_BirthDate")
+    A_Major = request.form.get("A_Major")
+
+    try:
+        sql = f'''
+        update account_manage set A_Email='{A_Email}', A_Password='{A_Password_new}',
+        A_BirthDate='{A_BirthDate}', A_Major='{A_Major}'
+        where A_StuID='{A_StuID}' and A_Password='{A_Password_old}'
+        '''
+        print(sql)
+        insert_or_update_data(sql)
+        return "User information updated successfully!" # 舊密碼錯誤不會更改密碼，但還是顯示成功訊息
+    except Exception as e:
+        logging.exception("Error occurred during updating user information")
+        print(e)
+        return "An error occurred during updating user information. Please check the error log for more information.", 500
 
 # [上架] 顯示網站
 @app.route('/book_create')
