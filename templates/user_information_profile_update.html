@@ -9,15 +9,15 @@
 <body>
   {% block content %}<!--複製這行 header-->
 
-  <form action="/do_user_information_profile_update" method="POST">
+  <form action="/do_user_information_profile_update" method="POST" enctype="multipart/form-data">
     <div class="container">
       <div class="left">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsNUtiv-TIeCX5mg_GVqFikTo8M4pM_IrrC8y1WV9&s" alt="個人頭像" class="profile-image">
-        <p>信用積分： - （共-筆交易）<!--這邊替換位置--></p>
+        <p>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）<!--這邊替換位置--></p>
       </div>
       <div class="right">
         <p>
-          暱稱：<!--這邊替換位置-->
+          暱稱：<input type="text" name="A_Nickname" value="{{ account['A_Nickname'] }}" required><!--這邊替換位置-->
         </p>
         <p>
           學號：<input type="text" name = "A_StuID" value="{{ account['A_StuID'] }}" readonly><!--這邊替換位置-->

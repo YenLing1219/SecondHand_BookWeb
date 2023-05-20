@@ -201,16 +201,17 @@ def user_information_profile_update():
     print(request.form)
     A_StuID = request.form.get("A_StuID")
     A_Email = request.form.get("A_Email")
-    A_Password_old = request.form.get("A_Password_old") #判斷舊密碼功能尚未成功
+    A_Password_old = request.form.get("A_Password_old") #判斷舊密碼是否正確
     A_Password_new = request.form.get("A_Password_new")
     A_StuID = request.form.get("A_StuID")
     A_BirthDate = request.form.get("A_BirthDate")
     A_Major = request.form.get("A_Major")
+    A_Nickname = request.form.get("A_Nickname")
 
     try:
         sql = f'''
-        update account_manage set A_Email='{A_Email}', A_Password='{A_Password_new}',
-        A_BirthDate='{A_BirthDate}', A_Major='{A_Major}'
+        update account_manage set A_Email='{A_Email}', A_Password='{A_Password_new}', 
+        A_BirthDate='{A_BirthDate}', A_Major='{A_Major}', A_Nickname='{A_Nickname}'
         where A_StuID='{A_StuID}' and A_Password='{A_Password_old}'
         '''
         print(sql)
