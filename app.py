@@ -34,14 +34,12 @@ SRC_PATH =  pathlib.Path(__file__).parent.absolute()
 UPLOAD_FOLDER = os.path.join(SRC_PATH,  'static', 'uploads')
 print(UPLOAD_FOLDER)
 
-
 #最初的模板
 """
 @app.route('/')
 def hello_world():
     return 'Hello World! 上架: /book_create    修改書籍資訊: /book_update/(+B_BookID)    書籍列表: /book_display    搜尋書籍: /book_search/(+search_str)'
 """
-
 
 # 首頁
 @app.route('/')
@@ -71,7 +69,6 @@ def register():
             A_BirthDate = request.form['A_BirthDate']
             A_Major = request.form['A_Major']
 
-
             cur = mysql.connection.cursor()
             cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,A_Password,A_StuID,A_RealNameVerify,A_BirthDate,A_Major))
             mysql.connection.commit()
@@ -93,14 +90,14 @@ def login():
             A_Password = request.form['A_Password']
             
             print(f"Login attempt: A_StuID={A_StuID}, A_Password={A_Password}")
- 
+
             curl = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
             curl.execute("SELECT * FROM account_manage WHERE A_StuID=%s",(A_StuID,))
             user = curl.fetchone()
             curl.close()
             
             print(f"User fetched from database: {user}")
- 
+
             if len(user) > 0:
                 if A_Password == user["A_Password"]:
                     session['A_StuID'] = user['A_StuID']
@@ -117,7 +114,6 @@ def login():
         logging.exception("Error occurred during login")
         print(e)
         return "An error occurred during login. Please check the error log for more information.", 500
-
 
 #將session清除，登出功能
 @app.route('/logout')
@@ -414,9 +410,9 @@ def show_book_detail(B_BookID):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute(sql)
         datas = cursor.fetchall()
-#        B_BookID = session['B_BookID']
+#        B_BookID = session['B_BookID'] #有這行似乎會error
         book = datas[0]
-#        session['A_Email'] =cursor['A_Email'] #
+#        session['A_Email'] =cursor['A_Email'] #有這行似乎會error
     finally:
         conn.close()
     print(sql)
