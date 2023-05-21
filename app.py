@@ -57,24 +57,6 @@ def index():
 def show_user_information():
     return render_template("user_information.html")
 
-# 顯示[賣家介面]
-@app.route('/user_information_sellerpage')
-def show_user_information_sellerpage():
-    
-    sql = "select B_BookID, B_BookName, B_BookPic from book_information"
-    conn = get_conn()
-    try:
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql)
-        datas = cursor.fetchall()
-    except Exception as e:
-        logging.exception("Error occurred during user_information_sellerpage")
-        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
-    finally:
-        conn.close()
-    print(sql)
-    return render_template("user_information_sellerpage.html", datas = datas)
-
 #註冊功能實現，需要pip install bcrypt
 @app.route('/register', methods=["GET", "POST"]) 
 def register():
@@ -222,6 +204,75 @@ def user_information_profile_update():
         print(e)
         return "An error occurred during updating user information. Please check the error log for more information.", 500
 
+# 顯示[賣家介面] 篩選條件：B_SalerID、B_SaleStatus
+@app.route('/user_information_sellerpage')
+def show_user_information_sellerpage():
+    B_SalerID = session.get('A_StuID')
+
+    # 架上書籍(B_SaleStatus!='已完成')
+    sql_processing = "select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information where B_SaleStatus!='已完成' and B_SalerID='{}'".format(B_SalerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_processing)
+        datas_processing = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_processing)
+
+    # 已完成(B_SaleStatus='已完成')
+    sql_finished = "select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information where B_SaleStatus='已完成' and B_SalerID='{}'".format(B_SalerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_finished)
+        datas_finished = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_finished)
+
+    return render_template("user_information_sellerpage.html", datas_processing = datas_processing, datas_finished = datas_finished)
+
+# 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
+@app.route('/user_information_orders')
+def show_user_information_orders():
+    A_BuyerID = session.get('A_StuID')
+
+    # 架上書籍(B_SaleStatus!='已完成')
+    sql_processing = "select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus from book_information b, order_information o where b.B_BookID = o.B_BookID and b.B_SaleStatus!='已完成' and o.A_BuyerID='{}'".format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_processing)
+        datas_processing = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_processing)
+
+    # 已完成(B_SaleStatus='已完成')
+    sql_finished = "select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus from book_information b, order_information o where b.B_BookID = o.B_BookID and b.B_SaleStatus='已完成' and o.A_BuyerID='{}'".format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_finished)
+        datas_finished = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_finished)
+    return render_template("user_information_orders.html", datas_processing = datas_processing, datas_finished = datas_finished)
+
 # [上架] 顯示網站
 @app.route('/book_create')
 def show_book_create():
@@ -236,8 +287,6 @@ def book_create():
     if file.filename != '':
         file.save(os.path.join(UPLOAD_FOLDER, file.filename))
         print('--picture save successfully:' + file.filename)
-
-    
 
     print(request.form)
     B_BookName = request.form.get("B_BookName")
@@ -262,7 +311,6 @@ def book_create():
     return "Book added successfully!"
 #    return redirect(url_for('home'))
 
-
 # [修改書籍資訊] 顯示網站
 @app.route('/book_update/<B_BookID>')
 def show_book_update(B_BookID):
@@ -279,34 +327,40 @@ def show_book_update(B_BookID):
     return render_template("book_update.html", book = book)
 
 # [修改書籍資訊] 接收表單提交的數據
-@app.route('/do_book_update', methods=['POST']) #修改接值方式 將尾截掉.edit
+@app.route('/do_book_update', methods=['POST'])
 def book_update():
     # 儲存圖片
     file = request.files['B_BookPic']
     if file.filename != '':
         file.save(os.path.join(UPLOAD_FOLDER, file.filename))
         print('--picture update successfully:' + file.filename)
+        B_BookPic = file.filename
+    else:
+        B_BookPic = ''  # Set it to empty if no file is uploaded
 
     print(request.form)
-    B_BookID = request.form.get("B_BookID") #擺在下方接值.edit
+    B_BookID = request.form.get("B_BookID")
     B_BookName = request.form.get("B_BookName")
     B_ISBN = request.form.get("B_ISBN")
     B_Author = request.form.get("B_Author")
     B_BookVersion = request.form.get("B_BookVersion")
     B_BookMajor = request.form.get("B_BookMajor")
     B_LessonName = request.form.get("B_LessonName")
-    B_BookPic = file.filename
     B_BookStatus = request.form.get("B_BookStatus")
     B_UsedStatus = request.form.get("B_UsedStatus")
     B_UsedByTeacher = request.form.get("B_UsedByTeacher")
     B_Extra_Info = request.form.get("B_Extra_Info")
     B_Price = request.form.get("B_Price")
+
     sql = f'''
     update book_information set B_BookName='{B_BookName}', B_ISBN='{B_ISBN}', B_Author='{B_Author}', B_BookVersion='{B_BookVersion}', 
-    B_BookMajor='{B_BookMajor}', B_LessonName='{B_LessonName}', B_BookPic='{B_BookPic}', B_BookStatus={B_BookStatus}, 
+    B_BookMajor='{B_BookMajor}', B_LessonName='{B_LessonName}', B_BookStatus={B_BookStatus}, 
     B_UsedStatus='{B_UsedStatus}', B_UsedByTeacher='{B_UsedByTeacher}', B_Extra_Info='{B_Extra_Info}', B_Price={B_Price}
-    where B_BookID={B_BookID}
     '''
+    if B_BookPic != '': 
+        sql += f", B_BookPic='{B_BookPic}'"  #有傳新圖片才更新這欄SQL
+    sql += f" where B_BookID={B_BookID}"
+
     print(sql)
     insert_or_update_data(sql)
     return "Information updated successfully!"
@@ -360,9 +414,9 @@ def show_book_detail(B_BookID):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute(sql)
         datas = cursor.fetchall()
-        B_BookID = session['B_BookID']
+#        B_BookID = session['B_BookID']
         book = datas[0]
-        session['A_Email'] =cursor['A_Email'] #
+#        session['A_Email'] =cursor['A_Email'] #
     finally:
         conn.close()
     print(sql)
