@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023 年 05 月 19 日 23:27
+-- 產生時間： 2023 年 05 月 21 日 19:30
 -- 伺服器版本： 10.4.28-MariaDB
 -- PHP 版本： 8.0.28
 
@@ -36,16 +36,17 @@ CREATE TABLE `account_manage` (
   `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `A_Nickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_CreditPoint` int(2) NOT NULL DEFAULT 50,
-  `A_TradeCount` int(10) NOT NULL DEFAULT 0
+  `A_TradeCount` int(10) NOT NULL DEFAULT 0,
+  `A_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `account_manage`
 --
 
-INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`) VALUES
-('shioubi0216@gmail.com', '$2b$12$4Lf28Xl7d6t1EkIecScc8u1ZQWU36ndFvm7GJ8FNm8CAssSKKC2OK', '410402407', 0, '2023-01-19', '經濟學系、所', '', 0, 0),
-('wsx2244667@gmail.com', '$2b$12$QmsxuEa5a/YxaPQ6vbAixu8lQfiwRCQz6S8YYg80Pd9e3Bhfrd1sK', '410402408', 0, '2023-05-09', '音樂學系', '', 0, 0);
+INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`, `A_image`) VALUES
+('shioubi0216@gmail.com', '$2b$12$4Lf28Xl7d6t1EkIecScc8u1ZQWU36ndFvm7GJ8FNm8CAssSKKC2OK', '410402407', 0, '2023-01-19', '經濟學系、所', '', 0, 0, ''),
+('wsx2244667@gmail.com', '$2b$12$QmsxuEa5a/YxaPQ6vbAixu8lQfiwRCQz6S8YYg80Pd9e3Bhfrd1sK', '410402408', 0, '2023-05-09', '音樂學系', '', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -67,22 +68,23 @@ CREATE TABLE `book_information` (
   `B_UsedByTeacher` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `B_Extra_Info` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `B_Price` int(5) NOT NULL,
-  `B_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `B_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `B_Salestatus` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `book_information`
 --
 
-INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`, `B_SalerID`) VALUES
-(1, '1', '111', '111', '110', '資管', 'wfee', 'qefrqfefeff', 1, '寫出來了 超級感動\r\n                        ', '11114', '~說明文字~\r\n                        ', 1500, '410402407'),
-(2, '221', '222', 'author', '22', 'adv', 'wfee', 'qefrqfefeff', 1, '~說明文字~\r\n    advadva                    ', 'efqf', '~說明文字~\r\n          advadv              ', 1000, ''),
-(3, '333', '3333333', 'hu', '33', '企管', 'akkkk', 'wWWWWWwww', 1, '~說明文字~', '', '~說明文字~', 650, '410402407'),
-(4, '444', '5151', '+8448599', '4', '666', '8448', '555', 3, '~說明文字~', '2', '~說明文字~', 600, ''),
-(5, 'ug', 'xgx', 'xfgj', 'gjc', '企管', 'xtrjs', 'wwwwwwwww', 1, '~說明文字~\r\n                        ', '55', 'kkk~說明文字~\r\n                        ', 777, ''),
-(7, 'ftj', 'sst', 'sthsj', 'fhx', '資管', 'xtrjs', 'ww', 1, '~說明文字~\r\n                        ', 'k', '~說明文字~\r\n                        ', 660, ''),
-(8, '33', '45555555555', 'author', '1.1', '財金', '555', 'IMG_0589.PNG', 2, '453\r\n3\r\n\r\n                        ', '', '~說明文字~\r\n                        ', 680, ''),
-(9, '999', '355322', 'author3', '1.1', '財金', '666', 'IMG_20180720_093925.jpg', 3, 'hahahahaha\r\n                        ', 'x', 'test test\r\n123\r\n                        ', 720, '');
+INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`, `B_SalerID`, `B_Salestatus`) VALUES
+(1, '1', '111', '111', '110', '資管', 'wfee', 'qefrqfefeff', 1, '寫出來了 超級感動\r\n                        ', '11114', '~說明文字~\r\n                        ', 1500, '410402407', ''),
+(2, '221', '222', 'author', '22', 'adv', 'wfee', 'qefrqfefeff', 1, '~說明文字~\r\n    advadva                    ', 'efqf', '~說明文字~\r\n          advadv              ', 1000, '', ''),
+(3, '333', '3333333', 'hu', '33', '企管', 'akkkk', 'wWWWWWwww', 1, '~說明文字~', '', '~說明文字~', 650, '410402407', ''),
+(4, '444', '5151', '+8448599', '4', '666', '8448', '555', 3, '~說明文字~', '2', '~說明文字~', 600, '', ''),
+(5, 'ug', 'xgx', 'xfgj', 'gjc', '企管', 'xtrjs', 'wwwwwwwww', 1, '~說明文字~\r\n                        ', '55', 'kkk~說明文字~\r\n                        ', 777, '', ''),
+(7, 'ftj', 'sst', 'sthsj', 'fhx', '資管', 'xtrjs', 'ww', 1, '~說明文字~\r\n                        ', 'k', '~說明文字~\r\n                        ', 660, '', ''),
+(8, '33', '45555555555', 'author', '1.1', '財金', '555', 'IMG_0589.PNG', 2, '453\r\n3\r\n\r\n                        ', '', '~說明文字~\r\n                        ', 680, '', ''),
+(9, '999', '355322', 'author3', '1.1', '財金', '666', 'IMG_20180720_093925.jpg', 3, 'hahahahaha\r\n                        ', 'x', 'test test\r\n123\r\n                        ', 720, '', '');
 
 -- --------------------------------------------------------
 
