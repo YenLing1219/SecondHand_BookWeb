@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
-
--- 主機： localhost
--- 產生時間： 
--- 伺服器版本： 8.0.17
--- PHP 版本： 7.3.10
+-- 主機： 127.0.0.1
+-- 產生時間： 2023 年 05 月 22 日 21:37
+-- 伺服器版本： 10.4.28-MariaDB
+-- PHP 版本： 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -37,8 +35,8 @@ CREATE TABLE `account_manage` (
   `A_BirthDate` date DEFAULT NULL,
   `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `A_Nickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_CreditPoint` int(2) NOT NULL DEFAULT '50',
-  `A_TradeCount` int(10) NOT NULL DEFAULT '0',
+  `A_CreditPoint` int(2) NOT NULL DEFAULT 50,
+  `A_TradeCount` int(10) NOT NULL DEFAULT 0,
   `A_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -61,14 +59,14 @@ INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVer
 CREATE TABLE `book_information` (
   `B_BookID` int(10) NOT NULL,
   `B_BookName` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `B_ISBN` varchar(11) COLLATE utf8mb4_general_ci NOT NULL,
-  `B_Author` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
-  `B_BookVersion` varchar(3) COLLATE utf8mb4_general_ci NOT NULL,
-  `B_BookMajor` varchar(3) COLLATE utf8mb4_general_ci NOT NULL,
-  `B_LessonName` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
-  `B_BookPic` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `B_ISBN` varchar(11) NOT NULL,
+  `B_Author` varchar(15) NOT NULL,
+  `B_BookVersion` varchar(3) NOT NULL,
+  `B_BookMajor` varchar(3) NOT NULL,
+  `B_LessonName` varchar(20) NOT NULL,
+  `B_BookPic` varchar(255) NOT NULL,
   `B_BookStatus` int(4) NOT NULL,
-  `B_UsedStatus` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `B_UsedStatus` varchar(255) NOT NULL,
   `B_UsedByTeacher` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `B_Extra_Info` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `B_Price` int(5) NOT NULL,
@@ -79,7 +77,6 @@ CREATE TABLE `book_information` (
 --
 -- 傾印資料表的資料 `book_information`
 --
-
 
 INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`, `B_SalerID`, `B_SaleStatus`) VALUES
 (1, '1', '111', '111', '110', '資管', 'wfee', 'qefrqfefeff', 1, '寫出來了 超級感動\r\n                        ', '11114', '~說明文字~\r\n                        ', 1500, '410402407', ''),
@@ -94,6 +91,20 @@ INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, 
 (11, ' 資料結構使用Java', '97898647642', '蔡明志', '4', '資訊管', '資料結構', 'ds_Java.jpg', 5, '近全新，無筆跡\r\n                        ', '蔡幸蓁', '買書沒多久就買了平板，\r\n所以幾乎沒用\r\n                        ', 400, 'test1', '已完成'),
 (12, 'Statistic for Business and Economics', '1292227087', 'James T.McClave', '13', '資訊管', '統計學', 'statistics.jpg', 2, '有鉛筆、原子筆筆跡，\r\n封底頁不見\r\n                        ', '', '學姊傳下來的\r\n                        ', 350, '410402226', '已上架');
 
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `comments`
+--
+
+CREATE TABLE `comments` (
+  `C_CommentID` int(11) NOT NULL,
+  `C_ParentCommentID` int(11) DEFAULT NULL,
+  `A_StuID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `B_BookID` int(10) NOT NULL,
+  `C_CommentText` text DEFAULT NULL,
+  `C_CommentTime` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -104,12 +115,12 @@ INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, 
 CREATE TABLE `order_information` (
   `O_OrderID` int(10) NOT NULL,
   `O_OrderTime` datetime DEFAULT NULL,
-  `O_LockerID` varchar(2) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `O_LockerID` varchar(2) DEFAULT NULL,
   `B_BookID` int(10) NOT NULL,
   `A_BuyerID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `B_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `O_OrderRating` int(3) NOT NULL,
-  `O_OrderComments` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `O_SalerRating` int(3) NOT NULL,
+  `O_BuyerRating` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -131,6 +142,14 @@ ALTER TABLE `book_information`
   ADD KEY `B_SalerID` (`B_SalerID`);
 
 --
+-- 資料表索引 `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`C_CommentID`),
+  ADD KEY `A_StuID` (`A_StuID`),
+  ADD KEY `B_BookID` (`B_BookID`);
+
+--
 -- 資料表索引 `order_information`
 --
 ALTER TABLE `order_information`
@@ -150,8 +169,21 @@ ALTER TABLE `book_information`
   MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `C_CommentID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- 已傾印資料表的限制式
 --
+
+--
+-- 資料表的限制式 `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`A_StuID`) REFERENCES `account_manage` (`A_StuID`),
+  ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`B_BookID`) REFERENCES `book_information` (`B_BookID`);
 
 --
 -- 資料表的限制式 `order_information`

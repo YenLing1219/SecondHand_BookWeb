@@ -498,8 +498,8 @@ def order_book():
     A_BuyerID = session.get('A_StuID')
     O_OrderTime = datetime.datetime.now()
     O_LockerID = 1
-    O_OrderRating = 1
-    O_OrderComments = "test"
+    O_SalerRating = 1
+    O_BuyerRating = 1
     # get saler_id from book_information table
     conn = get_conn()
     
@@ -512,8 +512,8 @@ def order_book():
     
     # insert order into order_information table
     cursor.execute(
-    "INSERT INTO order_information (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_OrderRating, O_OrderComments) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-    (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_OrderRating, O_OrderComments)
+    "INSERT INTO order_information (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_SalerRating, O_BuyerRating) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+    (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_SalerRating, O_BuyerRating)
 )
 
     conn.commit()
