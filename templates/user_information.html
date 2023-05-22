@@ -12,7 +12,8 @@
 
     <div class="container">
       <div class="left">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsNUtiv-TIeCX5mg_GVqFikTo8M4pM_IrrC8y1WV9&s" alt="個人頭像" class="profile-image">
+        <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
+        <p>{{ account['A_Nickname'] }} 您好！</p>
         <button class="button" onclick="location.href='/user_information_profile'">個人資料</button>
       </div>
       <div class="right">

@@ -49,11 +49,6 @@ def index():
     except Exception as e:
         logging.exception("Error occurred during index")
         return "An error occurred during index. Please check the error log for more information.", 500
-    
-# 顯示[用戶資訊]頁面
-@app.route('/user_information')
-def show_user_information():
-    return render_template("user_information.html")
 
 #註冊功能實現，需要pip install bcrypt
 @app.route('/register', methods=["GET", "POST"]) 
@@ -141,6 +136,22 @@ def insert_or_update_data(sql):
         finally:
             conn.close()
 
+# 顯示[用戶資訊]頁面
+@app.route('/user_information')
+def show_user_information():
+    A_StuID = session.get('A_StuID')
+    sql = "select A_Nickname, A_image from account_manage where A_StuID = '{}'".format(A_StuID) #怎麼取A_StuID的值
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+        account = datas[0]
+    finally:
+        conn.close()
+    print(sql)
+    return render_template("user_information.html", account=account)
+
 # 個人資料頁面
 @app.route('/user_information_profile')
 def show_user_information_profile():
@@ -176,11 +187,28 @@ def show_user_information_profile_update(A_StuID):
 # [修改個人資料] 接收表單提交的數據 (unfinished)
 @app.route('/do_user_information_profile_update', methods=["GET","POST"])
 def user_information_profile_update():
+    # 儲存頭像
+    file = request.files['A_image']
+    if file.filename != '':
+        file.save(os.path.join(UPLOAD_FOLDER, file.filename))
+        print('--new profile picture:' + file.filename)
+        A_image = file.filename
+    else:
+        A_image = ''  # 沒有上傳新圖像則設A_image為空字串供下面程式碼判斷
+
+    # 
+    A_Password_old = request.form.get("A_Password_old") #為判斷舊密碼是否正確
+    A_Password_new = request.form.get("A_Password_new")
+    file = request.files['A_image']
+    if A_Password_old != '' and A_Password_new != '':
+        A_Password = A_Password_new
+        print('--new password')
+    else:
+        A_Password = ''  # 沒有輸入舊密碼&新密碼則設A_Password為空字串供下面程式碼判斷
+
     print(request.form)
     A_StuID = request.form.get("A_StuID")
     A_Email = request.form.get("A_Email")
-    A_Password_old = request.form.get("A_Password_old") #判斷舊密碼是否正確
-    A_Password_new = request.form.get("A_Password_new")
     A_StuID = request.form.get("A_StuID")
     A_BirthDate = request.form.get("A_BirthDate")
     A_Major = request.form.get("A_Major")
@@ -188,13 +216,21 @@ def user_information_profile_update():
 
     try:
         sql = f'''
-        update account_manage set A_Email='{A_Email}', A_Password='{A_Password_new}', 
+        update account_manage set A_Email='{A_Email}', 
         A_BirthDate='{A_BirthDate}', A_Major='{A_Major}', A_Nickname='{A_Nickname}'
-        where A_StuID='{A_StuID}' and A_Password='{A_Password_old}'
         '''
+        if A_image != '': 
+            sql += f", A_image='{A_image}'"  #有傳新圖片才更新這欄SQL
+
+        if A_Password != '': 
+            sql += f", A_Password='{A_Password}' where A_StuID='{A_StuID}' and A_Password='{A_Password_old}'"  #有更改密碼才更新這欄SQL並檢查舊密碼是否正確
+        else:
+            sql += f" where A_StuID='{A_StuID}'"
+
         print(sql)
         insert_or_update_data(sql)
         return "User information updated successfully!" # 舊密碼錯誤不會更新資訊，但還是顯示成功訊息
+    
     except Exception as e:
         logging.exception("Error occurred during updating user information")
         print(e)
@@ -329,7 +365,7 @@ def book_update():
     file = request.files['B_BookPic']
     if file.filename != '':
         file.save(os.path.join(UPLOAD_FOLDER, file.filename))
-        print('--picture update successfully:' + file.filename)
+        print('--new book picture:' + file.filename)
         B_BookPic = file.filename
     else:
         B_BookPic = ''  # Set it to empty if no file is uploaded

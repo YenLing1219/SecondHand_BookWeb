@@ -11,7 +11,7 @@
 
     <div class="container">
       <div class="left">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsNUtiv-TIeCX5mg_GVqFikTo8M4pM_IrrC8y1WV9&s" alt="個人頭像" class="profile-image">
+        <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
         <p>暱稱：{{ account['A_Nickname'] }}<!--這邊替換位置--></p>
         <p>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）<!--這邊替換位置--></p>
       </div>

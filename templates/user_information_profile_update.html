@@ -12,24 +12,19 @@
   <form action="/do_user_information_profile_update" method="POST" enctype="multipart/form-data">
     <div class="container">
       <div class="left">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsNUtiv-TIeCX5mg_GVqFikTo8M4pM_IrrC8y1WV9&s" alt="個人頭像" class="profile-image">
         <p>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）<!--這邊替換位置--></p>
+        <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="舊頭像">
+        <input type="file" name="A_image" value="{{ account[ 'A_image' ]}}" accept="image/*">
       </div>
       <div class="right">
-        <p>
-          暱稱：<input type="text" name="A_Nickname" value="{{ account['A_Nickname'] }}" required><!--這邊替換位置-->
-        </p>
         <p>
           學號：<input type="text" name = "A_StuID" value="{{ account['A_StuID'] }}" readonly><!--這邊替換位置-->
         </p>
         <p>
+          暱稱：<input type="text" name="A_Nickname" value="{{ account['A_Nickname'] }}" required><!--這邊替換位置-->
+        </p>
+        <p>
           常用信箱：<input type="text" name="A_Email" value="{{ account['A_Email'] }}" required><!--這邊替換位置-->
-        </p>
-        <p>
-          舊密碼：<input type="password" name="A_Password_old" required><!--這邊替換位置-->
-        </p>
-        <p>
-          新密碼：<input type="password" name="A_Password_new" required><!--這邊替換位置-->
         </p>
         <p>科系：
           <select name="A_Major">
@@ -124,6 +119,12 @@
         </p>
         <p>
           生日：<input type="date" name="A_BirthDate" value="{{ account['A_BirthDate'] }}" required><!--這邊替換位置-->
+        </p>
+        <p>
+          舊密碼：<input type="password" name="A_Password_old"><!--這邊替換位置-->
+        </p>
+        <p>
+          新密碼：<input type="password" name="A_Password_new"><!--這邊替換位置-->
         </p>
         <p>
           <input type="submit" name="submit" value="確認更改">
