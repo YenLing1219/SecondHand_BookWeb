@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/user_information_styles.css">
+  <title>個人資料</title>
+</head>
+<body>
+  {% block content %}<!--複製這行 header-->
+
+    <div class="container">
+      <div class="left">
+        <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
+        <p>暱稱：{{ account['A_Nickname'] }}<!--這邊替換位置--></p>
+        <p>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）<!--這邊替換位置--></p>
+      </div>
+      <div class="right">
+        <p>學號：{{ account['A_StuID'] }}<!--這邊替換位置--></p>
+        <p>常用信箱：{{ account['A_Email'] }}<!--這邊替換位置--></p>
+        <p>科系：{{ account['A_Major'] }}<!--這邊替換位置--></p>
+        <p>生日：{{ account['A_BirthDate'] }}<!--這邊替換位置--></p>
+        <button class="button" onclick="location.href='/user_information_profile_update/{{ account['A_StuID'] }}'">修改資料 </button>
+        <button class="button">成為賣家</button>
+      </div>
+    </div>
+
+  {% endblock %}<!--複製這行 header-->
+</body>
+</html>

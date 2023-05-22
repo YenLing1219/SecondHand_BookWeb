@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../static/book_create_update_styles.css">
 </head>
 <body>
+    {% block content %}<!--複製這行 header-->
     <div>
         <h1>修改書籍</h1>
         <form action="/do_book_update" method="POST" enctype="multipart/form-data">
@@ -63,7 +64,7 @@
                     <th>書況照片*</th>
                     <td>
                         <input type="text" value="{{ book[ 'B_BookPic' ]}}" readonly><br>
-                        <input type="file" name="B_BookPic" accept="image/*">
+                        <input type="file" name="B_BookPic" value="{{ book[ 'B_BookPic' ]}}" accept="image/*">
                     </td>
                 </tr>
             </table>
@@ -87,7 +88,7 @@
             <h3>定價</h3>
             <table border="1">
                 <tr>
-                    <th>願意售價</th>
+                    <th>售價</th>
                     <td><input type="number" name="B_Price" value="{{ book[ 'B_Price' ]}}"></td>
                 </tr>
             </table>
@@ -97,5 +98,6 @@
             <input type="submit" name="submit" value="提交">
         </form>
     </div>
+    {% endblock %}<!--複製這行 header-->
 </body>
 </html>
