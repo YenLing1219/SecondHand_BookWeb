@@ -2837,3 +2837,4 @@ Traceback (most recent call last):
 pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
 INFO:werkzeug:127.0.0.1 - - [22/May/2023 21:08:23] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [22/May/2023 21:08:29] "POST /order HTTP/1.1" 200 -
+
