@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/user_information_sellerpage_styles.css">
-    <title>Custom Layout</title>
+    <title>賣家介面</title>
     <style>
         /* Container */
 .container {
@@ -108,20 +108,37 @@
     <div class="container">
         <button class="new-button" onclick="location.href='/book_create'">+NEW</button>
     </div>
-    <div class="border">
-        {% for book in datas %}
+
+    <div class="border"> <!--書籍篩選: 進行中-->
+        <h3>進行中</h3>
+        {% for book in datas_processing %}
         <div class="item">
             <div class="image-change">
                 <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
             </div>
             <p>書名：{{ book['B_BookName'] }}</p>
-            <p class="status">狀態：已上架</p>
+            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
             <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
             <button class="button remove">下架</button>
         </div>
         {% endfor %}
-    {% endblock %}<!--複製這行 header-->
-
     </div>
+
+    <div class="border"> <!--書籍篩選: 已完成-->
+        <h3>已完成</h3>
+        {% for book in datas_finished %}
+        <div class="item">
+            <div class="image-change">
+                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+            </div>
+            <p>書名：{{ book['B_BookName'] }}</p>
+            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+            <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
+            <button class="button remove">下架</button>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}<!--複製這行 header-->
 </body>
 </html>
