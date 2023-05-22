@@ -4,22 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>詳細書籍資訊</title>
-<link rel="stylesheet" href="css/book_detail_styles.css">
+<link rel="stylesheet" href="../static/book_detail_styles.css">
 </head>
-<body>
-  {% extends 'layout.html' %}
+<body><!--複製這行 header-->
+  <!--{% extends 'layout.html' %}-->
+  {% block content %}<!--複製這行 header-->
   <div class="container">
     <div class="left">
       <a href="#">
         <img class="image-link" src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片連結">
       </a>
       <button class="custom-button">
-        <!--新增目標位置 重新接入跳轉位置即可-->
-        <a href="目標網址">
-          <img src="button-image.jpg" alt="按鈕圖片">
-        </a>
+        <img src="button-image.jpg" alt="按鈕圖片">
       </button>
-      
     </div>
     <div class="right">
       <p>書名: <!--這邊替換位置-->{{ book['B_BookName'] }}</p>
@@ -57,8 +54,7 @@
     <button class="tab-button" data-target="details">詳細資訊</button>
     <button class="tab-button" data-target="qa">留言板(Q&A)</button>
     <button class="tab-button" data-target="seller">關於賣家</button>
-    <button class="tab-button" onclick="purchaseBook('{{ book['B_BookID'] }}', '{{ book['A_StuID'] }}')">購買</button>
-
+    <button class="tab-button">購買</button>
   </div>
   <div class="tab-content">
     <div id="details" class="content">
@@ -75,6 +71,6 @@
   </div>
   
   <script src="book_detail_script.js"></script>
-  
+  {% endblock %}<!--複製這行 header-->
 </body>
 </html>

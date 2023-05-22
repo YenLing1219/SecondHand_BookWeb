@@ -2,6 +2,7 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
+
 -- 主機： localhost
 -- 產生時間： 
 -- 伺服器版本： 8.0.17
@@ -29,22 +30,27 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `account_manage` (
-  `A_Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_Password` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_StuID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_Email` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_Password` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_StuID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_RealNameVerify` tinyint(1) DEFAULT NULL,
   `A_BirthDate` date DEFAULT NULL,
-  `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `A_Nickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `A_CreditPoint` int(2) NOT NULL DEFAULT '50',
+  `A_TradeCount` int(10) NOT NULL DEFAULT '0',
+  `A_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `account_manage`
 --
 
-INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`) VALUES
-('cherry911219@gmail.com', '$2b$12$/sKSfh7TR.S4F6fI7xSwDu/syU8aJbtob7MHmq4RcerLg5wNz0tYm', '410402226', 0, '2022-06-02', '資訊管理學系'),
-('shioubi0216@gmail.com', '$2b$12$499rklXJAjYP/H/OkLbNVeSQbl6VM.il90.haYNzAc8gZiESagATS', '410402407', 0, '2023-05-10', '醫學系'),
-('wsx2244667@gmail.com', '$2b$12$5oQ7JJqoEjI1mf07r9vuau.LG6IPK51vDtRzl49On/m.5Nc01DEJO', '410402408', 0, '2023-05-12', '音樂學系');
+INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`, `A_image`) VALUES
+('cherry911219@gmail.com', '12333', '410402226', 0, '2002-12-19', '資訊管理學系', '奇怪的知識增加了', 50, 0, 'profile_preset.jpg'),
+('shioubi0216@gmail.com', '$2b$12$4Lf28Xl7d6t1EkIecScc8u1ZQWU36ndFvm7GJ8FNm8CAssSKKC2OK', '410402407', 0, '2023-01-19', '經濟學系、所', '', 0, 0, 'profile_preset.jpg'),
+('wsx2244667@gmail.com', '$2b$12$QmsxuEa5a/YxaPQ6vbAixu8lQfiwRCQz6S8YYg80Pd9e3Bhfrd1sK', '410402408', 0, '2023-05-09', '音樂學系', '', 0, 0, 'profile_preset.jpg'),
+('111@gmail.com', '1111', 'test1', 0, '2001-01-11', '音樂學系', '', 50, 0, 'profile_preset.jpg');
 
 -- --------------------------------------------------------
 
@@ -60,22 +66,34 @@ CREATE TABLE `book_information` (
   `B_BookVersion` varchar(3) COLLATE utf8mb4_general_ci NOT NULL,
   `B_BookMajor` varchar(3) COLLATE utf8mb4_general_ci NOT NULL,
   `B_LessonName` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
-  `B_BookPic` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `B_BookPic` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `B_BookStatus` int(4) NOT NULL,
   `B_UsedStatus` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `B_UsedByTeacher` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `B_Extra_Info` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `B_Price` int(5) NOT NULL,
-   FOREIGN KEY (A_StuID) REFERENCES account_manage (A_StuID);
+  `B_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `B_SaleStatus` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '已上架'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `book_information`
 --
 
-INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`) VALUES
-(1, 'ドコデモ日本語', '11111111111', 'LiveABC', '1', '全人', '基礎日文', 'test1.jpg', 1, '測試1\r\n                        ', '教師1', '測試2\r\n                        ', 200),
-(2, '輔仁大學國文課本大學國文選', '45557555555', '輔仁大學國文系教師', '202', '全人', '國文', 'test3.jpg', 3, '~說明文字~\r\n                        ', 'authot', '~說明文字~\r\n                        ', 289);
+
+INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`, `B_SalerID`, `B_SaleStatus`) VALUES
+(1, '1', '111', '111', '110', '資管', 'wfee', 'qefrqfefeff', 1, '寫出來了 超級感動\r\n                        ', '11114', '~說明文字~\r\n                        ', 1500, '410402407', ''),
+(2, '221', '222', 'author', '22', 'adv', 'wfee', 'qefrqfefeff', 1, '~說明文字~\r\n    advadva                    ', 'efqf', '~說明文字~\r\n          advadv              ', 1000, '', ''),
+(3, '333', '3333333', 'hu', '33', '企管', 'akkkk', 'wWWWWWwww', 1, '~說明文字~', '', '~說明文字~', 650, '410402407', ''),
+(4, '444', '5151', '+8448599', '4', '666', '8448', '555', 3, '~說明文字~', '2', '~說明文字~', 600, '', ''),
+(5, 'ug', 'xgx', 'xfgj', 'gjc', '企管', 'xtrjs', 'wwwwwwwww', 1, '~說明文字~\r\n                        ', '55', 'kkk~說明文字~\r\n                        ', 777, '', ''),
+(7, 'ftj', 'sst', 'sthsj', 'fhx', '資管', 'xtrjs', 'ww', 1, '~說明文字~\r\n                        ', 'k', '~說明文字~\r\n                        ', 660, '', ''),
+(8, '33', '45555555555', 'author', '1.1', '財金', '555', 'IMG_0589.PNG', 2, '453\r\n3\r\n\r\n                        ', '', '~說明文字~\r\n                        ', 680, '', ''),
+(9, '999', '355322', 'author3', '1.1', '財金', '666', 'IMG_20180720_093925.jpg', 3, 'hahahahaha\r\n                        ', 'x', 'test test\r\n123\r\n                        ', 720, '', ''),
+(10, 'ドコデモ日本語4', '97898644120', '輔仁大學日文系教材編輯委員會', '1', '全人', '進階日文', '下載 (1).jpg', 1, '鉛筆、螢光筆筆跡，\r\n習題有寫過\r\n                        ', '王', '進階日文下學期用書\r\n                        ', 150, '410402226', '已上架'),
+(11, ' 資料結構使用Java', '97898647642', '蔡明志', '4', '資訊管', '資料結構', 'ds_Java.jpg', 5, '近全新，無筆跡\r\n                        ', '蔡幸蓁', '買書沒多久就買了平板，\r\n所以幾乎沒用\r\n                        ', 400, 'test1', '已完成'),
+(12, 'Statistic for Business and Economics', '1292227087', 'James T.McClave', '13', '資訊管', '統計學', 'statistics.jpg', 2, '有鉛筆、原子筆筆跡，\r\n封底頁不見\r\n                        ', '', '學姊傳下來的\r\n                        ', 350, '410402226', '已上架');
+
 
 -- --------------------------------------------------------
 
@@ -88,9 +106,17 @@ CREATE TABLE `order_information` (
   `O_OrderTime` datetime DEFAULT NULL,
   `O_LockerID` varchar(2) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `B_BookID` int(10) NOT NULL,
-  `A_BuyerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `A_BuyerID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `B_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `O_OrderStatus` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- 傾印資料表的資料 `order_information`
+--
+
+INSERT INTO `order_information` (`O_OrderID`, `O_OrderTime`, `O_LockerID`, `B_BookID`, `A_BuyerID`, `B_SalerID`, `O_OrderStatus`) VALUES
+(1, '2023-05-03 09:00:17', '1', 11, '410402226', 'test1', '已完成');
 
 --
 -- 已傾印資料表的索引
@@ -106,7 +132,9 @@ ALTER TABLE `account_manage`
 -- 資料表索引 `book_information`
 --
 ALTER TABLE `book_information`
-  ADD KEY `B_BookID` (`B_BookID`);
+  ADD PRIMARY KEY (`B_BookID`),
+  ADD KEY `B_BookID` (`B_BookID`),
+  ADD KEY `B_SalerID` (`B_SalerID`);
 
 --
 -- 資料表索引 `order_information`
@@ -115,7 +143,7 @@ ALTER TABLE `order_information`
   ADD PRIMARY KEY (`O_OrderID`),
   ADD KEY `B_BookID` (`B_BookID`),
   ADD KEY `A_BuyerID` (`A_BuyerID`),
-  ADD KEY `A_SalerID` (`A_SalerID`);
+  ADD KEY `B_SalerID` (`B_SalerID`);
 
 --
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
@@ -125,7 +153,7 @@ ALTER TABLE `order_information`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `book_information`
 --
 ALTER TABLE `book_information`
-  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 已傾印資料表的限制式
@@ -137,7 +165,7 @@ ALTER TABLE `book_information`
 ALTER TABLE `order_information`
   ADD CONSTRAINT `order_information_ibfk_1` FOREIGN KEY (`B_BookID`) REFERENCES `book_information` (`B_BookID`),
   ADD CONSTRAINT `order_information_ibfk_2` FOREIGN KEY (`A_BuyerID`) REFERENCES `account_manage` (`A_StuID`),
-  ADD CONSTRAINT `order_information_ibfk_3` FOREIGN KEY (`A_SalerID`) REFERENCES `account_manage` (`A_StuID`);
+  ADD CONSTRAINT `order_information_ibfk_3` FOREIGN KEY (`B_SalerID`) REFERENCES `book_information` (`B_SalerID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

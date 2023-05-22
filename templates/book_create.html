@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>書籍上架</title>
-    <link rel="stylesheet" href="css/book_create_update_styles.css">
+    <link rel="stylesheet" href="../static/book_create_update_styles.css">
 </head>
 <body>
     {% extends 'layout.html' %}
@@ -92,7 +92,7 @@
             <h3>定價</h3>
             <table border="1">
                 <tr>
-                    <th>願意售價</th>
+                    <th>售價</th>
                     <td><input type="number" name="B_Price"></td>
                 </tr>
             </table>
@@ -101,5 +101,6 @@
             <input type="submit" name="submit" value="提交">
         </form>
     </div>
+    {% endblock %}<!--複製這行 header-->
 </body>
 </html>
