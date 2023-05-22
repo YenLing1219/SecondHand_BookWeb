@@ -9,27 +9,27 @@
     {% extends 'layout.html' %}
     {% block title %} 首頁 {% endblock %}
     {% block content %}<!--複製這行 header-->
-    <div>
+    <div  align="center">
         <h1>修改書籍</h1>
         <form action="/do_book_update" method="POST" enctype="multipart/form-data">
-                上架編號<input type="number" name = "B_BookID" value="{{ book[ 'B_BookID' ]}}" readonly>
+        上架編號<input type="number" name = "B_BookID" value="{{ book[ 'B_BookID' ]}}" readonly>
 
             <h3>書籍基本資料</h3>
             <table border="1">
                 <tr>
-                    <th>書名*</th>
+                    <th>書名<font color="red">*<font></th>
                     <td><input type="text" name="B_BookName" value="{{ book[ 'B_BookName' ]}}" required></td>
                 </tr>
                 <tr>
-                    <th>版本*</th>
+                    <th>版本<font color="red">*<font></th>
                     <td><input type="text" name="B_BookVersion" value="{{ book[ 'B_BookVersion' ]}}" required></td>
                 </tr>
                 <tr>
-                    <th>ISBN碼*</th>
+                    <th>ISBN碼<font color="red">*<font></th>
                     <td><input type="text" name="B_ISBN" value="{{ book[ 'B_ISBN' ]}}" required></td>
                 </tr>
                 <tr>
-                    <th>作者*</th>
+                    <th>作者<font color="red">*<font></th>
                     <td><input type="text" name="B_Author" value="{{ book[ 'B_Author' ]}}" required></td>
                 </tr>
             </table>
@@ -37,7 +37,7 @@
             <h3>二手狀態調查</h3>
             <table border="1">
                 <tr>
-                    <th>全新未使用部分*</th>
+                    <th>全新未使用部分<font color="red">*<font></th>
                     <td>
                         <input type="number" value="{{ book[ 'B_BookStatus' ]}}" readonly><br>
                         更新:
@@ -51,7 +51,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>使用痕跡、筆跡、汙損敘述*</th>
+                    <th>使用痕跡、筆跡、汙損敘述<font color="red">*<font></th>
                     <td>
                         <textarea name="B_UsedStatus" cols="30" rows="10" required>{{ book[ 'B_UsedStatus' ]}}</textarea>
                     </td>
@@ -63,7 +63,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>書況照片*</th>
+                    <th>書況照片<font color="red">*<font></th>
                     <td>
                         <input type="text" value="{{ book[ 'B_BookPic' ]}}" readonly><br>
                         <input type="file" name="B_BookPic" value="{{ book[ 'B_BookPic' ]}}" accept="image/*">
@@ -74,10 +74,8 @@
             <h3>相關分類及標籤</h3>
             <table border="1">
                 <tr>
-                    <th>科系*</th>
+                    <th>科系<font color="red">*<font></th>
                     <td>
-                       
-                    
                         <select name="B_BookMajor" required>
                             <option value="{{ book['B_BookMajor'] }}">{{ book['B_BookMajor'] }}</option>
                 
@@ -169,7 +167,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>課程名稱*</th>
+                    <th>課程名稱<font color="red">*<font></th>
                     <td><input type="text" name="B_LessonName" value="{{ book[ 'B_LessonName' ]}}" required></td>
                 </tr>
                 <tr>
@@ -181,8 +179,8 @@
             <h3>定價</h3>
             <table border="1">
                 <tr>
-                    <th>售價</th>
-                    <td><input type="number" name="B_Price" value="{{ book[ 'B_Price' ]}}"></td>
+                    <th>售價<font color="red">*<font></th>
+                    <td><input type="number" name="B_Price" value="{{ book[ 'B_Price' ]}}" required></td>
                 </tr>
             </table>
 
