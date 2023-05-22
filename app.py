@@ -278,6 +278,19 @@ def show_user_information_sellerpage():
 
     return render_template("user_information_sellerpage.html", datas_processing = datas_processing, datas_finished = datas_finished)
 
+# [賣家介面] 評價功能
+@app.route('/do_user_information_sellerpage_rating/<B_BookID>', methods=['POST'])
+def user_information_sellerpage_rating(B_BookID):
+    print(request.form)
+    O_OrderRating = request.form.get("O_OrderRating")
+    sql = f'''
+    update order_information set O_OrderRating={O_OrderRating}
+    where B_BookID={B_BookID}
+    '''
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect(url_for('show_user_information_sellerpage'))
+
 # 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
 @app.route('/user_information_orders')
 def show_user_information_orders():
@@ -312,13 +325,18 @@ def show_user_information_orders():
     print(sql_finished)
     return render_template("user_information_orders.html", datas_processing = datas_processing, datas_finished = datas_finished)
 
-'''
-# [查詢訂單] 評價功能 (unfinished)
-@app.route('/do_user_information_orders_rating')
-def user_information_orders_rating():
-
-    return
-'''
+# [查詢訂單] 評價功能
+@app.route('/do_user_information_orders_rating/<B_BookID>', methods=['POST'])
+def user_information_orders_rating(B_BookID):
+    print(request.form)
+    O_OrderRating = request.form.get("O_OrderRating")
+    sql = f'''
+    update order_information set O_OrderRating={O_OrderRating}
+    where B_BookID={B_BookID}
+    '''
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect(url_for('show_user_information_orders'))
 
 # [上架] 顯示網站
 @app.route('/book_create')

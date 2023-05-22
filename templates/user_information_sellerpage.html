@@ -64,14 +64,18 @@
                 <p>書名：{{ book['B_BookName'] }}</p>
                 <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
 
-                <ul class="comment">
-                    <li value=1>☆</li>
-                    <li value=2>☆</li>
-                    <li value=3>☆</li>
-                    <li value=4>☆</li>
-                    <li value=5>☆</li>
-                </ul>
-                <button id="editBtn">評價</button>
+                <form action="/do_user_information_sellerpage_rating/{{ book['B_BookID'] }}" method="POST">
+                    <ul class="comment" size="20">
+                        <li value=1>☆</li>
+                        <li value=2>☆</li>
+                        <li value=3>☆</li>
+                        <li value=4>☆</li>
+                        <li value=5>☆</li>
+                    </ul>
+
+                    <input type="number" name="O_OrderRating"><!--暫時替代方案:直接輸數字-->
+                    <button id="editBtn" type="submit" name="submit">評價</button>
+                </form>
             </div>
             {% endfor %}
 

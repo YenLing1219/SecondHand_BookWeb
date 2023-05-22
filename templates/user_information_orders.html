@@ -6,6 +6,7 @@
 <title>分隔線示例</title>
 <link rel="stylesheet" href="../static/user_information_orders_styles.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../static/user_information_orders_script.js"></script>
 
 <script>
     $(function() {
@@ -52,22 +53,27 @@
                 </div>
                 <p>書名：{{ book['B_BookName'] }}</p>
                 <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
-            
-                <ul class="comment">
-                    <li>☆</li>
-                    <li>☆</li>
-                    <li>☆</li>
-                    <li>☆</li>
-                    <li>☆</li>
-                </ul>
-                <button id="editBtn">評價</button>
+
+                <form action="/do_user_information_orders_rating/{{ book['B_BookID'] }}" method="POST">
+                    <ul class="comment" size="20">
+                        <li value=1>☆</li>
+                        <li value=2>☆</li>
+                        <li value=3>☆</li>
+                        <li value=4>☆</li>
+                        <li value=5>☆</li>
+                    </ul>
+                    <input type="number" name="O_OrderRating"><!--暫時替代方案:直接輸數字-->
+
+                    <!--<input id="editBtn" type="submit" name="submit"  value="評價">-->
+                    <button id="editBtn" type="submit" name="submit">評價</button>
+                </form>
             </div>
             {% endfor %}
 
         </div>
     </div>
 
-<script src="../static/user_information_orders_script.js"></script>
+
 
 </body>
 </html>
