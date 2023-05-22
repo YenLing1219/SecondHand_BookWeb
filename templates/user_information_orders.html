@@ -1,140 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/user_information_sellerpage_styles.css">
-    <title>查詢訂單</title>
-    <style>
-        /* Container */
-.container {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分隔線示例</title>
+<link rel="stylesheet" href="../static/user_information_orders_styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-/* Button: +NEW */
-.new-button {
-    width: 400px;
-    height: 200px;
-    font-size: 48px; /* Adjust the font size as needed */
-    text-align: center;
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Vertical adjustment for the +NEW button */
-/* Change the 'align-items' value to adjust the vertical position */
-/* Example: flex-start, center, flex-end */
-.container {
-    align-items: center; /* Modify this value */
-}
-
-/* Border */
-.border {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Item */
-.item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid black;
-    padding: 20px;
-}
-
-/* Image */
-.item img {
-    width: 100px; /* Adjust the image size as needed */
-    height: 100px;
-}
-
-/* Text */
-.text {
-    margin-left: 10px;
-}
-
-/* Status */
-.status {
-    flex-grow: 1;
-    text-align: center;
-}
-
-/* Buttons: Modify and Remove */
-.button {
-    width: 100px;
-    height: 50px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin: 5px;
-}
-
-/* Modify button */
-.modify {
-    background-color: #4CAF50;
-}
-
-/* Remove button */
-.remove {
-    background-color: #f44336;
-}
-.image-chage {
-    width: 100px;
-    height: 300px;
-    overflow: hidden;
-  }
-  /*這是設置圖片大小上限的代碼
-  img {
-  max-width: 500px;
-  max-height: 300px;
-}
-*/
-
-    </style>
+<script>
+    $(function() {
+        // 绑定按钮的点击事件
+        $('#editBtn').click(toggleEditMode);
+    });
+</script>
 </head>
 <body>
-    {% extends 'layout.html' %}<!--複製這行 header-->
-    {% block content %}<!--複製這行 header-->
 
-    <div class="border"> <!--書籍篩選: 進行中-->
-        <h3>進行中</h3>
-        {% for book in datas_processing %}
-        <div class="item">
-            <div class="image-change">
-                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
-            </div>
-            <p>書名：{{ book['B_BookName'] }}</p>
-            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
-            <button class="button modify" onclick="location.href=''">完成訂單</button>
-            <button class="button remove">取消訂單</button>
+    <div class="border outside">
+
+        <div class="tabs">
+            <button class="tab-button" data-target="processing">進行中</button>
+            <button class="tab-button" data-target="finished">已完成(Q&A)</button>
         </div>
-        {% endfor %}
-    </div>
 
-    <div class="border"> <!--書籍篩選: 已完成-->
-        <h3>已完成</h3>
-        {% for book in datas_finished %}
-        <div class="item">
-            <div class="image-change">
-                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+        <div class="tab-content">
+            <div id="processing" class="content">
+
+                <!--書籍篩選: 進行中-->
+                {% for book in datas_processing %}
+                <div class="item">
+                    <div class="image-change">
+                        <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+                    </div>
+                    <p>書名：{{ book['B_BookName'] }}</p>
+                    <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+                    <button class="button modify" onclick="location.href=''">完成訂單</button>
+                    <button class="button remove">取消訂單</button>
+                </div>
+                {% endfor %}
+
             </div>
-            <p>書名：{{ book['B_BookName'] }}</p>
-            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
-            <button class="button modify" disabled="disabled" onclick="location.href=''">完成訂單</button>
-            <button class="button remove" disabled="disabled">取消訂單</button>
         </div>
-        {% endfor %}
-    </div>
 
-    {% endblock %}<!--複製這行 header-->
+        <div id="finished" class="content hide">
+
+            <!--書籍篩選: 已完成-->
+            {% for book in datas_finished %}
+            <div class="item">
+                <div class="image-change">
+                    <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+                </div>
+                <p>書名：{{ book['B_BookName'] }}</p>
+                <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+            
+                <ul class="comment">
+                    <li>☆</li>
+                    <li>☆</li>
+                    <li>☆</li>
+                    <li>☆</li>
+                    <li>☆</li>
+                </ul>
+                <button id="editBtn">評價</button>
+            </div>
+            {% endfor %}
+
+        </div>
+
+</div>
+
+<script src="../static/user_information_orders_script.js"></script>
+
 </body>
 </html>
