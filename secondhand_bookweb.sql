@@ -2,6 +2,7 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
+
 -- 主機： localhost
 -- 產生時間： 
 -- 伺服器版本： 8.0.17
@@ -79,6 +80,7 @@ CREATE TABLE `book_information` (
 -- 傾印資料表的資料 `book_information`
 --
 
+
 INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, `B_BookVersion`, `B_BookMajor`, `B_LessonName`, `B_BookPic`, `B_BookStatus`, `B_UsedStatus`, `B_UsedByTeacher`, `B_Extra_Info`, `B_Price`, `B_SalerID`, `B_SaleStatus`) VALUES
 (1, '1', '111', '111', '110', '資管', 'wfee', 'qefrqfefeff', 1, '寫出來了 超級感動\r\n                        ', '11114', '~說明文字~\r\n                        ', 1500, '410402407', ''),
 (2, '221', '222', 'author', '22', 'adv', 'wfee', 'qefrqfefeff', 1, '~說明文字~\r\n    advadva                    ', 'efqf', '~說明文字~\r\n          advadv              ', 1000, '', ''),
@@ -91,6 +93,7 @@ INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, 
 (10, 'ドコデモ日本語4', '97898644120', '輔仁大學日文系教材編輯委員會', '1', '全人', '進階日文', '下載 (1).jpg', 1, '鉛筆、螢光筆筆跡，\r\n習題有寫過\r\n                        ', '王', '進階日文下學期用書\r\n                        ', 150, '410402226', '已上架'),
 (11, ' 資料結構使用Java', '97898647642', '蔡明志', '4', '資訊管', '資料結構', 'ds_Java.jpg', 5, '近全新，無筆跡\r\n                        ', '蔡幸蓁', '買書沒多久就買了平板，\r\n所以幾乎沒用\r\n                        ', 400, 'test1', '已完成'),
 (12, 'Statistic for Business and Economics', '1292227087', 'James T.McClave', '13', '資訊管', '統計學', 'statistics.jpg', 2, '有鉛筆、原子筆筆跡，\r\n封底頁不見\r\n                        ', '', '學姊傳下來的\r\n                        ', 350, '410402226', '已上架');
+
 
 -- --------------------------------------------------------
 
