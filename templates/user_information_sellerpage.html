@@ -63,8 +63,15 @@
                 </div>
                 <p>書名：{{ book['B_BookName'] }}</p>
                 <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
-                <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
-                <button class="button remove">下架</button>
+
+                <ul class="comment">
+                    <li value=1>☆</li>
+                    <li value=2>☆</li>
+                    <li value=3>☆</li>
+                    <li value=4>☆</li>
+                    <li value=5>☆</li>
+                </ul>
+                <button id="editBtn">評價</button>
             </div>
             {% endfor %}
 
