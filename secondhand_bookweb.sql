@@ -108,15 +108,9 @@ CREATE TABLE `order_information` (
   `B_BookID` int(10) NOT NULL,
   `A_BuyerID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `B_SalerID` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `O_OrderStatus` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `O_OrderRating` int(3) NOT NULL,
+  `O_OrderComments` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- 傾印資料表的資料 `order_information`
---
-
-INSERT INTO `order_information` (`O_OrderID`, `O_OrderTime`, `O_LockerID`, `B_BookID`, `A_BuyerID`, `B_SalerID`, `O_OrderStatus`) VALUES
-(1, '2023-05-03 09:00:17', '1', 11, '410402226', 'test1', '已完成');
 
 --
 -- 已傾印資料表的索引

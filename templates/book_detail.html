@@ -14,9 +14,14 @@
       <a href="#">
         <img class="image-link" src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片連結">
       </a>
-      <button class="custom-button">
-        <img src="button-image.jpg" alt="按鈕圖片">
-      </button>
+      <form method="POST" action="/order">
+        <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
+        <button type="submit">
+            <img src="button-image.jpg" alt="購買" >
+        </button>
+    </form>
+    
+       
     </div>
     <div class="right">
       <p>書名: <!--這邊替換位置-->{{ book['B_BookName'] }}</p>

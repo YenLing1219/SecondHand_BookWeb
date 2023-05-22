@@ -76,7 +76,7 @@ def register():
         logging.exception("Error occurred during registration")
         return "An error occurred during registration. Please check the error log for more information.", 500
     
-#登入功能實現，同樣使用brcypt套件，加上MySQL和Mysqldb
+#登入功能實現，加上MySQL和Mysqldb
 @app.route('/login',methods=["GET","POST"])
 def login():
     print("Entering login function")
@@ -448,135 +448,97 @@ def show_book_detail(B_BookID):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute(sql)
         datas = cursor.fetchall()
-#        B_BookID = session['B_BookID'] #有這行似乎會error
-        book = datas[0]
-#        session['A_Email'] =cursor['A_Email'] #有這行似乎會error
+        if datas:  # check if datas is not empty
+            book = datas[0]
+            session['B_SalerID'] = book['B_SalerID']  # store B_SalerID in the session
+        else:
+            book = None  # or handle this case appropriately
     finally:
         conn.close()
     print(sql)
     return render_template("book_detail.html", book = book)
 
-<<<<<<< HEAD
-#信件功能函數
-from flask_mail import Mail, Message
-import random
+#定義寄信功能的function
+def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
+    content = MIMEMultipart()
+    content["subject"] = "您在輔大二手書網站的交易已成功!"
+    content["from"] = "wsx2244667@gmail.com"
+    content["to"] = to_email
+    content.attach(MIMEText(f"Please proceed to locker {locker_id} to get your book {book_name}"))
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'shioubi0216@gmail.com'
-app.config['MAIL_PASSWORD'] = 'inok628088'
-
-mail = Mail(app)
-
-counter = 1
-
-#處理電子郵件發送
-def send_email(buyer_email, seller_email, cabinet_number, password):
-    subject = "輔大二手課本交易平台上的交易成功!"
-    content = f"交易櫃號碼:{cabinet_number}\n密碼:{password}"
-
-    msg_buyer = Message(subject, recipients=[buyer_email])
-    msg_seller = Message(subject, recipients=[seller_email])
-
-    msg_buyer.body = content
-    msg_seller.body = content
-
-    mail.send(msg_buyer)
-    mail.send(msg_seller)
-
-
-def get_email_by_stu_id(stu_id):
-    connection = get_conn()
-    cursor = connection.cursor()
-    query = "SELECT A_Email FROM account_manage WHERE A_StuID = %s;"
-    cursor.execute(query, (stu_id,))
-    result = cursor.fetchone()
-    connection.close()
-
-    if result:
-        return result[0]
-    else:
-        return None
-
-def get_seller_email_by_book_id(book_id):
-    connection = get_conn()
-    cursor = connection.cursor()
-    query = """SELECT A_Email FROM account_manage 
-               JOIN  order_information ON account_manage.A_StuID = order_information.A_BuyerID
-               WHERE B_BookID = %s;"""
-    cursor.execute(query, (book_id,))
-    result = cursor.fetchone()
-    connection.close()
-
-    if result:
-        return result[0]
-    else:
-        return None
-
-#買書動作發生
-@app.route('/purchaseBook/<book_id>/<buyer_id>', methods=['GET'])
-def purchaseBook(book_id, buyer_id):
-
-    global counter
-
-    # 根據buyer_id和book_id查找賣家和買家的電子郵件地址
-    buyer_email = get_email_by_stu_id(buyer_id)
-    seller_email = get_seller_email_by_book_id(book_id)
-
-    # 生成隨機6位數密碼
-    password = random.randint(100000, 999999)
-
-    # 發送電子郵件
-    send_email(buyer_email, seller_email, counter, password)
-
-    # 更新櫃號碼
-    counter += 1
-    if counter > 99:
-        counter = 1
-
-    return "Emails sent successfully!"
-
-=======
-# 寄信功能嘗試
-@app.route('/purchase', methods=['POST'])
-def purchase():
-    #寄給販賣者
-    content = MIMEMultipart()  #建立MIMEMultipart物件
-    content["subject"] = "輔大二手書網站交易成功"  #郵件標題
-    content["from"] = "wsx2244667@gmail.com"  #寄件者(我們網站方)
-    content["to"] = "" #收件者(需要接值)
-    content.attach(MIMEText("請將您的書籍放入1號櫃"))  #郵件內容
-
-
-    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:  # 設定SMTP伺服器
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
         try:
-            smtp.ehlo()  # 驗證SMTP伺服器
-            smtp.starttls()  # 建立加密傳輸
-            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")  # 登入寄件者gmail
-            smtp.send_message(content)  # 寄送郵件
-            print("Complete!")
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")
+            smtp.send_message(content)
+            print("Email sent!")
         except Exception as e:
             print("Error message: ", e)
+
+def send_email_Saler(to_email, A_SalerID, book_name, locker_id):
+    content = MIMEMultipart()
+    content["subject"] = "您在輔大二手書網站的交易已成功!"
+    content["from"] = "wsx2244667@gmail.com"
+    content["to"] = to_email
+    content.attach(MIMEText(f"Please proceed to locker {locker_id} to put your book {book_name}"))
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
+        try:
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")
+            smtp.send_message(content)
+            print("Email sent!")
+        except Exception as e:
+            print("Error message: ", e)
+
+#點擊後購買後產生訂單
+@app.route('/order', methods=['POST'])
+def order_book():
+    B_BookID = request.form['B_BookID']
+    A_BuyerID = session.get('A_StuID')
+    O_OrderTime = datetime.datetime.now()
+    O_LockerID = 1
+    O_OrderRating = 1
+    O_OrderComments = "test"
+    # get saler_id from book_information table
+    conn = get_conn()
     
-    #寄給購買者
-    content = MIMEMultipart()  #建立MIMEMultipart物件
-    content["subject"] = "輔大二手書網站交易成功"  #郵件標題
-    content["from"] = "wsx2244667@gmail.com"  #寄件者(我們網站方)
-    content["to"] = "request.values['A_BuyerID']" #收件者(需要接值)
-    content.attach(MIMEText("請前往1號櫃領取您的書籍"))  #郵件內容
+    cursor = conn.cursor(pymysql.cursors.DictCursor)
+    cursor.execute("select B_SalerID FROM book_information WHERE B_BookID = %s", (B_BookID,))
+    result = cursor.fetchone()
+    if result is None:
+        return 'Book not found'+ B_BookID, 404
+    B_SalerID = result['B_SalerID'] # Here, use 'B_SalerID' instead of B_SalerID
+    
+    # insert order into order_information table
+    cursor.execute(
+    "INSERT INTO order_information (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_OrderRating, O_OrderComments) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+    (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_OrderRating, O_OrderComments)
+)
 
+    conn.commit()
+    
+    # Fetch the necessary data for the email
+    cursor.execute("SELECT A_Email FROM account_manage WHERE A_StuID = %s", (A_BuyerID,))
+    result = cursor.fetchone()
+    if result is not None:
+        A_Email_Buyer = result['A_Email']
+    cursor.execute("SELECT A_Email FROM account_manage WHERE A_StuID = %s", (B_SalerID,))
+    result = cursor.fetchone()
+    if result is not None:
+        A_Email_Saler = result['A_Email']
+    cursor.execute("SELECT B_BookName FROM book_information WHERE B_BookID = %s", (B_BookID,))
+    result = cursor.fetchone()
+    if result is not None:
+        B_BookName = result['B_BookName']
+    cursor.close()
+    
+    send_email_Buyer(A_Email_Buyer,A_BuyerID,B_BookName,O_LockerID)
+    send_email_Saler(A_Email_Saler,B_SalerID,B_BookName,O_LockerID)
+    return 'Order Placed Successfully'
 
-    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:  # 設定SMTP伺服器
-        try:
-            smtp.ehlo()  # 驗證SMTP伺服器
-            smtp.starttls()  # 建立加密傳輸
-            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")  # 登入寄件者gmail
-            smtp.send_message(content)  # 寄送郵件
-            print("Complete!")
-        except Exception as e:
-            print("Error message: ", e)
->>>>>>> 0ec6cbf682f89179cc0d7ea6bb30638c5b680b9d
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
     app.run(debug=True) 
