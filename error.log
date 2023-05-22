@@ -3954,3 +3954,318 @@ INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:38:40] "[36mGET /static/images/user
 INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:38:40] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069438.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:38:41] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:38:41] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:47] "[36mGET /static/uploads/profile_preset.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:57] "GET /user_information_profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:57] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:57] "[36mGET /static/uploads/profile_preset.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:59] "GET /user_information_profile_update/410402226 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:59] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:48:59] "[36mGET /static/uploads/profile_preset.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:06] "[32mPOST /do_user_information_profile_update HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:06] "GET /user_information_profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:06] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:06] "GET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069438.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:13] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069438.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:15] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:15] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:49:16] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:52:58] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:52:58] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:52:58] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:52:58] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:52:59] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:04] "[32mPOST /do_user_information_buyer_rating/11 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:04] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:04] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:04] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:05] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:05] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:30] "[32mPOST /do_user_information_buyer_rating/11 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:30] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:30] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:30] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:31] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:31] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:34] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:34] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:34] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:34] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069438.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:34] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:35] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:35] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:35] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:38] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:38] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:38] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:38] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:38] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:45] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:45] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:46] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:46] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:53:46] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:20] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:20] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:21] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:21] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:21] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:50] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:50] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:50] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:50] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:50] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:56] "[32mPOST /do_user_information_seller_rating/10 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:56] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:57] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:57] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:57] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 03:54:57] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:01:29] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:01:29] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:01:29] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:01:30] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:01:30] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:15] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:15] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:16] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:16] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:16] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:29] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069438.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:30] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:30] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:30] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:30] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:02:30] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:05:46] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:05:47] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:05:47] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:05:47] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:05:47] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:21] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069438.png HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred during user_information_sellerpage
+Traceback (most recent call last):
+  File "c:\Users\user\SA_test\SecondHand_BookWeb_fork\app.py", line 270, in show_user_information_sellerpage
+    cursor.execute(sql_finished)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'o.O_SalerRating' in 'field list'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:23] "[35m[1mGET /user_information_sellerpage HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:26] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:26] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:26] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:26] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:27] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:30] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:30] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:30] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:30] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:30] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred during user_information_sellerpage
+Traceback (most recent call last):
+  File "c:\Users\user\SA_test\SecondHand_BookWeb_fork\app.py", line 270, in show_user_information_sellerpage
+    cursor.execute(sql_finished)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'o.O_SalerRating' in 'field list'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:06:45] "[35m[1mGET /user_information_sellerpage HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:24] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:24] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:25] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:25] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:43] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:43] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:43] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:09:43] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+ERROR:root:Error occurred during user_information_sellerpage
+Traceback (most recent call last):
+  File "c:\Users\user\SA_test\SecondHand_BookWeb_fork\app.py", line 270, in show_user_information_sellerpage
+    cursor.execute(sql_finished)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'o.O_SalerRating' in 'field list'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:11:43] "[35m[1mGET /user_information_sellerpage HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:11:57] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:11:57] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:11:57] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:11:57] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:11:57] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+ERROR:root:Error occurred during user_information_sellerpage
+Traceback (most recent call last):
+  File "c:\Users\user\SA_test\SecondHand_BookWeb_fork\app.py", line 270, in show_user_information_sellerpage
+    cursor.execute(sql_finished)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'b.B_SalerID' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:18:49] "[35m[1mGET /user_information_sellerpage HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:29] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:29] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:29] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:29] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:29] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:36] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:36] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:36] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:36] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:19:37] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:23:10] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:23:10] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:23:11] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:23:11] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:23:11] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:30:51] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:30:51] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:30:51] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:30:51] "[33mGET /static/uploads/ww HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 04:30:51] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -

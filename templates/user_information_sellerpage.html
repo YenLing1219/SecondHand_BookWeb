@@ -20,7 +20,7 @@
 <body>
     <!--重新包覆測試，只預留header位置，方便以後插入-->
     <div class="header">
-        <center><h1>預留位置</h1></center>
+        <center><h1><!--預留位置--></h1></center>
     </div>
     <hr>
     <div class="container">
@@ -64,7 +64,7 @@
                 <p>書名：{{ book['B_BookName'] }}</p>
                 <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
 
-                <form action="/do_user_information_sellerpage_rating/{{ book['B_BookID'] }}" method="POST">
+                <form action="/do_user_information_seller_rating/{{ book['B_BookID'] }}" method="POST">
                     <ul class="comment" size="20">
                         <li value=1>☆</li>
                         <li value=2>☆</li>
@@ -73,7 +73,7 @@
                         <li value=5>☆</li>
                     </ul>
 
-                    <input type="number" name="O_OrderRating"><!--暫時替代方案:直接輸數字-->
+                    <input type="number" name="O_SalerRating" value="{{ book['O_SalerRating'] }}"><!--暫時替代方案:直接輸數字-->
                     <button id="editBtn" type="submit" name="submit">評價</button>
                 </form>
             </div>
