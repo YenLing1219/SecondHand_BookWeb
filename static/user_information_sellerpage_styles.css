@@ -1,7 +1,8 @@
-/* Container */
+.
+
 .container {
     width: 100%;
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,7 @@
 .new-button {
     width: 400px;
     height: 200px;
-    font-size: 48px; /* Adjust the font size as needed */
+    font-size: 48px; 
     text-align: center;
     background-color: blue;
     color: white;
@@ -19,48 +20,60 @@
     cursor: pointer;
 }
 
-/* Vertical adjustment for the +NEW button */
-/* Change the 'align-items' value to adjust the vertical position */
-/* Example: flex-start, center, flex-end */
-.container {
-    align-items: center; /* Modify this value */
-}
 
-/* Border */
-.border {
+.tabs {
+    display: flex;
+  }
+  
+  .tab-button {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .tab-content {
+    padding: 20px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  /* Border */
+  .border {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-}
-
-/* Item */
-.item {
+  }
+  
+  /* Item */
+  .item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 5px solid black;
     padding: 20px;
-}
-
-/* Image */
-.item img {
+  }
+  
+  /* Image */
+  .item img {
     width: 100px; /* Adjust the image size as needed */
     height: 100px;
-}
-
-/* Text */
-.text {
+  }
+  
+  /* Text */
+  .text {
     margin-left: 10px;
-}
-
-/* Status */
-.status {
+  }
+  
+  /* Status */
+  .status {
     flex-grow: 1;
     text-align: center;
-}
-
-/* Buttons: Modify and Remove */
-.button {
+  }
+  
+  /* Buttons: Modify and Remove */
+  .button {
     width: 100px;
     height: 50px;
     background-color: #4CAF50;
@@ -68,25 +81,44 @@
     border: none;
     cursor: pointer;
     margin: 5px;
-}
-
-/* Modify button */
-.modify {
+  }
+  
+  /* Modify button */
+  .modify {
     background-color: #4CAF50;
-}
-
-/* Remove button */
-.remove {
+  }
+  
+  /* Remove button */
+  .remove {
     background-color: #f44336;
-}
-.image-chage {
+  }
+  .image-chage {
     width: 100px;
     height: 300px;
     overflow: hidden;
   }
+  
   /*這是設置圖片大小上限的代碼
   img {
   max-width: 500px;
   max-height: 300px;
-}
-*/
+  }
+  */
+  
+  /*星星*/
+  * {
+      padding:0;
+      margin:0;
+  }
+  .comment {
+      font-size:40px;
+      color:teal;
+  }
+  .comment li {
+      float:left;
+  }
+  ul {
+      list-style:none;
+  }
+  /*到這*/
+  
