@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="../static/user_information_sellerpage_styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="user_information_sellerpage.css">
-
-    <link rel="stylesheet" href="css/user_information_sellerpage_styles.css">
+    <script>
+        $(function() {
+            // 绑定按钮的點擊事件
+            $('#editBtn').click(toggleEditMode);
+        });
+    </script>
 
     <title>Custom Layout</title>
 
@@ -19,38 +24,54 @@
     </div>
     <hr>
     <div class="container">
-       <center> <button class="new-button" onclick="location.href='/book_create'">+NEW</button></center>
+        <center> <button class="new-button" onclick="location.href='/book_create'">+NEW</button></center>
     </div>
-    <div class="border"> <!--書籍篩選: 進行中-->
-        <h3>進行中</h3>
-       
 
-        <div class="item">
-            <div class="image-change">
-                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+    <div class="border outside">
+
+        <div class="tabs">
+            <button class="tab-button" data-target="processing">進行中</button>
+            <button class="tab-button" data-target="finished">已完成</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="processing" class="content">
+
+                <!--書籍篩選: 進行中-->
+                {% for book in datas_processing %}
+                <div class="item">
+                    <div class="image-change">
+                        <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+                    </div>
+                    <p>書名：{{ book['B_BookName'] }}</p>
+                    <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+                    <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
+                    <button class="button remove">下架</button>
+                </div>
+                {% endfor %}
+
             </div>
-            <p>書名：{{ book['B_BookName'] }}</p>
-            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
-            <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
-            <button class="button remove">下架</button>
+        </div>
+
+        <div id="finished" class="content hide">
+
+            <!--書籍篩選: 已完成-->
+            {% for book in datas_finished %}
+            <div class="item">
+                <div class="image-change">
+                    <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+                </div>
+                <p>書名：{{ book['B_BookName'] }}</p>
+                <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+                <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
+                <button class="button remove">下架</button>
+            </div>
+            {% endfor %}
+
         </div>
     </div>
 
-    <div class="border"> <!--書籍篩選: 已完成-->
-        <h3>已完成</h3>
-      
-        <div class="item">
-            <div class="image-change">
-                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
-            </div>
-            <p>書名：{{ book['B_BookName'] }}</p>
-            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
-            <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
-            <button class="button remove">下架</button>
-        </div>
-   
-    </div>
-
+    <script src="../static/user_information_sellerpage_script.js"></script>
 
 </body>
 </html>
