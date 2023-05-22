@@ -14,9 +14,13 @@
       <a href="#">
         <img class="image-link" src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片連結">
       </a>
-      <button class="custom-button" onclick="window.location.href='/create_order/{{ book['B_BookID'] }}/{{ book['B_SalerID'] }}'">
-        <img src="button-image.jpg" alt="購買" >
-       </button>
+      <form method="POST" action="/order">
+        <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
+        <button type="submit">
+            <img src="button-image.jpg" alt="購買" >
+        </button>
+    </form>
+    
        
     </div>
     <div class="right">
