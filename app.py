@@ -182,9 +182,11 @@ def show_user_information_profile_update(A_StuID):
     finally:
         conn.close()
     print(sql)
-    return render_template("user_information_profile_update.html", account=account)
+    message = "User information updated successfully!"
+#    return render_template("user_information_profile_update.html", account=account)
+    return render_template("user_information_profile_update.html", account=account, message=message)
 
-# [修改個人資料] 接收表單提交的數據 (unfinished)
+# [修改個人資料] 接收表單提交的數據 
 @app.route('/do_user_information_profile_update', methods=["GET","POST"])
 def user_information_profile_update():
     # 儲存頭像
@@ -196,7 +198,7 @@ def user_information_profile_update():
     else:
         A_image = ''  # 沒有上傳新圖像則設A_image為空字串供下面程式碼判斷
 
-    # 
+    # 判斷密碼
     A_Password_old = request.form.get("A_Password_old") #為判斷舊密碼是否正確
     A_Password_new = request.form.get("A_Password_new")
     file = request.files['A_image']
@@ -229,7 +231,12 @@ def user_information_profile_update():
 
         print(sql)
         insert_or_update_data(sql)
-        return "User information updated successfully!" # 舊密碼錯誤不會更新資訊，但還是顯示成功訊息
+
+#        redirect(url_for("show_user_information_profile")) #trying:重新導向並用彈出式視窗顯示成功訊息
+
+#        return "User information updated successfully!" # 舊密碼錯誤不會更新資訊，但還是顯示成功訊息
+        return redirect(url_for("show_user_information_profile")) #trying:重新導向並用彈出式視窗顯示成功訊息
+
     
     except Exception as e:
         logging.exception("Error occurred during updating user information")
@@ -305,6 +312,14 @@ def show_user_information_orders():
     print(sql_finished)
     return render_template("user_information_orders.html", datas_processing = datas_processing, datas_finished = datas_finished)
 
+'''
+# [查詢訂單] 評價功能 (unfinished)
+@app.route('/do_user_information_orders_rating')
+def user_information_orders_rating():
+
+    return
+'''
+
 # [上架] 顯示網站
 @app.route('/book_create')
 def show_book_create():
@@ -340,8 +355,8 @@ def book_create():
     '''
     print(sql)
     insert_or_update_data(sql)
-    return "Book added successfully!"
-#    return redirect(url_for('home'))
+#    return "Book added successfully!"
+    return redirect(url_for('show_user_information_sellerpage'))  #trying:重新導向並用彈出式視窗顯示成功訊息
 
 # [修改書籍資訊] 顯示網站
 @app.route('/book_update/<B_BookID>')
@@ -395,7 +410,8 @@ def book_update():
 
     print(sql)
     insert_or_update_data(sql)
-    return "Information updated successfully!"
+#    return "Information updated successfully!"
+    return redirect(url_for('show_user_information_sellerpage'))  #trying:重新導向並用彈出式視窗顯示成功訊息
 
 # [書籍列表] 顯示網站
 @app.route('/book_display')
