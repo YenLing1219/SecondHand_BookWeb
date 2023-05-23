@@ -16,14 +16,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-  async function purchaseBook(book_id, buyer_id) {
-    const response = await fetch(`/purchaseBook/${book_id}/${buyer_id}`);
-    const result = await response.text();
-  
-    if (result === 'Emails sent successfully!') {
-      alert('郵件已成功發送！');
-    } else {
-      alert('郵件發送失敗，請稍後重試。');
-    }
-  }
   
