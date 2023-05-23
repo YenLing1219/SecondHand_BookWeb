@@ -4,17 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>分隔線示例</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-test.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(function() {
+        // 绑定按钮的点击事件
+        $('#editBtn').click(toggleEditMode);
+    });
+</script>
 </head>
 <body>
-  
-  <!--這邊開始，就是下面的頁面了-->
-  <div class="normal-content">位置標示</div>
-  <div class="border outside">
-       <div class="tabs">
-         <button class="tab-button" data-target="details">詳細資訊</button>
-         <button class="tab-button" data-target="qa">留言板(Q&A)</button>
-       </div>
+ 
+   <div class="border outside">
+      
+        <div class="tabs">
+            <button class="tab-button" data-target="details">進行中</button>
+            <button class="tab-button" data-target="qa">已完成(Q&A)</button>
+        </div>
+      
        <div class="tab-content">
          <div id="details" class="content">
          <div class="item">
@@ -33,12 +41,17 @@
                  <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
              </div>
              <p>書名：{{ book['B_BookName'] }}</p>
-             <p class="status">狀態a：{{ book['B_SaleStatus'] }}</p>
-             <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
-             <button class="button remove">下架</button>
+                <ul class="comment">
+                    <li>☆</li>
+                    <li>☆</li>
+                    <li>☆</li>
+                    <li>☆</li>
+                    <li>☆</li>
+                </ul>
+            <button id="editBtn">評價</button>
+                
            </div>
          </div>
-         <div id="seller" class="content hide">關於賣家的內容</div>
        </div>
   </div>
   
