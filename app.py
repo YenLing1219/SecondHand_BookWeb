@@ -17,6 +17,8 @@ import logging
 
 logging.basicConfig(filename='error.log', level=logging.DEBUG)
 
+
+
 app = Flask(__name__)
 app.secret_key = "abc123"
 
@@ -557,6 +559,8 @@ def order_book():
     O_LockerID = 1
     O_SalerRating = 0
     O_BuyerRating = 0
+    O_SalerRating = 0
+    O_BuyerRating = 0
     # get saler_id from book_information table
     conn = get_conn()
     
@@ -594,10 +598,11 @@ def order_book():
     send_email_Saler(A_Email_Saler,B_SalerID,B_BookName,O_LockerID)
     return 'Order Placed Successfully'
 
+#測試comments的功能用
 @app.route('/comments')
-def comments():
-    A_StuID = session['A_StuID']
-    return render_template("comments.html" , A_StuID=A_StuID)
+def comment():
+    A_CurrentuserID = session.get('A_StuID')
+    return render_template("comments.html", A_StuID = A_CurrentuserID)
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
