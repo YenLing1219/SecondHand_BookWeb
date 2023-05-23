@@ -7,25 +7,16 @@
   <title>個人資料頁面</title>
 </head>
 <body>
+ 
+  {% block content %}<!--複製這行 header-->
 
-  <div class="container">
-    <div class="area1">
-    <!--header預留欄位-->
-    {% extends 'layout.html' %}
-    {% block title %} 首頁 {% endblock %}
-    </div>
-    {% block content %}<!--複製這行 header-->
-
-    <div class="left">
-      <div class="left-item">
+    <div class="container">
+      <div class="left">
         <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
         <p>{{ account['A_Nickname'] }} 您好！</p>
-        <button class="button"  onclick="location.href='/user_information_profile'">個人資訊</button>
+        <button class="button" onclick="location.href='/user_information_profile'">個人資料</button>
       </div>
-    </div>
-  
-    <div class="right">
-      <div class="right-item">
+      <div class="right">
         <button class="button" onclick="location.href='/user_information_orders'">查詢訂單</button>
         <button class="button">信用積分</button>
         <button class="button">交易紀錄</button>
@@ -34,7 +25,7 @@
         <button class="button">Q&A</button>
       </div>
     </div>
-  </div>
+
   {% endblock %}<!--複製這行 header-->
 </body>
 </html>
