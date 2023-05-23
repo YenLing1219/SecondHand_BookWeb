@@ -6,19 +6,19 @@
  <div class="col-md-6 col-md-offset-3">
  <form action="/register" method="POST">
  <div class="form-group">
- <label>(*必填欄位)學號</label>
+ <label>學號<font color="red">*</font></label>
  <input type="text" required="required" class="form-control" name="A_StuID">
  </div>
  <div class="form-group">
- <label>(*必填欄位)常用信箱</label>
+ <label>常用信箱<font color="red">*</font></label>
  <input type="email" required="required" class="form-control" name="A_Email">
  </div>
  <div class="form-group">
- <label>(*必填欄位)密碼</label>
+ <label>密碼<font color="red">*</font></label>
  <input type="password" required="required" class="form-control" name="A_Password">
  </div>
  <div class="form-group">
-  <label>(*必填欄位)確認密碼</label>
+  <label>確認密碼<font color="red">*</font></label>
   <input type="password" name="ConfirmPassword" required="required" oninput="setCustomValidity('');" 
     onchange="if(document.getElementById('A_Password').value != document.getElementById('ConfirmPassword').value)
     {setCustomValidity('密碼不相符，請重新輸入!');}"/>
@@ -120,11 +120,12 @@
   </select>
   </div>
   <div class="form-group">
-    <label>(*必填欄位)實名認證</label>
+    <label>實名認證<font color="red">*</font></label>
     <input type="radio" required="required" class="form-group" name="A_RealNameVerify" value="0" /> No
     <input type="radio" required="required" class="form-group" name="A_RealNameVerify" value="1" /> Yes
     </div>
  <div class="form-group">
+
  <button class="btn btn-primary">Register</button>
  </div>
  </form>
