@@ -577,7 +577,7 @@ def order_book():
 @app.route('/comments')
 def comment():
     A_CurrentuserID = session.get('A_StuID')
-    return render_template("TestComments.html", A_StuID = A_CurrentuserID)
+    return render_template("comments.html", A_StuID = A_CurrentuserID)
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
