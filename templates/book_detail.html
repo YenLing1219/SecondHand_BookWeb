@@ -16,7 +16,7 @@
         <img class="image-link" src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片連結">
       </a>
 
-      <form method="POST" action="/book_buy/{{ book['B_BookID'] }}">
+      <form method="POST" action="/order">
         <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
         <button type="submit" onclick="location.href='/book_buy/{{ book['B_BookID'] }}'">
             <img src="button-image.jpg" alt="購買" >

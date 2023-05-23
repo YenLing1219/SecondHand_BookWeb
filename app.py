@@ -555,8 +555,8 @@ def order_book():
     A_BuyerID = session.get('A_StuID')
     O_OrderTime = datetime.datetime.now()
     O_LockerID = 1
-    O_OrderRating = 1
-    O_OrderComments = "test"
+    O_SalerRating = 0
+    O_BuyerRating = 0
     # get saler_id from book_information table
     conn = get_conn()
     
@@ -569,8 +569,8 @@ def order_book():
     
     # insert order into order_information table
     cursor.execute(
-    "INSERT INTO order_information (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_OrderRating, O_OrderComments) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-    (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_OrderRating, O_OrderComments)
+    "INSERT INTO order_information (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_SalerRating, O_BuyerRating) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+    (O_OrderTime, O_LockerID, B_BookID, B_SalerID, A_BuyerID, O_SalerRating, O_BuyerRating)
 )
 
     conn.commit()
@@ -593,6 +593,11 @@ def order_book():
     send_email_Buyer(A_Email_Buyer,A_BuyerID,B_BookName,O_LockerID)
     send_email_Saler(A_Email_Saler,B_SalerID,B_BookName,O_LockerID)
     return 'Order Placed Successfully'
+
+@app.route('/comments')
+def comments():
+    A_StuID = session['A_StuID']
+    return render_template("comments.html" , A_StuID=A_StuID)
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
