@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="user_information_sellerpage_styles.css">
+
+    <title>Custom Layout</title>
+
+</head>
+<body>
+    <!--重新包覆測試，只預留header位置，方便以後插入-->
+    <div class="header">
+        <center><h1>預留位置</h1></center>
+    </div>
+    <hr>
+    <div class="container">
+       <center> <button class="new-button" onclick="location.href='/book_create'">+NEW</button></center>
+    </div>
+    <div class="border"> <!--書籍篩選: 進行中-->
+        <h3>進行中</h3>
+       
+
+        <div class="item">
+            <div class="image-change">
+                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+            </div>
+            <p>書名：{{ book['B_BookName'] }}</p>
+            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+            <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
+            <button class="button remove">下架</button>
+        </div>
+    </div>
+
+    <div class="border"> <!--書籍篩選: 已完成-->
+        
+      
+        <div class="item">
+            <div class="image-change">
+                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+            </div>
+            <p>書名：{{ book['B_BookName'] }}</p>
+            <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+            <button class="button modify" onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
+            <button class="button remove">下架</button>
+        </div>
+   
+    </div>
+
+
+</body>
+</html>

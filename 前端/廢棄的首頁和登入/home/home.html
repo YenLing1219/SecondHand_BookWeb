@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輔仁大學二手課本交易平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .search-box {
+            width: 400px;
+            height: 40px;
+            padding-left: 40px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-image: url('magnifier-icon.svg');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+    </style>
+     <script>
+        function updateLoginButton() {
+          const isLoggedIn = false; // 使用後端登入檢測的結果替換此值
+          const userName = '使用者名稱'; // 使用實際登入者名字替換此值
+    
+          const loginButton = document.getElementById('loginButton');
+          const loginLink = document.getElementById('loginLink');
+    
+          if (isLoggedIn) {
+            loginButton.textContent = userName + ' 歡迎回來';
+            loginLink.href = '已登入網址.html'; // 請替換成您的已登入網址
+          } else {
+            loginButton.textContent = 'Log In';
+            loginLink.href = '登入網址.html'; // 請替換成您的登入網址
+          }
+        }
+    
+        // 在頁面加載時，根據登入狀態更新按鈕
+        window.addEventListener('load', updateLoginButton);
+      </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="首頁網址.html">
+                <button>
+                    <img src="house-icon.svg" alt="首頁" width="30" height="30">
+                    <span>首頁</span>
+                </button>
+            </a>
+        </div>
+        <nav class="nav">
+            <div class="nav-item">
+                <a href="用戶資訊網址.html">
+                    <button>
+                        <img src="user-icon.svg" alt="用戶資訊" width="25" height="25">
+                        <span>用戶資訊</span>
+                    </button>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="關注中網址.html">
+                    <button>
+                        <img src="star-icon.svg" alt="關注中" width="25" height="25">
+                        <span>關注中</span>
+                    </button>
+                </a>
+            </div>
+            <!-- 4/27 追加部分 -->
+            <div class="nav-item">
+                <a id="loginLink" href="登入網址.html">
+                  <button id="loginButton">
+                    <span>Log In</span>
+                  </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 style="text-align: center;">輔仁大學二手課本交易平台</h1>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="搜尋...">
+            <button class="search-button">搜尋</button>
+        </div>
+        
+    </main>
+</body>
+</html>
