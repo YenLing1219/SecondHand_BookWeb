@@ -498,8 +498,8 @@ def order_book():
     A_BuyerID = session.get('A_StuID')
     O_OrderTime = datetime.datetime.now()
     O_LockerID = 1
-    O_SalerRating = 1
-    O_BuyerRating = 1
+    O_SalerRating = 0
+    O_BuyerRating = 0
     # get saler_id from book_information table
     conn = get_conn()
     
@@ -536,6 +536,12 @@ def order_book():
     send_email_Buyer(A_Email_Buyer,A_BuyerID,B_BookName,O_LockerID)
     send_email_Saler(A_Email_Saler,B_SalerID,B_BookName,O_LockerID)
     return 'Order Placed Successfully'
+
+#測試comments的功能用
+@app.route('/comments')
+def comment():
+    A_CurrentuserID = session.get('A_StuID')
+    return render_template("TestComments.html", A_StuID = A_CurrentuserID)
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行

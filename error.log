@@ -2838,3 +2838,1196 @@ pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'"
 INFO:werkzeug:127.0.0.1 - - [22/May/2023 21:08:23] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [22/May/2023 21:08:29] "POST /order HTTP/1.1" 200 -
 
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:06] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:07] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:07] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:07] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:07] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:21] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:21] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:21] "[33mGET /comments_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:31] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:31] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:02:31] "[33mGET /comments_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:03:45] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:03:45] "[33mGET /comments_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:03:46] "[33mGET /comments_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:05:52] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:05:52] "[33mGET /comments_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:05:53] "[33mGET /comments_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:07:31] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:07:32] "[33mGET /comments_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:07:32] "[33mGET /comments_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:10:33] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:10:33] "[33mGET /comments_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:10:35] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:12:15] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 05:12:18] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:37] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:37] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:37] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:37] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:37] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:44] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:27:47] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:37:30] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:37:32] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:48:37] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:48:41] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:49:24] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:49:31] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:49:34] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:50:01] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:50:05] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:51:44] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:51:46] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:52:02] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:52:04] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:52:30] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:52:32] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:52:57] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:53:00] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:53:21] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:53:24] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:07] "GET /comments HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:10] "[33mGET /your-image-url.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:47] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:47] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:47] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:47] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:47] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:53] "GET /do_book_search?search_str=111 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:53] "[36mGET /static/book_display_search_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:53] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:54] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:54] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /book_detail/book_detail_script.js [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'book_detail_script.js' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:54] "[35m[1mGET /book_detail/book_detail_script.js HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:54] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 06:55:54] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:19] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:19] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /book_detail/book_detail_script.js [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'book_detail_script.js' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:19] "[35m[1mGET /book_detail/book_detail_script.js HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:19] "GET /static/comments_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:19] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:19] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:29] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:29] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:29] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:29] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:29] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:32] "GET /do_book_search?search_str=111 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:32] "[36mGET /static/book_display_search_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:32] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:33] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:33] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:33] "[36mGET /static/comments_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:33] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/book_detail_script.js [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'book_detail_script.js' in 'where clause'")
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:33] "[35m[1mGET /book_detail/book_detail_script.js HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:33] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:39] "POST /order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:20:41] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:34:29] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:34:30] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:34:30] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:34:30] "GET /static/comments_script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:34:30] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:34:30] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:35:23] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:21] "GET /do_book_search?search_str=111 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:21] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:21] "[36mGET /static/book_display_search_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:22] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:23] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:23] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:23] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:23] "[36mGET /static/comments_script.js HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:23] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /order [POST]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 514, in order_book
+    cursor.execute(
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '0' for key 'PRIMARY'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:24] "[35m[1mPOST /order HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:36:25] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:28] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:29] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:29] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:29] "[36mGET /static/comments_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:29] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:29] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:37:36] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "[36mGET /static/comments_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:14] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "[36mGET /static/comments_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:17] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:20] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "[36mGET /static/comments_script.js HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:41:26] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:12] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:12] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:13] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:13] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:13] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:13] "[36mGET /static/comments_script.js HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:51:13] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:52:16] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:52:16] "GET /static/book_detail_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:52:16] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:52:16] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:52:16] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:52:23] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:35] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:35] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:35] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:35] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:35] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:35] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:53:39] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:54:09] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:31] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:31] "GET /static/book_detail_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:31] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:31] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:31] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:31] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:39] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /book_detail/your-image-url.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'your' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:55:42] "[35m[1mGET /book_detail/your-image-url.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:56:02] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:56:02] "GET /static/book_detail_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:56:02] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:56:02] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:56:02] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:56:02] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:59:57] "GET /book_detail/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:59:57] "GET /static/book_detail_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:59:57] "[33mGET /static/comment_system_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:59:57] "[33mGET /static/book_detail_script.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:59:57] "[33mGET /static/uploads/qefrqfefeff HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /book_detail/button-image.jpg [GET]
+Traceback (most recent call last):
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\Desktop\SecondHand_BookWeb\app.py", line 447, in show_book_detail
+    cursor.execute(sql)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 158, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 325, in _query
+    conn.query(q)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 549, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 779, in _read_query_result
+    result.read()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1157, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 729, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\shiou\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'button' in 'where clause'")
+INFO:werkzeug:127.0.0.1 - - [23/May/2023 07:59:57] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;  /* Adjusted width from 800px to 500px */
+            margin: 0 auto;
+            padding: 10px;  /* Adjusted padding from 20px to 10px */
+        }
+    
+        .border {
+            width: 500px;  /* Adjusted width from 800px to 500px */
+            height: 100px;  /* Adjusted height from 200px to 100px */
+            border: 1px solid black;
+            margin-bottom: 5px;  /* Adjusted margin from 10px to 5px */
+            padding: 5px;  /* Adjusted padding from 10px to 5px */
+            display: flex;
+        }
+        
+        .left {
+            flex: 1;
+            position: relative;
+        }
+        
+        .left-border {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            border-right: 1px solid rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 10px;
+        }
+        
+        #image {
+            max-width: 80px;
+            max-height: 120px;
+        }
+        
+        .right {
+            flex: 4;
+        }
+        
+        #textArea {
+            width: 506px;  /* Adjusted width from 400px to 200px */
+            height: 100px;  /* Adjusted height from 200px to 100px */
+            margin-bottom: 5px;  /* Adjusted margin from 10px to 5px */
+        }
+        
+        #submitBtn {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+    
+    
+
+<body>
+    <!--生成物在js檔案內，有標註了-->
+    <div class="container">
+        <div id="textContainer"></div>
+        <textarea id="textArea"></textarea>
+        <button id="submitBtn">提交</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // 在整個網頁載入完成後執行以下程式碼
+            var submitBtn = document.getElementById('submitBtn');
+            submitBtn.addEventListener('click', submitText);
+        
+            function submitText() {
+                // 提交文字的函數
+                var textArea = document.getElementById('textArea');
+                var text = textArea.value;
+                // 獲取文本框中的文字
+        
+                if (text.trim() !== '') {
+                    // 如果文字不是空白
+        
+                    // 建立一個邊框元素
+                    var border = document.createElement('div');
+                    border.classList.add('border');
+        
+                    // 建立左側元素
+                    var left = document.createElement('div');
+                    left.classList.add('left');
+                    border.appendChild(left);
+        
+                    var leftBorder = document.createElement('div');
+                    leftBorder.classList.add('left-border');
+                    left.appendChild(leftBorder);
+        
+                    var leftContent = document.createElement('div');
+                    leftContent.classList.add('left-content');
+                    leftBorder.appendChild(leftContent);
+        
+                    /*圖片 */
+                    var image = document.createElement('img');
+                    image.setAttribute('src', 'your-image-url.jpg');
+                    image.setAttribute('id', 'image');
+                    leftContent.appendChild(image);
+                    /*用戶名 目前預設值是下面的提交 */
+                    var A_StuID = "{{ A_StuID }}";
+                    var textElement = document.createElement('p');
+                    textElement.innerHTML = A_StuID;
+                    leftContent.appendChild(textElement);
+        
+                    // 建立右側元素
+                    var right = document.createElement('div');
+                    right.classList.add('right');
+                    right.innerHTML = text;
+                    border.appendChild(right);
+        
+                    // 將整個邊框元素加入文本容器中
+                    var textContainer = document.getElementById('textContainer');
+                    textContainer.appendChild(border);
+        
+                    // 清空文本框
+                    textArea.value = '';
+                }
+            }
+        };
+    </script>
+</body>
+</html>
