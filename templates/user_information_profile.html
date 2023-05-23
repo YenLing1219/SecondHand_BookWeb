@@ -11,6 +11,7 @@
 
     <div class="container">
       <div class="left">
+        <a onclick="location.href='/user_information'">[點此回上頁]</a><br><!--臨時用連結-->
         <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
         <p>暱稱：{{ account['A_Nickname'] }}<!--這邊替換位置--></p>
         <p>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）<!--這邊替換位置--></p>
