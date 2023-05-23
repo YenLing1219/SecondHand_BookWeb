@@ -5653,3 +5653,7 @@ INFO:werkzeug:127.0.0.1 - - [23/May/2023 16:38:02] "[36mGET /static/images/home
 INFO:werkzeug:127.0.0.1 - - [23/May/2023 16:38:02] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [23/May/2023 16:38:02] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [23/May/2023 16:38:02] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-629-328
