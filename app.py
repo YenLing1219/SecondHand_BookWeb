@@ -492,29 +492,6 @@ def show_book_detail(B_BookID):
     print(sql)
     return render_template("book_detail.html", book = book)
 
-# [確認購買頁面] 顯示網站
-@app.route('/book_buy/<B_BookID>')
-def show_book_buy(B_BookID):
-    sql = '''
-    select B_BookID, B_BookName, B_Price
-    from book_information where B_BookID={}'''.format(B_BookID)
-    conn = get_conn()
-    try:
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql)
-        datas = cursor.fetchall()
-        if datas:  # check if datas is not empty
-            book = datas[0]
-            session['B_SalerID'] = book['B_SalerID']  # store B_SalerID in the session
-        else:
-            book = None  # or handle this case appropriately
-    finally:
-        conn.close()
-    print(sql)
-    return render_template("book_buy.html", book = book)
-
-
-
 #定義寄信功能的function
 def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
     content = MIMEMultipart()

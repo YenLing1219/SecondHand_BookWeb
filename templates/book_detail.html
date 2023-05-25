@@ -18,7 +18,7 @@
 
       <form method="POST" action="/order">
         <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
-        <button type="submit" onclick="location.href='/book_buy/{{ book['B_BookID'] }}'">
+        <button type="submit">
             <img src="button-image.jpg" alt="購買" >
         </button>
     </form>
@@ -61,7 +61,6 @@
     <button class="tab-button" data-target="details">詳細資訊</button>
     <button class="tab-button" data-target="qa">留言板(Q&A)</button>
     <button class="tab-button" data-target="seller">關於賣家</button>
-    <button class="tab-button">購買</button>
   </div>
   <div class="tab-content">
     <div id="details" class="content">
