@@ -3,66 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>搜尋結果</title>
+    <title>範例網站</title>
     <link rel="stylesheet" href="../static/book_display_search_styles.css">
+    <script src="../static/book_display_search_script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #f1f1f1;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin-left: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .search-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 30px 0;
-        }
-
-        .search-box {
-            width: 400px;
-            height: 40px;
-            padding-left: 40px;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-image: url('magnifier-icon.svg');
-            background-repeat: no-repeat;
-            background-position: 10px center;
-        }
-    </style>
 <body>
-        <form action="/do_book_search" method="GET" enctype="multipart/form-data">
-            <div class="search-container">
-                <input type="text" name="search_str" placeholder="{{ search_str }}" name="search">
-                <button class="search-button" name="searchButton" type="submit">搜索</button>
-            </div>
-        </form>
-        <hr>
-        <div class="grid-container">
-            <!--從這裡-->
+    <!--搜尋欄，有header後可替換-->
+    <div class="search-container">
+        <input type="text" placeholder="搜索..." name="search">
+        <button class="search-button" name="searchButton">搜索</button>
+    </div>
+    <hr>
+
+    <div class="grid-container">
+        <!-- 內容生成 -->
             {% for book in datas %}
             <div class="grid-item">
                 <div class="image-container">
@@ -76,8 +32,15 @@
                 </div>
             </div>
             {% endfor %}
-            <!--到這裡是一個格子 一頁顯示最多16張 4*4-->
-        </div>
+
+    </div>
+    <!-- 分頁 -->
+    <div class="pagination-container">
+        <button id="previousPage" disabled>上一頁</button>
+        <span id="currentPage"></span>
+        <button id="nextPage">下一頁</button>
+        <button id="lastPage">尾頁</button>
+    </div>
 
 </body>
 </html>
