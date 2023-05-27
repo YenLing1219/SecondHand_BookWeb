@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="../static/user_information_sellerpage_styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../static/user_information_sellerpage_script.js"></script>
 
     <script>
         $(function() {
@@ -64,25 +65,32 @@
                 <p>書名：{{ book['B_BookName'] }}</p>
                 <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
 
+                <!--已完成訂單：評分功能-->
                 <form action="/do_user_information_seller_rating/{{ book['B_BookID'] }}" method="POST">
-                    <ul class="comment" size="20">
-                        <li value=1>☆</li>
-                        <li value=2>☆</li>
-                        <li value=3>☆</li>
-                        <li value=4>☆</li>
-                        <li value=5>☆</li>
+                    <ul class="comment" size="20" name="O_SalerRating">
+                        <li value="1" onclick="setRatingValue(1)">☆</li>
+                        <li value="2" onclick="setRatingValue(2)">☆</li>
+                        <li value="3" onclick="setRatingValue(3)">☆</li>
+                        <li value="4" onclick="setRatingValue(4)">☆</li>
+                        <li value="5" onclick="setRatingValue(5)">☆</li>
                     </ul>
+                    <input type="hidden" name="O_SalerRating" id="ratingValueInput">
 
-                    <input type="number" name="O_SalerRating" value="{{ book['O_SalerRating'] }}"><!--暫時替代方案:直接輸數字-->
                     <button id="editBtn" type="submit" name="submit">評價</button>
                 </form>
+
             </div>
             {% endfor %}
 
         </div>
     </div>
 
-    <script src="../static/user_information_sellerpage_script.js"></script>
+    <script>
+        //儲存評分的值
+        function setRatingValue(value) {
+            document.getElementById("ratingValueInput").value = value;
+        }
+    </script>
 
 </body>
 </html>

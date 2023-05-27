@@ -363,3 +363,261 @@ INFO:werkzeug:127.0.0.1 - - [25/May/2023 18:07:02] "[36mGET /static/uploads/¸ê°
 INFO:werkzeug:127.0.0.1 - - [25/May/2023 18:07:02] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/May/2023 18:07:02] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [25/May/2023 18:07:10] "POST /order HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 104-700-764
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:19:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:19:38] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:19:38] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:19:38] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:19:38] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:19:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:28] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:28] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:28] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:28] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:28] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:36] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:36] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:36] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:36] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:36] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:36] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:40] "GET /do_book_search?search_str=¤é¥» HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:40] "[36mGET /static/book_display_search_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:40] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "GET /book_detail/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "[35m[1mGET /book_detail/comments.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "GET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "GET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "GET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:20:42] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:31] "GET /book_detail/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:31] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:31] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:31] "[35m[1mGET /book_detail/comments.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:31] "[36mGET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:31] "[36mGET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:32] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:32] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 21:28:32] "[36mGET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:36] "GET /book_detail/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:36] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[35m[1mGET /book_detail/comments.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[36mGET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[36mGET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:26:37] "[36mGET /book_detail/comments.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:02] "GET /book_detail/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:02] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:02] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:02] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:02] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:37] "GET /book_detail/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:37] "[36mGET /static/book_detail_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "[35m[1mGET /book_detail/home.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "GET /book_detail/home.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "GET /book_detail/home.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "[35m[1mGET /book_detail/button-image.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/May/2023 22:40:38] "GET /book_detail/home.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 239-728-740
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:39] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:39] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:39] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:39] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:44] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:44] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:44] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:44] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:44] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:51] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:51] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:51] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:51] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:51] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:51] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:52] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:53] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:53] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:54] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:54] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:54] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:55] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:55] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:55] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:47:55] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:28] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:28] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:29] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:29] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:29] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:29] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:29] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:41] "[35m[1mPOST /do_user_information_seller_rating/10 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:41] "GET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:41] "GET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:42] "GET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:42] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:55] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:55] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:55] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:56] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:56] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:56] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:48:56] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:39] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:39] "GET /static/user_information_orders_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:39] "GET /static/user_information_orders_script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:39] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:40] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:54] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:54] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:54] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:54] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:55] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:56] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:56] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:56] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:56] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:56] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:57] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:57] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:57] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:58] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:50:58] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:03] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:03] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:03] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:03] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:03] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:03] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:06] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:06] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:06] "[36mGET /static/uploads/profile_preset.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:07] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:08] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:08] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:08] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:15] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:15] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:15] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:15] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:15] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:16] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:17] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:17] "[36mGET /static/uploads/profile_preset.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:19] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:19] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:20] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred during login
+Traceback (most recent call last):
+  File "c:\Users\user\SA_test\SecondHand_BookWeb_fork\app.py", line 98, in login
+    if len(user) > 0:
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:28] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:38] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:38] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:38] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:38] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:38] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:38] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:39] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:40] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:51:40] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:51] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:51] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:52] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:53] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:53] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:53] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:53] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:53:53] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:40] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:40] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:40] "GET /static/user_information_sellerpage_script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:41] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:41] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:41] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:54:41] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:56:41] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:56:41] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:56:41] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:56:41] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:56:41] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:59:54] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:59:54] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:59:54] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:59:54] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 04:59:55] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:00] "[32mPOST /do_user_information_buyer_rating/16 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:00] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:01] "[36mGET /static/user_information_orders_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:01] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:01] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:01] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:16] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:16] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:16] "[36mGET /static/images/logout.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:16] "[36mGET /static/images/user.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:17] "[36mGET /static/images/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:18] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:18] "[36mGET /static/user_information_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:18] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:20] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:26] "[35m[1mPOST /do_user_information_seller_rating/10 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:26] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:26] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:00:27] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 239-728-740
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:18] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:24] "[35m[1mPOST /do_user_information_seller_rating/10 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:24] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:24] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/May/2023 05:07:24] "[36mGET /do_user_information_seller_rating/10?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 239-728-740
