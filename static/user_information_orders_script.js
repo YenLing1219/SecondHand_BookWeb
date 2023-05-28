@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
         targetContent.classList.remove('hide');
       });
     });
+
+    // Check URL parameters and switch content accordingly
+    // 網址是/...?tab=finished時預設導到'finished'分頁
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    if (tabParam === 'finished') {
+      document.getElementById('processing').classList.add('hide');
+      document.getElementById('finished').classList.remove('hide');
+    }
+
   });
 
   $(document).ready(function() {
