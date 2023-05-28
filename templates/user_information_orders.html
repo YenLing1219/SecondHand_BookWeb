@@ -63,8 +63,8 @@
                         <li value="4" onclick="setRatingValue(4)">☆</li>
                         <li value="5" onclick="setRatingValue(5)">☆</li>
                     </ul>
-                    <input type="hidden" name="O_BuyerRating" id="ratingValueInput">
-                
+                    <input type="hidden" name="O_BuyerRating" id="ratingValueInput" value="{{ book['O_BuyerRating'] }}">
+                    
                     <button id="editBtn" type="submit" name="submit">評價</button>
                 </form>
             </div>

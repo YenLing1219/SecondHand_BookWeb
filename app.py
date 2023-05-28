@@ -325,7 +325,7 @@ def user_information_seller_rating(B_BookID):
     '''
     print(sql)
     insert_or_update_data(sql)
-    return redirect(url_for('show_user_information_sellerpage'))
+    return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
 
 # [查詢訂單] 買家評價功能
 @app.route('/do_user_information_buyer_rating/<B_BookID>', methods=['POST'])
@@ -338,7 +338,7 @@ def user_information_buyer_rating(B_BookID):
     '''
     print(sql)
     insert_or_update_data(sql)
-    return redirect(url_for('show_user_information_orders'))
+    return redirect('/user_information_orders?tab=finished') #重新導向至已完成分頁
 
 # [上架] 顯示網站
 @app.route('/book_create')

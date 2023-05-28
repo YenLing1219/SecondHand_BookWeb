@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
       targetContent.classList.remove('hide');
     });
   });
+
+    // Check URL parameters and switch content accordingly
+    // 網址是/...?tab=finished時預設導到'finished'分頁
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    if (tabParam === 'finished') {
+      document.getElementById('processing').classList.add('hide');
+      document.getElementById('finished').classList.remove('hide');
+    }
+
 });
 
 $(document).ready(function() {
@@ -48,6 +58,15 @@ $(document).ready(function() {
       commentSection.on("mouseenter", "li", starHoverEnter);
       commentSection.on("mouseleave", starHoverLeave);
       commentSection.on("click", "li", starClick);
+
+      // 將星星依SQL中O_SalerRating值填滿對應個數
+      const ratingValue = parseInt($("#ratingValueInput").val()); // 取得O_SalerRating的值
+      $(".comment").children("li").each(function(index) { // 找到對應的<li>元素，將索引小於等於ratingValue的<li>元素設定為填滿的星星
+        if (index < ratingValue) {
+          $(this).text(wjx_all).addClass("clicked");
+        }
+      });
+
     } else {
       enableEdit = true; // Set enableEdit to true if the button text is not "評價"
       editBtn.text("評價");
@@ -56,6 +75,16 @@ $(document).ready(function() {
       commentSection.off("mouseenter", "li", starHoverEnter);
       commentSection.off("mouseleave", starHoverLeave);
       commentSection.off("click", "li", starClick);
+
+      // (鎖定狀態下)將星星依SQL中O_SalerRating值填滿對應個數
+      $(".comment").children("li").each(function(index) {
+        if (index < ratingValue) {
+          $(this).text(wjx_all);
+        } else {
+          $(this).text(wjx_none);
+        }
+      });
+
     }
   }
 
