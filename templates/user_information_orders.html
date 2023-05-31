@@ -20,13 +20,30 @@
     <div class="border outside">
 
         <div class="tabs">
+            <button class="tab-button" data-target="ordered">已下單</button>
             <button class="tab-button" data-target="processing">進行中</button>
             <button class="tab-button" data-target="finished">已完成</button>
         </div>
 
         <div class="tab-content">
-            <div id="processing" class="content">
 
+            <div id="ordered" class="content">
+                <!--書籍篩選: 已下單-->
+                {% for book in datas_ordered %}
+                <div class="item">
+                    <div class="image-change">
+                        <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="Image">
+                    </div>
+                    <p>書名：{{ book['B_BookName'] }}</p>
+                    <p class="status">狀態：{{ book['B_SaleStatus'] }}</p>
+                    <button class="button modify" onclick="location.href=''">完成訂單</button>
+                    <button class="button remove">取消訂單</button>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <div id="processing" class="content">
                 <!--書籍篩選: 進行中-->
                 {% for book in datas_processing %}
                 <div class="item">
@@ -44,7 +61,6 @@
         </div>
 
         <div id="finished" class="content hide">
-
             <!--書籍篩選: 已完成-->
             {% for book in datas_finished %}
             <div class="item">
